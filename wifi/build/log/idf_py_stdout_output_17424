@@ -1,0 +1,79 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Projekty\IoT\wifi\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Projekty/IoT/wifi/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6880 bytes. 0x780 bytes (7%) free.
+[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+[3/8] Linking C static library esp-idf\main\libmain.a
+[4/8] Generating ld/sections.ld
+[5/8] Linking CXX executable wifi.elf
+[6/8] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated C:/Projekty/IoT/wifi/build/wifi.bin
+[7/8] cmd.exe /C "cd /D C:\Projekty\IoT\wifi\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Projekty/IoT/wifi/build/partition_table/partition-table.bin C:/Projekty/IoT/wifi/build/wifi.bin"
+wifi.bin binary size 0xbde50 bytes. Smallest app partition is 0x100000 bytes. 0x421b0 bytes (26%) free.
+[7/8] cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.3.1\components\esptool_py && C:\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/Espressif/frameworks/esp-idf-v5.3.1 -D SERIAL_TOOL=C:/Espressif/python_env/idf5.3_py3.11_env/Scripts/python.eesptool.py --chip esp32 -p COM3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 wifi.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.1
+Serial port COM3
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 78:ee:4c:00:06:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000cdfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 26752 bytes to 16354...
+Writing at 0x00001000... (100 %)
+Wrote 26752 bytes (16354 compressed) at 0x00001000 in 0.6 seconds (effective 372.2 kbit/s)...
+Hash of data verified.
+Compressed 777808 bytes to 495657...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001c8e9... (6 %)
+Writing at 0x00022eec... (9 %)
+Writing at 0x0002812f... (12 %)
+Writing at 0x00031724... (16 %)
+Writing at 0x0003734e... (19 %)
+Writing at 0x0003d017... (22 %)
+Writing at 0x00042e0f... (25 %)
+Writing at 0x00048b75... (29 %)
+Writing at 0x0004ef3e... (32 %)
+Writing at 0x00054181... (35 %)
+Writing at 0x00059529... (38 %)
+Writing at 0x0005eb4a... (41 %)
+Writing at 0x00063ec6... (45 %)
+Writing at 0x00069555... (48 %)
+Writing at 0x0006ed53... (51 %)
+Writing at 0x00074abd... (54 %)
+Writing at 0x0007a115... (58 %)
+Writing at 0x0007fe2f... (61 %)
+Writing at 0x00085ba1... (64 %)
+Writing at 0x0008b39b... (67 %)
+Writing at 0x000910ab... (70 %)
+Writing at 0x00096b16... (74 %)
+Writing at 0x0009c608... (77 %)
+Writing at 0x000a5d43... (80 %)
+Writing at 0x000add3a... (83 %)
+Writing at 0x000b3a5e... (87 %)
+Writing at 0x000bb5de... (90 %)
+Writing at 0x000c0ff9... (93 %)
+Writing at 0x000c71ca... (96 %)
+Writing at 0x000cc4a1... (100 %)
+Wrote 777808 bytes (495657 compressed) at 0x00010000 in 11.4 seconds (effective 546.7 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 867.0 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+xe;;C:/Espressif/frameworks/esp-idf-v5.3.1/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Projekty/IoT/wifi/build -P C:/Espressif/frameworks/esp-idf-v5.3.1/components/esptool_py/run_serial_tool.cmake"
