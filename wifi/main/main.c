@@ -7,9 +7,11 @@
 #include "nvs_flash.h"
 #include "driver/gpio.h"
 #include "esp_http_client.h"
-#define WIFI_SSID "MyNET_Fiber_5385"   // Nazwa sieci WiFi
-#define WIFI_PASS "8b0fc920"           // Hasło do sieci WiFi
+#define WIFI_SSID "wifi_przemek"   // Nazwa sieci WiFi MyNET_Fiber_5385
+#define WIFI_PASS "xdxdxdxd"           // Hasło do sieci WiFi
 #define LED_PIN GPIO_NUM_2  // Definiujemy GPIO2 jako pin LED
+#define AP_SSID "noise_detector"
+#define AP_PASS "qwerty123"
 
 static EventGroupHandle_t wifi_event_group;
 const int CONNECTED_BIT = BIT0;
@@ -116,12 +118,40 @@ void wifi_init_sta() {
     esp_wifi_start();
 }
 
+void wifi_init_ap() {
+    esp_netif_init();
+    esp_event_loop_create_default();
+    esp_netif_create_default_wifi_ap();
 
+    wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
+    esp_wifi_init(&cfg);
+
+    wifi_config_t wifi_config = {
+        .ap = {
+            .ssid = AP_SSID,
+            .ssid_len = strlen(AP_SSID),
+            .password = AP_PASS,
+            .max_connection = 4,       // Max clients that can connect to the AP
+            .authmode = WIFI_AUTH_WPA_WPA2_PSK,
+        },
+    };
+
+    if (strlen(AP_PASS) == 0) {
+        wifi_config.ap.authmode = WIFI_AUTH_OPEN;
+    }
+
+    esp_wifi_set_mode(WIFI_MODE_AP);
+    esp_wifi_set_config(WIFI_IF_AP, &wifi_config);
+    esp_wifi_start();
+
+    ESP_LOGI(TAG, "ESP32 configured in Access Point mode with SSID: %s", AP_SSID);
+}
 
 
 void app_main(void) {
     nvs_flash_init();         // Inicjalizacja pamięci NVS
-    wifi_init_sta();          // Inicjalizacja i połączenie z WiFi 
+    //wifi_init_sta();          // Inicjalizacja i połączenie z WiFi 
+    wifi_init_ap();
     esp_rom_gpio_pad_select_gpio(LED_PIN);
     gpio_set_direction(LED_PIN, GPIO_MODE_OUTPUT); 
     gpio_set_level(LED_PIN, 0);
