@@ -1,4 +1,8 @@
+#include <stdio.h>
+#include <stdint.h>
+#include <stddef.h>
 #include <string.h>
+#include <inttypes.h>
 #include "esp_mac.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/event_groups.h"
@@ -7,8 +11,9 @@
 #include "nvs_flash.h"
 #include "driver/gpio.h"
 #include "esp_http_client.h"
-#define WIFI_SSID "wifi_przemek"   // Nazwa sieci WiFi MyNET_Fiber_5385
-#define WIFI_PASS "xdxdxdxd"           // Hasło do sieci WiFi
+#include "mqtt_client.h"
+#define WIFI_SSID "MyNET_Fiber_5385"   // Nazwa sieci WiFi  wifi_przemek
+#define WIFI_PASS "8b0fc920"           // Hasło do sieci WiFi xdxdxdxd
 #define LED_PIN GPIO_NUM_2  // Definiujemy GPIO2 jako pin LED
 #define AP_SSID "noise_detector"
 #define AP_PASS "qwerty123"
@@ -21,6 +26,10 @@ bool connected = false;
 
 #define MAX_HTTP_RECV_BUFFER 512
 #define MAX_HTTP_OUTPUT_BUFFER 2048
+
+static void mqtt_app_start(void);
+static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event_id, void *event_data);
+static esp_err_t mqtt_event_handler_cb(esp_mqtt_event_handle_t event);
 
 
 esp_err_t _http_event_handler(esp_http_client_event_t *evt) {
@@ -83,15 +92,18 @@ static void wifi_event_handler(void* arg, esp_event_base_t event_base, int32_t e
     } else if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_DISCONNECTED) {
         esp_wifi_connect();
         gpio_set_level(LED_PIN, 1);
-        vTaskDelay(pdMS_TO_TICKS(500));
+        vTaskDelay(pdMS_TO_TICKS(200));
         gpio_set_level(LED_PIN, 0);
-        ESP_LOGI(TAG, "Retrying connection to the WiFi...");
         connected = false;
+        ESP_LOGI(TAG, "%d", connected);
+        ESP_LOGI(TAG, "Retrying connection to the WiFi...");
     } else if (event_base == IP_EVENT && event_id == IP_EVENT_STA_GOT_IP) {
         xEventGroupSetBits(wifi_event_group, CONNECTED_BIT);
         connected = true;
+        ESP_LOGI(TAG, "%d", connected);
         ESP_LOGI(TAG, "Connected to WiFi!");
         http_rest_with_hostname_path();
+        mqtt_app_start();
     }
 }
 
@@ -147,15 +159,68 @@ void wifi_init_ap() {
     ESP_LOGI(TAG, "ESP32 configured in Access Point mode with SSID: %s", AP_SSID);
 }
 
+static esp_err_t mqtt_event_handler_cb(esp_mqtt_event_handle_t event)
+{
+    esp_mqtt_client_handle_t client = event->client;
+    switch (event->event_id)
+    {
+    case MQTT_EVENT_CONNECTED:
+        ESP_LOGI(TAG, "MQTT_EVENT_CONNECTED");
+        // esp_mqtt_client_subscribe(client, "my_topic", 0);
+        esp_mqtt_client_publish(client, "my_topic", "Hi to all from ESP32 .........", 0, 1, 0);
+        break;
+    case MQTT_EVENT_DISCONNECTED:
+        ESP_LOGI(TAG, "MQTT_EVENT_DISCONNECTED");
+        break;
+    case MQTT_EVENT_SUBSCRIBED:
+        ESP_LOGI(TAG, "MQTT_EVENT_SUBSCRIBED, msg_id=%d", event->msg_id);
+        break;
+    case MQTT_EVENT_UNSUBSCRIBED:
+        ESP_LOGI(TAG, "MQTT_EVENT_UNSUBSCRIBED, msg_id=%d", event->msg_id);
+        break;
+    case MQTT_EVENT_PUBLISHED:
+        ESP_LOGI(TAG, "MQTT_EVENT_PUBLISHED, msg_id=%d", event->msg_id);
+        break;
+    case MQTT_EVENT_DATA:
+        ESP_LOGI(TAG, "MQTT_EVENT_DATA");
+        printf("\nTOPIC=%.*s\r\n", event->topic_len, event->topic);
+        printf("DATA=%.*s\r\n", event->data_len, event->data);
+        break;
+    case MQTT_EVENT_ERROR:
+        ESP_LOGI(TAG, "MQTT_EVENT_ERROR");
+        break;
+    default:
+        ESP_LOGI(TAG, "Other event id:%d", event->event_id);
+        break;
+    }
+    return ESP_OK;
+}
+
+static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event_id, void *event_data)
+{
+    ESP_LOGD(TAG, "Event dispatched from event loop base=%s, event_id=%d", base, (int)event_id);
+    mqtt_event_handler_cb(event_data);
+}
+
+static void mqtt_app_start(void)
+{
+    esp_mqtt_client_config_t mqtt_cfg = {
+        .broker.address.uri = "mqtt://mqtt.eclipseprojects.io",
+    };
+    esp_mqtt_client_handle_t client = esp_mqtt_client_init(&mqtt_cfg);
+    esp_mqtt_client_register_event(client, ESP_EVENT_ANY_ID, mqtt_event_handler, client);
+    esp_mqtt_client_start(client);
+}
+
+
 
 void app_main(void) {
     nvs_flash_init();         // Inicjalizacja pamięci NVS
-    //wifi_init_sta();          // Inicjalizacja i połączenie z WiFi 
-    wifi_init_ap();
+    wifi_init_sta();          // Inicjalizacja i połączenie z WiFi 
+    //wifi_init_ap();
     esp_rom_gpio_pad_select_gpio(LED_PIN);
     gpio_set_direction(LED_PIN, GPIO_MODE_OUTPUT); 
     gpio_set_level(LED_PIN, 0);
-
 }
 
 

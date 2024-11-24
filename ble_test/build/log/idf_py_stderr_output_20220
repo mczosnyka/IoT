@@ -1,0 +1,690 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM3 instead...[0m
+[0;33m--- esp-idf-monitor 1.5.0 on \\.\COM3 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400014fa: strlen in ROM
+0x40157c0e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+0x4014e1d5: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x40164a8d: esp_log_writev at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:210
+0x400964ad: esp_log_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:220
+0x400d8f4d: esp_gap_cb at C:/Projekty/IoT/ble_test/main/main.c:350 (discriminator 1)
+0x400dbcd9: btc_gap_ble_cb_to_app at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:73
+0x400dc8c1: btc_gap_ble_adv_pkt_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:632
+0x4010d13a: osi_thread_generic_event_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:425
+0x4010d00b: osi_thread_run at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:165
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400014fa: strlen in ROM
+0x40157c0e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+0x4014e1d5: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x40164a8d: esp_log_writev at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:210
+0x400964ad: esp_log_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:220
+0x400d8f4d: esp_gap_cb at C:/Projekty/IoT/ble_test/main/main.c:350 (discriminator 1)
+0x400dbcd9: btc_gap_ble_cb_to_app at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:73
+0x400dc8c1: btc_gap_ble_adv_pkt_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:632
+0x4010d13a: osi_thread_generic_event_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:425
+0x4010d00b: osi_thread_run at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:165
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400014fa: strlen in ROM
+0x40157c0e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+0x4014e1d5: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x40164a8d: esp_log_writev at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:210
+0x400964ad: esp_log_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:220
+0x400d8f4d: esp_gap_cb at C:/Projekty/IoT/ble_test/main/main.c:350 (discriminator 1)
+0x400dbcd9: btc_gap_ble_cb_to_app at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:73
+0x400dc8c1: btc_gap_ble_adv_pkt_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:632
+0x4010d13a: osi_thread_generic_event_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:425
+0x4010d00b: osi_thread_run at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:165
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400014fa: strlen in ROM
+0x40157c0e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+0x4014e1d5: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x40164a8d: esp_log_writev at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:210
+0x400964ad: esp_log_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:220
+0x400d8f4d: esp_gap_cb at C:/Projekty/IoT/ble_test/main/main.c:350 (discriminator 1)
+0x400dbcd9: btc_gap_ble_cb_to_app at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:73
+0x400dc8c1: btc_gap_ble_adv_pkt_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:632
+0x4010d13a: osi_thread_generic_event_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:425
+0x4010d00b: osi_thread_run at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:165
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400014fa: strlen in ROM
+0x40157c0e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+0x4014e1d5: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x40164a8d: esp_log_writev at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:210
+0x400964ad: esp_log_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:220
+0x400d8f4d: esp_gap_cb at C:/Projekty/IoT/ble_test/main/main.c:350 (discriminator 1)
+0x400dbcd9: btc_gap_ble_cb_to_app at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:73
+0x400dc8c1: btc_gap_ble_adv_pkt_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:632
+0x4010d13a: osi_thread_generic_event_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:425
+0x4010d00b: osi_thread_run at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:165
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400014fa: strlen in ROM
+0x40157c0e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+0x4014e1d5: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x40164a8d: esp_log_writev at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:210
+0x400964ad: esp_log_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:220
+0x400d8f4d: esp_gap_cb at C:/Projekty/IoT/ble_test/main/main.c:350 (discriminator 1)
+0x400dbcd9: btc_gap_ble_cb_to_app at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:73
+0x400dc8c1: btc_gap_ble_adv_pkt_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:632
+0x4010d13a: osi_thread_generic_event_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:425
+0x4010d00b: osi_thread_run at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:165
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400014fa: strlen in ROM
+0x40157c0e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+0x4014e1d5: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x40164a8d: esp_log_writev at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:210
+0x400964ad: esp_log_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:220
+0x400d8f4d: esp_gap_cb at C:/Projekty/IoT/ble_test/main/main.c:350 (discriminator 1)
+0x400dbcd9: btc_gap_ble_cb_to_app at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:73
+0x400dc8c1: btc_gap_ble_adv_pkt_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:632
+0x4010d13a: osi_thread_generic_event_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:425
+0x4010d00b: osi_thread_run at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:165
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400014fa: strlen in ROM
+0x40157c0e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+0x4014e1d5: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x40164a8d: esp_log_writev at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:210
+0x400964ad: esp_log_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:220
+0x400d8f4d: esp_gap_cb at C:/Projekty/IoT/ble_test/main/main.c:350 (discriminator 1)
+0x400dbcd9: btc_gap_ble_cb_to_app at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:73
+0x400dc8c1: btc_gap_ble_adv_pkt_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:632
+0x4010d13a: osi_thread_generic_event_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:425
+0x4010d00b: osi_thread_run at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:165
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400014fa: strlen in ROM
+0x40157c0e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+0x4014e1d5: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x40164a8d: esp_log_writev at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:210
+0x400964ad: esp_log_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:220
+0x400d8f4d: esp_gap_cb at C:/Projekty/IoT/ble_test/main/main.c:350 (discriminator 1)
+0x400dbcd9: btc_gap_ble_cb_to_app at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:73
+0x400dc8c1: btc_gap_ble_adv_pkt_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:632
+0x4010d13a: osi_thread_generic_event_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:425
+0x4010d00b: osi_thread_run at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:165
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400014fa: strlen in ROM
+0x40157c0e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+0x4014e1d5: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x40164a8d: esp_log_writev at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:210
+0x400964ad: esp_log_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:220
+0x400d8f4d: esp_gap_cb at C:/Projekty/IoT/ble_test/main/main.c:350 (discriminator 1)
+0x400dbcd9: btc_gap_ble_cb_to_app at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:73
+0x400dc8c1: btc_gap_ble_adv_pkt_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:632
+0x4010d13a: osi_thread_generic_event_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:425
+0x4010d00b: osi_thread_run at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:165
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400014fa: strlen in ROM
+0x40157c0e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+0x4014e1d5: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x40164a8d: esp_log_writev at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:210
+0x400964ad: esp_log_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:220
+0x400d8f4d: esp_gap_cb at C:/Projekty/IoT/ble_test/main/main.c:350 (discriminator 1)
+0x400dbcd9: btc_gap_ble_cb_to_app at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:73
+0x400dc8c1: btc_gap_ble_adv_pkt_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:632
+0x4010d13a: osi_thread_generic_event_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:425
+0x4010d00b: osi_thread_run at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:165
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400014fa: strlen in ROM
+0x40157c0e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+0x4014e1d5: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x40164a8d: esp_log_writev at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:210
+0x400964ad: esp_log_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:220
+0x400d8f4d: esp_gap_cb at C:/Projekty/IoT/ble_test/main/main.c:350 (discriminator 1)
+0x400dbcd9: btc_gap_ble_cb_to_app at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:73
+0x400dc8c1: btc_gap_ble_adv_pkt_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:632
+0x4010d13a: osi_thread_generic_event_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:425
+0x4010d00b: osi_thread_run at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:165
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400014fa: strlen in ROM
+0x40157c0e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+0x4014e1d5: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x40164a8d: esp_log_writev at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:210
+0x400964ad: esp_log_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:220
+0x400d8f4d: esp_gap_cb at C:/Projekty/IoT/ble_test/main/main.c:350 (discriminator 1)
+0x400dbcd9: btc_gap_ble_cb_to_app at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:73
+0x400dc8c1: btc_gap_ble_adv_pkt_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:632
+0x4010d13a: osi_thread_generic_event_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:425
+0x4010d00b: osi_thread_run at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:165
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400014fa: strlen in ROM
+0x40157c0e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+0x4014e1d5: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x40164a8d: esp_log_writev at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:210
+0x400964ad: esp_log_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:220
+0x400d8f4d: esp_gap_cb at C:/Projekty/IoT/ble_test/main/main.c:350 (discriminator 1)
+0x400dbcd9: btc_gap_ble_cb_to_app at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:73
+0x400dc8c1: btc_gap_ble_adv_pkt_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:632
+0x4010d13a: osi_thread_generic_event_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:425
+0x4010d00b: osi_thread_run at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:165
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400014fa: strlen in ROM
+0x40157c0e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+0x4014e1d5: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x40164a8d: esp_log_writev at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:210
+0x400964ad: esp_log_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:220
+0x400d8f4d: esp_gap_cb at C:/Projekty/IoT/ble_test/main/main.c:350 (discriminator 1)
+0x400dbcd9: btc_gap_ble_cb_to_app at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:73
+0x400dc8c1: btc_gap_ble_adv_pkt_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:632
+0x4010d13a: osi_thread_generic_event_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:425
+0x4010d00b: osi_thread_run at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:165
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400014fa: strlen in ROM
+0x40157c0e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+0x4014e1d5: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x40164a8d: esp_log_writev at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:210
+0x400964ad: esp_log_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:220
+0x400d8f4d: esp_gap_cb at C:/Projekty/IoT/ble_test/main/main.c:350 (discriminator 1)
+0x400dbcd9: btc_gap_ble_cb_to_app at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:73
+0x400dc8c1: btc_gap_ble_adv_pkt_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:632
+0x4010d13a: osi_thread_generic_event_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:425
+0x4010d00b: osi_thread_run at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:165
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400014fa: strlen in ROM
+0x40157c0e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+0x4014e1d5: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x40164a8d: esp_log_writev at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:210
+0x400964ad: esp_log_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:220
+0x400d8f4d: esp_gap_cb at C:/Projekty/IoT/ble_test/main/main.c:350 (discriminator 1)
+0x400dbcd9: btc_gap_ble_cb_to_app at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:73
+0x400dc8c1: btc_gap_ble_adv_pkt_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:632
+0x4010d13a: osi_thread_generic_event_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:425
+0x4010d00b: osi_thread_run at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:165
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400014fa: strlen in ROM
+0x40157c0e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+0x4014e1d5: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x40164a8d: esp_log_writev at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:210
+0x400964ad: esp_log_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:220
+0x400d8f4d: esp_gap_cb at C:/Projekty/IoT/ble_test/main/main.c:350 (discriminator 1)
+0x400dbcd9: btc_gap_ble_cb_to_app at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:73
+0x400dc8c1: btc_gap_ble_adv_pkt_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:632
+0x4010d13a: osi_thread_generic_event_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:425
+0x4010d00b: osi_thread_run at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:165
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400014fa: strlen in ROM
+0x40157c0e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+0x4014e1d5: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x40164a8d: esp_log_writev at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:210
+0x400964ad: esp_log_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:220
+0x400d8f4d: esp_gap_cb at C:/Projekty/IoT/ble_test/main/main.c:350 (discriminator 1)
+0x400dbcd9: btc_gap_ble_cb_to_app at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:73
+0x400dc8c1: btc_gap_ble_adv_pkt_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:632
+0x4010d13a: osi_thread_generic_event_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:425
+0x4010d00b: osi_thread_run at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:165
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400014fa: strlen in ROM
+0x40157c0e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+0x4014e1d5: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x40164a8d: esp_log_writev at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:210
+0x400964ad: esp_log_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:220
+0x400d8f4d: esp_gap_cb at C:/Projekty/IoT/ble_test/main/main.c:350 (discriminator 1)
+0x400dbcd9: btc_gap_ble_cb_to_app at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:73
+0x400dc8c1: btc_gap_ble_adv_pkt_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:632
+0x4010d13a: osi_thread_generic_event_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:425
+0x4010d00b: osi_thread_run at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:165
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400014fa: strlen in ROM
+0x40157c0e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+0x4014e1d5: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x40164a8d: esp_log_writev at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:210
+0x400964ad: esp_log_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:220
+0x400d8f4d: esp_gap_cb at C:/Projekty/IoT/ble_test/main/main.c:350 (discriminator 1)
+0x400dbcd9: btc_gap_ble_cb_to_app at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:73
+0x400dc8c1: btc_gap_ble_adv_pkt_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:632
+0x4010d13a: osi_thread_generic_event_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:425
+0x4010d00b: osi_thread_run at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:165
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400014fa: strlen in ROM
+0x40157c0e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+0x4014e1d5: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x40164a8d: esp_log_writev at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:210
+0x400964ad: esp_log_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:220
+0x400d8f4d: esp_gap_cb at C:/Projekty/IoT/ble_test/main/main.c:350 (discriminator 1)
+0x400dbcd9: btc_gap_ble_cb_to_app at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:73
+0x400dc8c1: btc_gap_ble_adv_pkt_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:632
+0x4010d13a: osi_thread_generic_event_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:425
+0x4010d00b: osi_thread_run at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:165
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400014fa: strlen in ROM
+0x40157c0e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+0x4014e1d5: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x40164a8d: esp_log_writev at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:210
+0x400964ad: esp_log_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:220
+0x400d8f4d: esp_gap_cb at C:/Projekty/IoT/ble_test/main/main.c:350 (discriminator 1)
+0x400dbcd9: btc_gap_ble_cb_to_app at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:73
+0x400dc8c1: btc_gap_ble_adv_pkt_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:632
+0x4010d13a: osi_thread_generic_event_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:425
+0x4010d00b: osi_thread_run at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:165
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400014fa: strlen in ROM
+0x40157c0e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+0x4014e1d5: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x40164a8d: esp_log_writev at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:210
+0x400964ad: esp_log_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:220
+0x400d8f4d: esp_gap_cb at C:/Projekty/IoT/ble_test/main/main.c:350 (discriminator 1)
+0x400dbcd9: btc_gap_ble_cb_to_app at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:73
+0x400dc8c1: btc_gap_ble_adv_pkt_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:632
+0x4010d13a: osi_thread_generic_event_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:425
+0x4010d00b: osi_thread_run at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:165
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400014fa: strlen in ROM
+0x40157c0e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+0x4014e1d5: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x40164a8d: esp_log_writev at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:210
+0x400964ad: esp_log_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:220
+0x400d8f4d: esp_gap_cb at C:/Projekty/IoT/ble_test/main/main.c:350 (discriminator 1)
+0x400dbcd9: btc_gap_ble_cb_to_app at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:73
+0x400dc8c1: btc_gap_ble_adv_pkt_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:632
+0x4010d13a: osi_thread_generic_event_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:425
+0x4010d00b: osi_thread_run at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:165
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400014fa: strlen in ROM
+0x40157c0e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+0x4014e1d5: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x40164a8d: esp_log_writev at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:210
+0x400964ad: esp_log_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:220
+0x400d8f4d: esp_gap_cb at C:/Projekty/IoT/ble_test/main/main.c:350 (discriminator 1)
+0x400dbcd9: btc_gap_ble_cb_to_app at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:73
+0x400dc8c1: btc_gap_ble_adv_pkt_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:632
+0x4010d13a: osi_thread_generic_event_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:425
+0x4010d00b: osi_thread_run at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:165
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400014fa: strlen in ROM
+0x40157c0e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+0x4014e1d5: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x40164a8d: esp_log_writev at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:210
+0x400964ad: esp_log_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:220
+0x400d8f4d: esp_gap_cb at C:/Projekty/IoT/ble_test/main/main.c:350 (discriminator 1)
+0x400dbcd9: btc_gap_ble_cb_to_app at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:73
+0x400dc8c1: btc_gap_ble_adv_pkt_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:632
+0x4010d13a: osi_thread_generic_event_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:425
+0x4010d00b: osi_thread_run at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:165
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400014fa: strlen in ROM
+0x40157c0e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+0x4014e1d5: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x40164a8d: esp_log_writev at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:210
+0x400964ad: esp_log_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:220
+0x400d8f4d: esp_gap_cb at C:/Projekty/IoT/ble_test/main/main.c:350 (discriminator 1)
+0x400dbcd9: btc_gap_ble_cb_to_app at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:73
+0x400dc8c1: btc_gap_ble_adv_pkt_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:632
+0x4010d13a: osi_thread_generic_event_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:425
+0x4010d00b: osi_thread_run at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:165
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400014fa: strlen in ROM
+0x40157c0e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+0x4014e1d5: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x40164a8d: esp_log_writev at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:210
+0x400964ad: esp_log_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:220
+0x400d8f4d: esp_gap_cb at C:/Projekty/IoT/ble_test/main/main.c:350 (discriminator 1)
+0x400dbcd9: btc_gap_ble_cb_to_app at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:73
+0x400dc8c1: btc_gap_ble_adv_pkt_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:632
+0x4010d13a: osi_thread_generic_event_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:425
+0x4010d00b: osi_thread_run at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:165
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400014fa: strlen in ROM
+0x40157c0e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+0x4014e1d5: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x40164a8d: esp_log_writev at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:210
+0x400964ad: esp_log_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:220
+0x400d8f4d: esp_gap_cb at C:/Projekty/IoT/ble_test/main/main.c:350 (discriminator 1)
+0x400dbcd9: btc_gap_ble_cb_to_app at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:73
+0x400dc8c1: btc_gap_ble_adv_pkt_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:632
+0x4010d13a: osi_thread_generic_event_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:425
+0x4010d00b: osi_thread_run at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:165
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400014fa: strlen in ROM
+0x40157c0e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+0x4014e1d5: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x40164a8d: esp_log_writev at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:210
+0x400964ad: esp_log_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:220
+0x400d8f4d: esp_gap_cb at C:/Projekty/IoT/ble_test/main/main.c:350 (discriminator 1)
+0x400dbcd9: btc_gap_ble_cb_to_app at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:73
+0x400dc8c1: btc_gap_ble_adv_pkt_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:632
+0x4010d13a: osi_thread_generic_event_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:425
+0x4010d00b: osi_thread_run at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:165
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- 0x400014fd: strlen in ROM
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400014fa: strlen in ROM
+0x40157c0e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+0x4014e1d5: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x40164a8d: esp_log_writev at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:210
+0x400964ad: esp_log_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:220
+0x400d8f4d: esp_gap_cb at C:/Projekty/IoT/ble_test/main/main.c:350 (discriminator 1)
+0x400dbcd9: btc_gap_ble_cb_to_app at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:73
+0x400dc8c1: btc_gap_ble_adv_pkt_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:632
+0x4010d13a: osi_thread_generic_event_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:425
+0x4010d00b: osi_thread_run at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:165
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400014fa: strlen in ROM
+0x40157c0e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+0x4014e1d5: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x40164a8d: esp_log_writev at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:210
+0x400964ad: esp_log_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:220
+0x400d8f4d: esp_gap_cb at C:/Projekty/IoT/ble_test/main/main.c:350 (discriminator 1)
+0x400dbcd9: btc_gap_ble_cb_to_app at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:73
+0x400dc8c1: btc_gap_ble_adv_pkt_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:632
+0x4010d13a: osi_thread_generic_event_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:425
+0x4010d00b: osi_thread_run at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:165
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- 0x400014fd: strlen in ROM
+[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- 0x400014fa: strlen in ROM
+0x40157c0e: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+[0m
+[0;33m--- 0x4014e1d5: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+[0m
+[0;33m--- 0x400964ad: esp_log_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:220
+[0m
+[0;33m--- 0x400d8f4d: esp_gap_cb at C:/Projekty/IoT/ble_test/main/main.c:350 (discriminator 1)
+[0m
+[0;33m--- 0x400dc8c1: btc_gap_ble_adv_pkt_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:632
+[0m
+[0;33m--- 0x4010d13a: osi_thread_generic_event_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:425
+[0m
+[0;33m--- 0x4010d00b: osi_thread_run at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:165
+[0m
+[0;33m--- 0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0m
+Traceback (most recent call last):
+  File "C:\Espressif\frameworks\esp-idf-v5.3.1\tools/idf_monitor.py", line 11, in <module>
+    sys.exit(subprocess.run([sys.executable, '-m', 'esp_idf_monitor'] + sys.argv[1:]).returncode)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "subprocess.py", line 550, in run
+  File "subprocess.py", line 1199, in communicate
+  File "subprocess.py", line 1262, in wait
+  File "subprocess.py", line 1543, in _wait
+KeyboardInterrupt

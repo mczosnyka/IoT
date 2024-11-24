@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+C:/Projekty/IoT/ble_server_test/build/CMakeFiles/bootloader
+C:/Projekty/IoT/ble_server_test/build/CMakeFiles/bootloader.rule
+C:/Projekty/IoT/ble_server_test/build/CMakeFiles/bootloader-complete.rule
+C:/Projekty/IoT/ble_server_test/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+C:/Projekty/IoT/ble_server_test/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+C:/Projekty/IoT/ble_server_test/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+C:/Projekty/IoT/ble_server_test/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+C:/Projekty/IoT/ble_server_test/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+C:/Projekty/IoT/ble_server_test/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+C:/Projekty/IoT/ble_server_test/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

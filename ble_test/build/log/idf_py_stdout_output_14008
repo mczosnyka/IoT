@@ -1,0 +1,103 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Projekty\IoT\ble_test\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Projekty/IoT/ble_test/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6880 bytes. 0x780 bytes (7%) free.
+[2/7] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+In file included from C:/Projekty/IoT/ble_test/main/main.c:14:
+C:/Projekty/IoT/ble_test/main/main.c: In function 'esp_gap_cb':
+C:/Projekty/IoT/ble_test/main/main.c:354:69: warning: passing argument 1 of 'strlen' makes pointer from integer without a cast [-Wint-conversion]
+  354 |                 ESP_LOGI(GATTC_TAG, "dlugosc ustawiona: %d", strlen(adv_name_len));
+      |                                                                     ^~~~~~~~~~~~
+      |                                                                     |
+      |                                                                     uint8_t {aka unsigned char}
+C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/include/esp_log.h:435:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  435 |         if (level==ESP_LOG_ERROR )          { esp_log_write(ESP_LOG_ERROR,      tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/include/esp_log.h:367:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  367 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+C:/Projekty/IoT/ble_test/main/main.c:354:17: note: in expansion of macro 'ESP_LOGI'
+  354 |                 ESP_LOGI(GATTC_TAG, "dlugosc ustawiona: %d", strlen(adv_name_len));
+      |                 ^~~~~~~~
+In file included from C:/Projekty/IoT/ble_test/main/main.c:2:
+C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20240530/xtensa-esp-elf/xtensa-esp-elf/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t' {aka 'unsigned char'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+C:/Projekty/IoT/ble_test/main/main.c:354:69: warning: passing argument 1 of 'strlen' makes pointer from integer without a cast [-Wint-conversion]
+  354 |                 ESP_LOGI(GATTC_TAG, "dlugosc ustawiona: %d", strlen(adv_name_len));
+      |                                                                     ^~~~~~~~~~~~
+      |                                                                     |
+      |                                                                     uint8_t {aka unsigned char}
+C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/include/esp_log.h:436:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  436 |         else if (level==ESP_LOG_WARN )      { esp_log_write(ESP_LOG_WARN,       tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/include/esp_log.h:367:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  367 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+C:/Projekty/IoT/ble_test/main/main.c:354:17: note: in expansion of macro 'ESP_LOGI'
+  354 |                 ESP_LOGI(GATTC_TAG, "dlugosc ustawiona: %d", strlen(adv_name_len));
+      |                 ^~~~~~~~
+C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20240530/xtensa-esp-elf/xtensa-esp-elf/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t' {aka 'unsigned char'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+C:/Projekty/IoT/ble_test/main/main.c:354:69: warning: passing argument 1 of 'strlen' makes pointer from integer without a cast [-Wint-conversion]
+  354 |                 ESP_LOGI(GATTC_TAG, "dlugosc ustawiona: %d", strlen(adv_name_len));
+      |                                                                     ^~~~~~~~~~~~
+      |                                                                     |
+      |                                                                     uint8_t {aka unsigned char}
+C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/include/esp_log.h:437:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  437 |         else if (level==ESP_LOG_DEBUG )     { esp_log_write(ESP_LOG_DEBUG,      tag, LOG_FORMAT(D, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/include/esp_log.h:367:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  367 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+C:/Projekty/IoT/ble_test/main/main.c:354:17: note: in expansion of macro 'ESP_LOGI'
+  354 |                 ESP_LOGI(GATTC_TAG, "dlugosc ustawiona: %d", strlen(adv_name_len));
+      |                 ^~~~~~~~
+C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20240530/xtensa-esp-elf/xtensa-esp-elf/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t' {aka 'unsigned char'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+C:/Projekty/IoT/ble_test/main/main.c:354:69: warning: passing argument 1 of 'strlen' makes pointer from integer without a cast [-Wint-conversion]
+  354 |                 ESP_LOGI(GATTC_TAG, "dlugosc ustawiona: %d", strlen(adv_name_len));
+      |                                                                     ^~~~~~~~~~~~
+      |                                                                     |
+      |                                                                     uint8_t {aka unsigned char}
+C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/include/esp_log.h:438:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  438 |         else if (level==ESP_LOG_VERBOSE )   { esp_log_write(ESP_LOG_VERBOSE,    tag, LOG_FORMAT(V, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/include/esp_log.h:367:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  367 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+C:/Projekty/IoT/ble_test/main/main.c:354:17: note: in expansion of macro 'ESP_LOGI'
+  354 |                 ESP_LOGI(GATTC_TAG, "dlugosc ustawiona: %d", strlen(adv_name_len));
+      |                 ^~~~~~~~
+C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20240530/xtensa-esp-elf/xtensa-esp-elf/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t' {aka 'unsigned char'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+C:/Projekty/IoT/ble_test/main/main.c:354:69: warning: passing argument 1 of 'strlen' makes pointer from integer without a cast [-Wint-conversion]
+  354 |                 ESP_LOGI(GATTC_TAG, "dlugosc ustawiona: %d", strlen(adv_name_len));
+      |                                                                     ^~~~~~~~~~~~
+      |                                                                     |
+      |                                                                     uint8_t {aka unsigned char}
+C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/include/esp_log.h:439:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  439 |         else                                { esp_log_write(ESP_LOG_INFO,       tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/include/esp_log.h:367:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  367 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+C:/Projekty/IoT/ble_test/main/main.c:354:17: note: in expansion of macro 'ESP_LOGI'
+  354 |                 ESP_LOGI(GATTC_TAG, "dlugosc ustawiona: %d", strlen(adv_name_len));
+      |                 ^~~~~~~~
+C:/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20240530/xtensa-esp-elf/xtensa-esp-elf/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t' {aka 'unsigned char'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+[3/7] Linking C static library esp-idf\main\libmain.a
+[4/7] Generating ld/sections.ld
+[5/7] Linking CXX executable ble_test.elf
+[6/7] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated C:/Projekty/IoT/ble_test/build/ble_test.bin
+[7/7] cmd.exe /C "cd /D C:\Projekty\IoT\ble_test\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Projekty/IoT/ble_test/build/partition_table/partition-table.bin C:/Projekty/IoT/ble_test/build/ble_test.bin"
+ble_test.bin binary size 0xdbf80 bytes. Smallest app partition is 0x100000 bytes. 0x24080 bytes (14%) free.

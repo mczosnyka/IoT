@@ -1,0 +1,46 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM3 instead...[0m
+[0;33m--- esp-idf-monitor 1.5.0 on \\.\COM3 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40131b47: task_wdt_timeout_handling at C:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:434
+0x40131f80: task_wdt_isr at C:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:507
+0x40083a71: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x400d64c1: uart_ll_get_txfifo_len at C:/Espressif/frameworks/esp-idf-v5.3.1/components/hal/esp32/include/hal/uart_ll.h:408
+ (inlined by) uart_tx_char at C:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_driver_uart/src/uart_vfs.c:170
+0x400d6c8f: uart_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_driver_uart/src/uart_vfs.c:223
+0x400d7cc1: esp_vfs_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/vfs/vfs.c:502 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000182a: write in ROM
+0x400d7669: console_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_vfs_console/vfs_console.c:67
+0x400d7cc1: esp_vfs_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/vfs/vfs.c:502 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x4014dd91: __sfvwrite_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x4015969f: __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4015907d: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x4014e221: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x40164ad9: esp_log_writev at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:210
+0x400964ad: esp_log_write at C:/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:220
+0x400d8fbd: esp_gap_cb at C:/Projekty/IoT/ble_test/main/main.c:387 (discriminator 1)
+0x400dbd19: btc_gap_ble_cb_to_app at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:73
+0x400dc901: btc_gap_ble_adv_pkt_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/btc/profile/std/gap/btc_gap_ble.c:632
+0x4010d17a: osi_thread_generic_event_handler at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:425
+0x4010d04b: osi_thread_run at C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/common/osi/thread.c:165
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0m
+Traceback (most recent call last):
+  File "C:\Espressif\frameworks\esp-idf-v5.3.1\tools/idf_monitor.py", line 11, in <module>
+    sys.exit(subprocess.run([sys.executable, '-m', 'esp_idf_monitor'] + sys.argv[1:]).returncode)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "subprocess.py", line 550, in run
+  File "subprocess.py", line 1199, in communicate
+  File "subprocess.py", line 1262, in wait
+  File "subprocess.py", line 1543, in _wait
+KeyboardInterrupt

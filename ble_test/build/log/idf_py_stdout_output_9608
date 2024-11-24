@@ -1,0 +1,1785 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 22 2024 14:15:44[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=28b8ch (166796) map[0m
+[0;32mI (161) esp_image: segment 1: paddr=00038bb4 vaddr=3ffbdb60 size=04b54h ( 19284) load[0m
+[0;32mI (169) esp_image: segment 2: paddr=0003d710 vaddr=40080000 size=02908h ( 10504) load[0m
+[0;32mI (173) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=96070h (614512) map[0m
+[0;32mI (386) esp_image: segment 4: paddr=000d6098 vaddr=40082908 size=15d18h ( 89368) load[0m
+[0;32mI (434) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (434) boot: Disabling RNG early entropy source...[0m
+[0;32mI (446) cpu_start: Multicore app[0m
+[0;32mI (454) cpu_start: Pro cpu start user code[0m
+[0;32mI (454) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (455) app_init: Application information:[0m
+[0;32mI (457) app_init: Project name:     ble_test[0m
+[0;32mI (462) app_init: App version:      80e5f3c-dirty[0m
+[0;32mI (468) app_init: Compile time:     Nov 22 2024 14:15:09[0m
+[0;32mI (474) app_init: ELF file SHA256:  44bc0d120...[0m
+[0;32mI (479) app_init: ESP-IDF:          v5.3.1[0m
+[0;32mI (484) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (489) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (494) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (499) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (506) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (512) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (518) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (524) heap_init: At 3FFCA3F0 len 00015C10 (87 KiB): DRAM[0m
+[0;32mI (530) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (536) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (543) heap_init: At 40098620 len 000079E0 (30 KiB): IRAM[0m
+[0;32mI (551) spi_flash: detected chip: generic[0m
+[0;32mI (554) spi_flash: flash io: dio[0m
+[0;33mW (558) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (571) coexist: coex firmware version: 4482466[0m
+[0;32mI (577) main_task: Started on CPU0[0m
+[0;32mI (587) main_task: Calling app_main()[0m
+[0;32mI (617) BTDM_INIT: BT controller compile version [b022216][0m
+[0;32mI (617) BTDM_INIT: Bluetooth MAC: 78:ee:4c:00:06:5e[0m
+[0;32mI (617) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;32mI (1067) GATTC_DEMO: REG_EVT[0m
+[0;32mI (1077) main_task: Returned from app_main()[0m
+[0;32mI (1077) GATTC_DEMO: scan start success[0m
+[0;32mI (1117) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (1117) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (1117) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (1117) GATTC_DEMO:  [0m
+[0;32mI (1167) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (1167) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (1167) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (1167) GATTC_DEMO:  [0m
+[0;32mI (1197) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (1197) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (1197) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (1207) GATTC_DEMO: iTAG            [0m
+[0;32mI (1207) GATTC_DEMO:  [0m
+[0;32mI (1217) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (1217) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (1217) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (1227) GATTC_DEMO:  [0m
+[0;32mI (1267) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (1267) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (1267) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (1267) GATTC_DEMO:  [0m
+[0;32mI (1297) GATTC_DEMO: 66 72 58 e0 b1 3b [0m
+[0;32mI (1297) GATTC_DEMO: searched Adv Data Len 18, Scan Response Len 0[0m
+[0;32mI (1297) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (1307) GATTC_DEMO:  [0m
+[0;32mI (1317) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (1317) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (1317) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (1317) GATTC_DEMO:  [0m
+[0;32mI (1367) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (1367) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (1367) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (1367) GATTC_DEMO:  [0m
+[0;32mI (1607) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (1607) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (1607) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (1607) GATTC_DEMO: iTAG            [0m
+[0;32mI (1617) GATTC_DEMO:  [0m
+[0;32mI (1667) GATTC_DEMO: cc ce 4a 21 10 c0 [0m
+[0;32mI (1667) GATTC_DEMO: searched Adv Data Len 8, Scan Response Len 0[0m
+[0;32mI (1667) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (1667) GATTC_DEMO:  [0m
+[0;32mI (1967) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (1967) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 0[0m
+[0;32mI (1967) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (1967) GATTC_DEMO:  [0m
+[0;32mI (1967) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (1977) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (1987) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (1987) GATTC_DEMO:  [0m
+[0;32mI (2067) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (2067) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (2067) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (2067) GATTC_DEMO:  [0m
+[0;32mI (2117) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (2117) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (2117) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (2117) GATTC_DEMO:  [0m
+[0;32mI (2167) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (2167) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (2167) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (2167) GATTC_DEMO:  [0m
+[0;32mI (2207) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (2207) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (2207) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (2217) GATTC_DEMO:  [0m
+[0;32mI (2217) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (2227) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (2227) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (2237) GATTC_DEMO: iTAG            [0m
+[0;32mI (2237) GATTC_DEMO:  [0m
+[0;32mI (2267) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (2267) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (2267) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (2267) GATTC_DEMO:  [0m
+[0;32mI (2317) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (2317) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (2317) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (2317) GATTC_DEMO:  [0m
+[0;32mI (2367) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (2367) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (2367) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (2367) GATTC_DEMO:  [0m
+[0;32mI (2417) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (2417) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (2417) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (2417) GATTC_DEMO:  [0m
+[0;32mI (2467) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (2467) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (2467) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (2467) GATTC_DEMO:  [0m
+[0;32mI (2517) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (2517) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (2517) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (2517) GATTC_DEMO:  [0m
+[0;32mI (2567) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (2567) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (2567) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (2567) GATTC_DEMO:  [0m
+[0;32mI (2617) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (2617) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (2617) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (2617) GATTC_DEMO:  [0m
+[0;32mI (2667) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (2667) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (2667) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (2667) GATTC_DEMO:  [0m
+[0;32mI (2767) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (2767) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (2767) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (2767) GATTC_DEMO:  [0m
+[0;32mI (3267) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (3267) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (3267) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (3267) GATTC_DEMO:  [0m
+[0;32mI (3317) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (3317) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (3317) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (3317) GATTC_DEMO:  [0m
+[0;32mI (3467) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (3467) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (3467) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (3467) GATTC_DEMO:  [0m
+[0;32mI (3517) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (3517) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (3517) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (3517) GATTC_DEMO:  [0m
+[0;32mI (3567) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (3567) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (3567) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (3567) GATTC_DEMO:  [0m
+[0;32mI (3617) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (3617) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (3617) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (3617) GATTC_DEMO:  [0m
+[0;32mI (3667) GATTC_DEMO: cc ce 4a 21 10 c0 [0m
+[0;32mI (3667) GATTC_DEMO: searched Adv Data Len 8, Scan Response Len 0[0m
+[0;32mI (3667) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (3667) GATTC_DEMO:  [0m
+[0;32mI (3667) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (3677) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (3687) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (3687) GATTC_DEMO:  [0m
+[0;32mI (3717) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (3717) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (3717) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (3717) GATTC_DEMO:  [0m
+[0;32mI (3837) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (3837) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (3837) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (3837) GATTC_DEMO: iTAG            [0m
+[0;32mI (3847) GATTC_DEMO:  [0m
+[0;32mI (4037) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (4037) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (4037) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (4047) GATTC_DEMO: iTAG            [0m
+[0;32mI (4047) GATTC_DEMO:  [0m
+[0;32mI (4117) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (4117) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (4117) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (4117) GATTC_DEMO:  [0m
+[0;32mI (4217) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (4217) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (4217) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (4217) GATTC_DEMO:  [0m
+[0;32mI (4317) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (4317) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (4317) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (4317) GATTC_DEMO:  [0m
+[0;32mI (4417) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (4417) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (4417) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (4417) GATTC_DEMO:  [0m
+[0;32mI (4447) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (4447) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (4447) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (4447) GATTC_DEMO: iTAG            [0m
+[0;32mI (4457) GATTC_DEMO:  [0m
+[0;32mI (4517) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (4517) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (4517) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (4517) GATTC_DEMO:  [0m
+[0;32mI (4617) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (4617) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (4617) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (4617) GATTC_DEMO:  [0m
+[0;32mI (4647) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (4647) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (4647) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (4657) GATTC_DEMO: iTAG            [0m
+[0;32mI (4657) GATTC_DEMO:  [0m
+[0;32mI (4767) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (4767) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (4767) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (4767) GATTC_DEMO:  [0m
+[0;32mI (4847) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (4847) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (4847) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (4857) GATTC_DEMO:  [0m
+[0;32mI (4867) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (4867) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (4867) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (4877) GATTC_DEMO: iTAG            [0m
+[0;32mI (4877) GATTC_DEMO:  [0m
+[0;32mI (4967) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (4967) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (4967) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (4967) GATTC_DEMO:  [0m
+[0;32mI (5047) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (5047) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (5047) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (5057) GATTC_DEMO:  [0m
+[0;32mI (5067) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (5067) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (5067) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (5077) GATTC_DEMO: iTAG            [0m
+[0;32mI (5077) GATTC_DEMO:  [0m
+[0;32mI (5157) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (5157) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (5157) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (5157) GATTC_DEMO:  [0m
+[0;32mI (5157) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (5167) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (5177) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (5177) GATTC_DEMO:  [0m
+[0;32mI (5257) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (5257) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (5257) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (5257) GATTC_DEMO:  [0m
+[0;32mI (5267) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (5267) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (5277) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (5277) GATTC_DEMO: iTAG            [0m
+[0;32mI (5287) GATTC_DEMO:  [0m
+[0;32mI (5367) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (5367) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (5367) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (5367) GATTC_DEMO:  [0m
+[0;32mI (5457) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (5457) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (5457) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (5467) GATTC_DEMO: iTAG            [0m
+[0;32mI (5467) GATTC_DEMO:  [0m
+[0;32mI (5467) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (5477) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (5477) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (5487) GATTC_DEMO:  [0m
+[0;32mI (5567) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (5567) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (5567) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (5567) GATTC_DEMO:  [0m
+[0;32mI (5567) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (5577) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (5587) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (5587) GATTC_DEMO:  [0m
+[0;32mI (5657) GATTC_DEMO: cc ce 4a 21 10 c0 [0m
+[0;32mI (5657) GATTC_DEMO: searched Adv Data Len 8, Scan Response Len 0[0m
+[0;32mI (5657) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (5667) GATTC_DEMO:  [0m
+[0;32mI (5667) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (5667) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (5677) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (5687) GATTC_DEMO: iTAG            [0m
+[0;32mI (5687) GATTC_DEMO:  [0m
+[0;32mI (5687) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (5697) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (5707) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (5707) GATTC_DEMO:  [0m
+[0;32mI (5867) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (5867) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (5867) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (5867) GATTC_DEMO: iTAG            [0m
+[0;32mI (5877) GATTC_DEMO:  [0m
+[0;32mI (6087) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (6087) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (6087) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (6097) GATTC_DEMO:  [0m
+[0;32mI (6097) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (6107) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (6107) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (6117) GATTC_DEMO:  [0m
+[0;32mI (6197) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (6197) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (6197) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (6197) GATTC_DEMO:  [0m
+[0;32mI (6207) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (6207) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (6217) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (6217) GATTC_DEMO:  [0m
+[0;32mI (6307) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (6307) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (6307) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (6307) GATTC_DEMO:  [0m
+[0;32mI (6317) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (6317) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (6327) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (6327) GATTC_DEMO:  [0m
+[0;32mI (6407) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (6407) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (6407) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (6407) GATTC_DEMO:  [0m
+[0;32mI (6417) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (6417) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (6427) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (6427) GATTC_DEMO:  [0m
+[0;32mI (6507) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (6507) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (6507) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (6507) GATTC_DEMO:  [0m
+[0;32mI (6517) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (6517) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (6527) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (6527) GATTC_DEMO:  [0m
+[0;32mI (6617) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (6617) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (6617) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (6617) GATTC_DEMO:  [0m
+[0;32mI (6717) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (6717) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (6717) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (6717) GATTC_DEMO:  [0m
+[0;32mI (7167) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (7167) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (7167) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (7167) GATTC_DEMO:  [0m
+[0;32mI (7267) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (7267) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (7267) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (7267) GATTC_DEMO:  [0m
+[0;32mI (7347) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (7347) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (7347) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (7357) GATTC_DEMO:  [0m
+[0;32mI (7357) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (7367) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (7367) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (7377) GATTC_DEMO:  [0m
+[0;32mI (7457) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (7457) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (7457) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (7457) GATTC_DEMO:  [0m
+[0;32mI (7467) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (7467) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (7477) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (7477) GATTC_DEMO:  [0m
+[0;32mI (7487) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (7487) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (7497) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (7497) GATTC_DEMO: iTAG            [0m
+[0;32mI (7507) GATTC_DEMO:  [0m
+[0;32mI (7557) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (7557) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (7557) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (7567) GATTC_DEMO:  [0m
+[0;32mI (7567) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (7577) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (7577) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (7587) GATTC_DEMO:  [0m
+[0;32mI (7687) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (7687) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (7687) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (7687) GATTC_DEMO: iTAG            [0m
+[0;32mI (7697) GATTC_DEMO:  [0m
+[0;32mI (7767) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (7767) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (7767) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (7767) GATTC_DEMO:  [0m
+[0;32mI (7867) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (7867) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (7867) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (7867) GATTC_DEMO:  [0m
+[0;32mI (7887) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (7887) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (7887) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (7897) GATTC_DEMO: iTAG            [0m
+[0;32mI (7897) GATTC_DEMO:  [0m
+[0;32mI (8087) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (8087) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (8087) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (8097) GATTC_DEMO: iTAG            [0m
+[0;32mI (8097) GATTC_DEMO:  [0m
+[0;32mI (8217) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (8217) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (8217) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (8217) GATTC_DEMO:  [0m
+[0;32mI (8297) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (8297) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (8297) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (8297) GATTC_DEMO: iTAG            [0m
+[0;32mI (8307) GATTC_DEMO:  [0m
+[0;32mI (8317) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (8317) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (8317) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (8327) GATTC_DEMO:  [0m
+[0;32mI (8407) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (8407) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (8407) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (8407) GATTC_DEMO:  [0m
+[0;32mI (8417) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (8417) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (8427) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (8427) GATTC_DEMO:  [0m
+[0;32mI (8497) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (8497) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (8497) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (8497) GATTC_DEMO:  [0m
+[0;32mI (8507) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (8507) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (8517) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (8517) GATTC_DEMO: iTAG            [0m
+[0;32mI (8527) GATTC_DEMO:  [0m
+[0;32mI (8527) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (8537) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (8537) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (8547) GATTC_DEMO:  [0m
+[0;32mI (8607) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (8607) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (8607) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (8617) GATTC_DEMO:  [0m
+[0;32mI (8617) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (8617) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (8627) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (8637) GATTC_DEMO:  [0m
+[0;32mI (8697) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (8697) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (8697) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (8707) GATTC_DEMO: iTAG            [0m
+[0;32mI (8707) GATTC_DEMO:  [0m
+[0;32mI (8717) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (8717) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (8727) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (8727) GATTC_DEMO:  [0m
+[0;32mI (8817) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (8817) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (8817) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (8817) GATTC_DEMO:  [0m
+[0;32mI (8897) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (8897) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (8897) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (8907) GATTC_DEMO: iTAG            [0m
+[0;32mI (8907) GATTC_DEMO:  [0m
+[0;32mI (8917) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (8917) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (8927) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (8927) GATTC_DEMO:  [0m
+[0;32mI (9017) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (9017) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (9017) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (9017) GATTC_DEMO:  [0m
+[0;32mI (9107) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (9107) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (9107) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (9107) GATTC_DEMO: iTAG            [0m
+[0;32mI (9117) GATTC_DEMO:  [0m
+[0;32mI (9167) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (9167) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (9167) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (9167) GATTC_DEMO:  [0m
+[0;32mI (9267) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (9267) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (9267) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (9267) GATTC_DEMO:  [0m
+[0;32mI (9307) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (9307) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (9307) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (9317) GATTC_DEMO: iTAG            [0m
+[0;32mI (9317) GATTC_DEMO:  [0m
+[0;32mI (9367) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (9367) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (9367) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (9367) GATTC_DEMO:  [0m
+[0;32mI (9447) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (9447) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (9447) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (9457) GATTC_DEMO:  [0m
+[0;32mI (9457) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (9467) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (9467) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (9477) GATTC_DEMO:  [0m
+[0;32mI (9507) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (9507) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (9507) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (9517) GATTC_DEMO: iTAG            [0m
+[0;32mI (9517) GATTC_DEMO:  [0m
+[0;32mI (9557) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (9557) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (9557) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (9557) GATTC_DEMO:  [0m
+[0;32mI (9567) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (9567) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (9577) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (9577) GATTC_DEMO:  [0m
+[0;32mI (9657) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (9657) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (9657) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (9657) GATTC_DEMO:  [0m
+[0;32mI (9657) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (9667) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (9677) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (9677) GATTC_DEMO:  [0m
+[0;32mI (9677) GATTC_DEMO: cc ce 4a 21 10 c0 [0m
+[0;32mI (9687) GATTC_DEMO: searched Adv Data Len 8, Scan Response Len 0[0m
+[0;32mI (9687) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (9697) GATTC_DEMO:  [0m
+[0;32mI (9707) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (9707) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (9717) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (9717) GATTC_DEMO: iTAG            [0m
+[0;32mI (9717) GATTC_DEMO:  [0m
+[0;32mI (9757) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (9757) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (9757) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (9767) GATTC_DEMO:  [0m
+[0;32mI (9767) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (9767) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (9777) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (9787) GATTC_DEMO:  [0m
+[0;32mI (9857) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (9857) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (9857) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (9867) GATTC_DEMO:  [0m
+[0;32mI (9867) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (9867) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (9877) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (9887) GATTC_DEMO:  [0m
+[0;32mI (9957) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (9957) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (9957) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (9967) GATTC_DEMO:  [0m
+[0;32mI (9967) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (9977) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (9977) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (9987) GATTC_DEMO:  [0m
+[0;32mI (10067) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (10067) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (10067) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (10067) GATTC_DEMO:  [0m
+[0;32mI (10167) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (10167) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (10167) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (10167) GATTC_DEMO:  [0m
+[0;32mI (10517) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (10517) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (10517) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (10517) GATTC_DEMO:  [0m
+[0;32mI (10617) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (10617) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (10617) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (10617) GATTC_DEMO:  [0m
+[0;32mI (10717) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (10717) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (10717) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (10717) GATTC_DEMO:  [0m
+[0;32mI (10807) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (10807) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (10807) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (10807) GATTC_DEMO:  [0m
+[0;32mI (10817) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (10817) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (10827) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (10827) GATTC_DEMO:  [0m
+[0;32mI (10917) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (10917) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (10917) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (10917) GATTC_DEMO:  [0m
+[0;32mI (10927) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (10927) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (10937) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (10937) GATTC_DEMO:  [0m
+[0;32mI (11017) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (11017) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (11017) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (11017) GATTC_DEMO:  [0m
+[0;32mI (11117) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (11117) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (11117) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (11117) GATTC_DEMO:  [0m
+[0;32mI (11217) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (11217) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (11217) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (11217) GATTC_DEMO:  [0m
+[0;32mI (11317) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (11317) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (11317) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (11317) GATTC_DEMO:  [0m
+[0;32mI (11367) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (11367) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (11367) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (11367) GATTC_DEMO:  [0m
+[0;32mI (11467) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (11467) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (11467) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (11467) GATTC_DEMO:  [0m
+[0;32mI (11537) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (11537) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (11537) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (11537) GATTC_DEMO: iTAG            [0m
+[0;32mI (11547) GATTC_DEMO:  [0m
+[0;32mI (11567) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (11567) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (11567) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (11567) GATTC_DEMO:  [0m
+[0;32mI (11657) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (11657) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (11657) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (11657) GATTC_DEMO:  [0m
+[0;32mI (11667) GATTC_DEMO: cc ce 4a 21 10 c0 [0m
+[0;32mI (11667) GATTC_DEMO: searched Adv Data Len 8, Scan Response Len 0[0m
+[0;32mI (11677) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (11677) GATTC_DEMO:  [0m
+[0;32mI (11737) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (11737) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (11737) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (11747) GATTC_DEMO: iTAG            [0m
+[0;32mI (11747) GATTC_DEMO:  [0m
+[0;32mI (11767) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (11767) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (11767) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (11767) GATTC_DEMO:  [0m
+[0;32mI (11857) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (11857) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (11857) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (11867) GATTC_DEMO:  [0m
+[0;32mI (11867) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (11877) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (11877) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (11887) GATTC_DEMO:  [0m
+[0;32mI (11937) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (11937) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (11937) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (11947) GATTC_DEMO:  [0m
+[0;32mI (11967) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (11967) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (11967) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (11967) GATTC_DEMO: iTAG            [0m
+[0;32mI (11977) GATTC_DEMO:  [0m
+[0;32mI (12067) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (12067) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (12067) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (12067) GATTC_DEMO:  [0m
+[0;32mI (12147) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (12147) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (12147) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (12147) GATTC_DEMO: iTAG            [0m
+[0;32mI (12157) GATTC_DEMO:  [0m
+[0;32mI (12167) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (12167) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (12167) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (12177) GATTC_DEMO:  [0m
+[0;32mI (12267) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (12267) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (12267) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (12267) GATTC_DEMO:  [0m
+[0;32mI (12417) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (12417) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (12417) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (12417) GATTC_DEMO:  [0m
+[0;32mI (12517) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (12517) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (12517) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (12517) GATTC_DEMO:  [0m
+[0;32mI (12547) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (12547) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (12547) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (12557) GATTC_DEMO: iTAG            [0m
+[0;32mI (12557) GATTC_DEMO:  [0m
+[0;32mI (12617) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (12617) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (12617) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (12617) GATTC_DEMO:  [0m
+[0;32mI (12717) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (12717) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (12717) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (12717) GATTC_DEMO:  [0m
+[0;32mI (12757) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (12757) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (12757) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (12757) GATTC_DEMO: iTAG            [0m
+[0;32mI (12767) GATTC_DEMO:  [0m
+[0;32mI (12817) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (12817) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (12817) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (12817) GATTC_DEMO:  [0m
+[0;32mI (12957) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (12957) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (12957) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (12957) GATTC_DEMO: iTAG            [0m
+[0;32mI (12967) GATTC_DEMO:  [0m
+[0;32mI (13017) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (13017) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (13017) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (13017) GATTC_DEMO:  [0m
+[0;32mI (13117) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (13117) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (13117) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (13117) GATTC_DEMO:  [0m
+[0;32mI (13157) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (13157) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (13157) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (13167) GATTC_DEMO: iTAG            [0m
+[0;32mI (13167) GATTC_DEMO:  [0m
+[0;32mI (13217) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (13217) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (13217) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (13217) GATTC_DEMO:  [0m
+[0;32mI (13317) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (13317) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (13317) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (13317) GATTC_DEMO:  [0m
+[0;32mI (13357) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (13357) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (13357) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (13367) GATTC_DEMO:  [0m
+[0;32mI (13367) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (13377) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (13377) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (13387) GATTC_DEMO: iTAG            [0m
+[0;32mI (13387) GATTC_DEMO:  [0m
+[0;32mI (13417) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (13417) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (13417) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (13417) GATTC_DEMO:  [0m
+[0;32mI (13467) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (13467) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (13467) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (13467) GATTC_DEMO:  [0m
+[0;32mI (13517) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (13517) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (13517) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (13517) GATTC_DEMO:  [0m
+[0;32mI (13567) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (13567) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (13567) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (13567) GATTC_DEMO:  [0m
+[0;32mI (13617) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (13617) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (13617) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (13617) GATTC_DEMO:  [0m
+[0;32mI (13667) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (13667) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (13667) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (13667) GATTC_DEMO:  [0m
+[0;32mI (13717) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (13717) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (13717) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (13717) GATTC_DEMO:  [0m
+[0;32mI (13767) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (13767) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (13767) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (13767) GATTC_DEMO:  [0m
+[0;32mI (13817) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (13817) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (13817) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (13817) GATTC_DEMO:  [0m
+[0;32mI (13867) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (13867) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (13867) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (13867) GATTC_DEMO:  [0m
+[0;32mI (13967) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (13967) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (13967) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (13967) GATTC_DEMO:  [0m
+[0;32mI (14417) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (14417) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (14417) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (14417) GATTC_DEMO:  [0m
+[0;32mI (14467) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (14467) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (14467) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (14467) GATTC_DEMO:  [0m
+[0;32mI (14517) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (14517) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (14517) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (14517) GATTC_DEMO:  [0m
+[0;32mI (14567) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (14567) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (14567) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (14567) GATTC_DEMO:  [0m
+[0;32mI (14617) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (14617) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (14617) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (14617) GATTC_DEMO:  [0m
+[0;32mI (14667) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (14667) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (14667) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (14667) GATTC_DEMO:  [0m
+[0;32mI (14717) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (14717) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (14717) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (14717) GATTC_DEMO:  [0m
+[0;32mI (14767) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (14767) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (14767) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (14767) GATTC_DEMO:  [0m
+[0;32mI (14817) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (14817) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (14817) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (14817) GATTC_DEMO:  [0m
+[0;32mI (14867) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (14867) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (14867) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (14867) GATTC_DEMO:  [0m
+[0;32mI (14967) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (14967) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (14967) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (14967) GATTC_DEMO:  [0m
+[0;32mI (14987) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (14987) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (14987) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (14987) GATTC_DEMO: iTAG            [0m
+[0;32mI (14997) GATTC_DEMO:  [0m
+[0;32mI (15067) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (15067) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (15067) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (15067) GATTC_DEMO:  [0m
+[0;32mI (15187) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (15187) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (15187) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (15187) GATTC_DEMO: iTAG            [0m
+[0;32mI (15197) GATTC_DEMO:  [0m
+[0;32mI (15387) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (15387) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (15387) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (15397) GATTC_DEMO: iTAG            [0m
+[0;32mI (15397) GATTC_DEMO:  [0m
+[0;32mI (15467) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (15467) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (15467) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (15467) GATTC_DEMO:  [0m
+[0;32mI (15517) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (15517) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (15517) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (15517) GATTC_DEMO:  [0m
+[0;32mI (15567) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (15567) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (15567) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (15567) GATTC_DEMO:  [0m
+[0;32mI (15587) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (15587) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (15597) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (15597) GATTC_DEMO: iTAG            [0m
+[0;32mI (15607) GATTC_DEMO:  [0m
+[0;32mI (15667) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (15667) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (15667) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (15667) GATTC_DEMO:  [0m
+[0;32mI (15717) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (15717) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (15717) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (15717) GATTC_DEMO:  [0m
+[0;32mI (15767) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (15767) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (15767) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (15767) GATTC_DEMO:  [0m
+[0;32mI (15797) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (15797) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (15797) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (15797) GATTC_DEMO: iTAG            [0m
+[0;32mI (15807) GATTC_DEMO:  [0m
+[0;32mI (15867) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (15867) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (15867) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (15867) GATTC_DEMO:  [0m
+[0;32mI (15917) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (15917) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (15917) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (15917) GATTC_DEMO:  [0m
+[0;32mI (15967) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (15967) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (15967) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (15967) GATTC_DEMO:  [0m
+[0;32mI (15997) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (15997) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (15997) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (15997) GATTC_DEMO: iTAG            [0m
+[0;32mI (16007) GATTC_DEMO:  [0m
+[0;32mI (16067) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (16067) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (16067) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (16067) GATTC_DEMO:  [0m
+[0;32mI (16117) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (16117) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (16117) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (16117) GATTC_DEMO:  [0m
+[0;32mI (16197) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (16197) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (16197) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (16207) GATTC_DEMO: iTAG            [0m
+[0;32mI (16207) GATTC_DEMO:  [0m
+[0;32mI (16217) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (16217) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (16227) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (16227) GATTC_DEMO:  [0m
+[0;32mI (16397) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (16397) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (16407) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (16407) GATTC_DEMO: iTAG            [0m
+[0;32mI (16417) GATTC_DEMO:  [0m
+[0;32mI (16607) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (16607) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (16607) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (16607) GATTC_DEMO: iTAG            [0m
+[0;32mI (16617) GATTC_DEMO:  [0m
+[0;32mI (16717) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (16717) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (16717) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (16717) GATTC_DEMO:  [0m
+[0;32mI (16807) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (16807) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (16807) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (16817) GATTC_DEMO:  [0m
+[0;32mI (16817) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (16817) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (16827) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (16837) GATTC_DEMO: iTAG            [0m
+[0;32mI (16837) GATTC_DEMO:  [0m
+[0;32mI (16867) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (16867) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (16867) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (16867) GATTC_DEMO:  [0m
+[0;32mI (16917) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (16917) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (16917) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (16917) GATTC_DEMO:  [0m
+[0;32mI (16967) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (16967) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (16967) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (16967) GATTC_DEMO:  [0m
+[0;32mI (17007) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (17007) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (17007) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (17017) GATTC_DEMO: iTAG            [0m
+[0;32mI (17017) GATTC_DEMO:  [0m
+[0;32mI (17067) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (17067) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (17067) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (17067) GATTC_DEMO:  [0m
+[0;32mI (17167) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (17167) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (17167) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (17167) GATTC_DEMO:  [0m
+[0;32mI (17207) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (17207) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (17217) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (17217) GATTC_DEMO: iTAG            [0m
+[0;32mI (17217) GATTC_DEMO:  [0m
+[0;32mI (17267) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (17267) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (17267) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (17267) GATTC_DEMO:  [0m
+[0;32mI (17367) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (17367) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (17367) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (17367) GATTC_DEMO:  [0m
+[0;32mI (17457) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (17457) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (17457) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (17457) GATTC_DEMO:  [0m
+[0;32mI (17467) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (17467) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (17477) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (17477) GATTC_DEMO:  [0m
+[0;32mI (17557) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (17557) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (17557) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (17567) GATTC_DEMO:  [0m
+[0;32mI (17567) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (17577) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (17577) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (17587) GATTC_DEMO:  [0m
+[0;32mI (17667) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (17667) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (17667) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (17667) GATTC_DEMO:  [0m
+[0;32mI (17767) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (17767) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (17767) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (17767) GATTC_DEMO:  [0m
+[0;32mI (17867) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (17867) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (17867) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (17867) GATTC_DEMO:  [0m
+[0;32mI (17967) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (17967) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (17967) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (17967) GATTC_DEMO:  [0m
+[0;32mI (18017) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (18017) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (18017) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (18017) GATTC_DEMO:  [0m
+[0;32mI (18067) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (18067) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (18067) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (18067) GATTC_DEMO:  [0m
+[0;32mI (18117) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (18117) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (18117) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (18117) GATTC_DEMO:  [0m
+[0;32mI (18167) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (18167) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (18167) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (18167) GATTC_DEMO:  [0m
+[0;32mI (18217) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (18217) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (18217) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (18217) GATTC_DEMO:  [0m
+[0;32mI (18317) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (18317) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (18317) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (18317) GATTC_DEMO:  [0m
+[0;32mI (18417) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (18417) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (18417) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (18417) GATTC_DEMO:  [0m
+[0;32mI (18517) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (18517) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (18517) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (18517) GATTC_DEMO:  [0m
+[0;32mI (18617) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (18617) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (18617) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (18617) GATTC_DEMO:  [0m
+[0;32mI (18917) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (18917) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (18917) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (18917) GATTC_DEMO:  [0m
+[0;32mI (19017) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (19017) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (19017) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (19017) GATTC_DEMO:  [0m
+[0;32mI (19037) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (19037) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (19037) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (19047) GATTC_DEMO:  [0m
+[0;32mI (19067) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (19067) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (19067) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (19067) GATTC_DEMO: iTAG            [0m
+[0;32mI (19077) GATTC_DEMO:  [0m
+[0;32mI (19117) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (19117) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (19117) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (19117) GATTC_DEMO:  [0m
+[0;32mI (19167) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (19167) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (19167) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (19167) GATTC_DEMO:  [0m
+[0;32mI (19217) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (19217) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (19217) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (19217) GATTC_DEMO:  [0m
+[0;32mI (19237) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (19237) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (19237) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (19247) GATTC_DEMO: iTAG            [0m
+[0;32mI (19247) GATTC_DEMO:  [0m
+[0;32mI (19267) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (19267) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (19267) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (19267) GATTC_DEMO:  [0m
+[0;32mI (19317) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (19317) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (19317) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (19317) GATTC_DEMO:  [0m
+[0;32mI (19367) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (19367) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (19367) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (19367) GATTC_DEMO:  [0m
+[0;32mI (19417) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (19417) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (19417) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (19417) GATTC_DEMO:  [0m
+[0;32mI (19447) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (19447) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (19447) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (19447) GATTC_DEMO: iTAG            [0m
+[0;32mI (19457) GATTC_DEMO:  [0m
+[0;32mI (19467) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (19467) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (19467) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (19477) GATTC_DEMO:  [0m
+[0;32mI (19517) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (19517) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (19517) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (19517) GATTC_DEMO:  [0m
+[0;32mI (19567) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (19567) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (19567) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (19567) GATTC_DEMO:  [0m
+[0;32mI (19647) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (19647) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (19647) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (19647) GATTC_DEMO: iTAG            [0m
+[0;32mI (19657) GATTC_DEMO:  [0m
+[0;32mI (19847) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (19847) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (19847) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (19857) GATTC_DEMO: iTAG            [0m
+[0;32mI (19857) GATTC_DEMO:  [0m
+[0;32mI (20047) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (20047) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (20047) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (20057) GATTC_DEMO:  [0m
+[0;32mI (20067) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (20067) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (20067) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (20077) GATTC_DEMO: iTAG            [0m
+[0;32mI (20077) GATTC_DEMO:  [0m
+[0;32mI (20167) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (20167) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (20167) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (20167) GATTC_DEMO:  [0m
+[0;32mI (20217) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (20217) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (20217) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (20217) GATTC_DEMO:  [0m
+[0;32mI (20257) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (20257) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (20257) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (20257) GATTC_DEMO:  [0m
+[0;32mI (20267) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (20267) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (20277) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (20277) GATTC_DEMO: iTAG            [0m
+[0;32mI (20287) GATTC_DEMO:  [0m
+[0;32mI (20367) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (20367) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (20367) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (20367) GATTC_DEMO:  [0m
+[0;32mI (20417) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (20417) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (20417) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (20417) GATTC_DEMO:  [0m
+[0;32mI (20457) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (20457) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (20457) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (20467) GATTC_DEMO: iTAG            [0m
+[0;32mI (20467) GATTC_DEMO:  [0m
+[0;32mI (20467) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (20477) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (20477) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (20487) GATTC_DEMO:  [0m
+[0;32mI (20567) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (20567) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (20567) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (20567) GATTC_DEMO:  [0m
+[0;32mI (20657) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (20657) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (20657) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (20667) GATTC_DEMO: iTAG            [0m
+[0;32mI (20667) GATTC_DEMO:  [0m
+[0;32mI (20867) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (20867) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (20867) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (20867) GATTC_DEMO: iTAG            [0m
+[0;32mI (20877) GATTC_DEMO:  [0m
+[0;32mI (21067) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (21067) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (21067) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (21067) GATTC_DEMO:  [0m
+[0;32mI (21077) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (21077) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (21087) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (21087) GATTC_DEMO: iTAG            [0m
+[0;32mI (21097) GATTC_DEMO:  [0m
+[0;32mI (21167) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (21167) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (21167) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (21167) GATTC_DEMO:  [0m
+[0;32mI (21267) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (21267) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (21267) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (21267) GATTC_DEMO:  [0m
+[0;32mI (21317) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (21317) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (21317) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (21317) GATTC_DEMO:  [0m
+[0;32mI (21367) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (21367) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (21367) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (21367) GATTC_DEMO:  [0m
+[0;32mI (21417) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (21417) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (21417) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (21417) GATTC_DEMO:  [0m
+[0;32mI (21467) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (21467) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (21467) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (21467) GATTC_DEMO:  [0m
+[0;32mI (21517) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (21517) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (21517) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (21517) GATTC_DEMO:  [0m
+[0;32mI (21567) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (21567) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (21567) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (21567) GATTC_DEMO:  [0m
+[0;32mI (21617) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (21617) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (21617) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (21617) GATTC_DEMO:  [0m
+[0;32mI (21667) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (21667) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (21667) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (21667) GATTC_DEMO:  [0m
+[0;32mI (21707) GATTC_DEMO: cc ce 4a 21 10 c0 [0m
+[0;32mI (21707) GATTC_DEMO: searched Adv Data Len 8, Scan Response Len 0[0m
+[0;32mI (21707) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (21717) GATTC_DEMO:  [0m
+[0;32mI (21717) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (21717) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (21727) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (21737) GATTC_DEMO:  [0m
+[0;32mI (21817) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (21817) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (21817) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (21817) GATTC_DEMO:  [0m
+[0;32mI (22317) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (22317) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (22317) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (22317) GATTC_DEMO:  [0m
+[0;32mI (22367) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (22367) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (22367) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (22367) GATTC_DEMO:  [0m
+[0;32mI (22417) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (22417) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (22417) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (22417) GATTC_DEMO:  [0m
+[0;32mI (22467) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (22467) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (22467) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (22467) GATTC_DEMO:  [0m
+[0;32mI (22517) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (22517) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (22517) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (22517) GATTC_DEMO:  [0m
+[0;32mI (22567) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (22567) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (22567) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (22567) GATTC_DEMO:  [0m
+[0;32mI (22617) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (22617) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (22617) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (22617) GATTC_DEMO:  [0m
+[0;32mI (22687) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (22687) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (22687) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (22687) GATTC_DEMO: iTAG            [0m
+[0;32mI (22697) GATTC_DEMO:  [0m
+[0;32mI (22717) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (22717) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (22717) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (22717) GATTC_DEMO:  [0m
+[0;32mI (22767) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (22767) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (22767) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (22767) GATTC_DEMO:  [0m
+[0;32mI (22817) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (22817) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (22817) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (22817) GATTC_DEMO:  [0m
+[0;32mI (22867) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (22867) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (22867) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (22867) GATTC_DEMO:  [0m
+[0;32mI (22887) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (22887) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (22887) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (22897) GATTC_DEMO: iTAG            [0m
+[0;32mI (22897) GATTC_DEMO:  [0m
+[0;32mI (22967) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (22967) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (22967) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (22967) GATTC_DEMO:  [0m
+[0;32mI (23067) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (23067) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (23067) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (23067) GATTC_DEMO:  [0m
+[0;32mI (23087) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (23087) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (23087) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (23097) GATTC_DEMO: iTAG            [0m
+[0;32mI (23097) GATTC_DEMO:  [0m
+[0;32mI (23167) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (23167) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (23167) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (23167) GATTC_DEMO:  [0m
+[0;32mI (23297) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (23297) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (23297) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (23297) GATTC_DEMO: iTAG            [0m
+[0;32mI (23307) GATTC_DEMO:  [0m
+[0;32mI (23367) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (23367) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (23367) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (23367) GATTC_DEMO:  [0m
+[0;32mI (23467) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (23467) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (23467) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (23467) GATTC_DEMO:  [0m
+[0;32mI (23497) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (23497) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (23497) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (23497) GATTC_DEMO: iTAG            [0m
+[0;32mI (23507) GATTC_DEMO:  [0m
+[0;32mI (23567) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (23567) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (23567) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (23567) GATTC_DEMO:  [0m
+[0;32mI (23667) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (23667) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (23667) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (23667) GATTC_DEMO:  [0m
+[0;32mI (23697) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (23697) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (23697) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (23707) GATTC_DEMO:  [0m
+[0;32mI (23707) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (23717) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (23717) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (23727) GATTC_DEMO: iTAG            [0m
+[0;32mI (23727) GATTC_DEMO:  [0m
+[0;32mI (23737) GATTC_DEMO: cc ce 4a 21 10 c0 [0m
+[0;32mI (23737) GATTC_DEMO: searched Adv Data Len 8, Scan Response Len 0[0m
+[0;32mI (23747) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (23747) GATTC_DEMO:  [0m
+[0;32mI (23767) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (23767) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (23767) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (23767) GATTC_DEMO:  [0m
+[0;32mI (23817) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (23817) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (23817) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (23817) GATTC_DEMO:  [0m
+[0;32mI (23867) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (23867) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (23867) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (23867) GATTC_DEMO:  [0m
+[0;32mI (23897) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (23897) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (23897) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (23907) GATTC_DEMO:  [0m
+[0;32mI (23917) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (23917) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (23917) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (23927) GATTC_DEMO: iTAG            [0m
+[0;32mI (23927) GATTC_DEMO:  [0m
+[0;32mI (24017) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (24017) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (24017) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (24017) GATTC_DEMO:  [0m
+[0;32mI (24107) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (24107) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (24107) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (24107) GATTC_DEMO:  [0m
+[0;32mI (24117) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (24117) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (24127) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (24127) GATTC_DEMO: iTAG            [0m
+[0;32mI (24137) GATTC_DEMO:  [0m
+[0;32mI (24217) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (24217) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (24217) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (24217) GATTC_DEMO:  [0m
+[0;32mI (24307) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (24307) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (24307) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (24307) GATTC_DEMO:  [0m
+[0;32mI (24317) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (24317) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (24327) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (24327) GATTC_DEMO: iTAG            [0m
+[0;32mI (24337) GATTC_DEMO:  [0m
+[0;32mI (24337) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (24347) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (24347) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (24357) GATTC_DEMO:  [0m
+[0;32mI (24507) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (24507) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (24507) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (24517) GATTC_DEMO: iTAG            [0m
+[0;32mI (24517) GATTC_DEMO:  [0m
+[0;32mI (24707) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (24707) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (24707) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (24717) GATTC_DEMO:  [0m
+[0;32mI (24717) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (24727) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (24727) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (24737) GATTC_DEMO: iTAG            [0m
+[0;32mI (24737) GATTC_DEMO:  [0m
+[0;32mI (24767) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (24767) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (24767) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (24767) GATTC_DEMO:  [0m
+[0;32mI (24867) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (24867) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (24867) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (24867) GATTC_DEMO:  [0m
+[0;32mI (24917) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (24917) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (24917) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (24917) GATTC_DEMO:  [0m
+[0;32mI (24927) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (24927) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (24937) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (24937) GATTC_DEMO: iTAG            [0m
+[0;32mI (24947) GATTC_DEMO:  [0m
+[0;32mI (24967) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (24967) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (24967) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (24967) GATTC_DEMO:  [0m
+[0;32mI (25067) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (25067) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (25067) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (25067) GATTC_DEMO:  [0m
+[0;32mI (25167) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (25167) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (25167) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (25167) GATTC_DEMO:  [0m
+[0;32mI (25267) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (25267) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (25267) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (25267) GATTC_DEMO:  [0m
+[0;32mI (25367) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (25367) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (25367) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (25367) GATTC_DEMO:  [0m
+[0;32mI (25467) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (25467) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (25467) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (25467) GATTC_DEMO:  [0m
+[0;32mI (25667) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (25667) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (25667) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (25667) GATTC_DEMO:  [0m
+[0;32mI (25717) GATTC_DEMO: cc ce 4a 21 10 c0 [0m
+[0;32mI (25717) GATTC_DEMO: searched Adv Data Len 8, Scan Response Len 0[0m
+[0;32mI (25717) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (25717) GATTC_DEMO:  [0m
+[0;32mI (25767) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (25767) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (25767) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (25767) GATTC_DEMO:  [0m
+[0;32mI (25867) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (25867) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (25867) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (25867) GATTC_DEMO:  [0m
+[0;32mI (25967) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (25967) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (25967) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (25967) GATTC_DEMO:  [0m
+[0;32mI (26067) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (26067) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (26067) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (26067) GATTC_DEMO:  [0m
+[0;32mI (26117) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (26117) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (26117) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (26117) GATTC_DEMO:  [0m
+[0;32mI (26167) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (26167) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (26167) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (26167) GATTC_DEMO:  [0m
+[0;32mI (26217) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (26217) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (26217) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (26217) GATTC_DEMO:  [0m
+[0;32mI (26317) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (26317) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (26317) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (26317) GATTC_DEMO:  [0m
+[0;32mI (26417) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (26417) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (26417) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (26417) GATTC_DEMO:  [0m
+[0;32mI (26517) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (26517) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (26517) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (26517) GATTC_DEMO:  [0m
+[0;32mI (26537) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (26537) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (26537) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (26537) GATTC_DEMO: iTAG            [0m
+[0;32mI (26547) GATTC_DEMO:  [0m
+[0;32mI (26617) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (26617) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (26617) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (26617) GATTC_DEMO:  [0m
+[0;32mI (26717) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (26717) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (26717) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (26717) GATTC_DEMO:  [0m
+[0;32mI (26737) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (26737) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (26737) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (26747) GATTC_DEMO: iTAG            [0m
+[0;32mI (26747) GATTC_DEMO:  [0m
+[0;32mI (26817) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (26817) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (26817) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (26817) GATTC_DEMO:  [0m
+[0;32mI (26917) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (26917) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (26917) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (26917) GATTC_DEMO:  [0m
+[0;32mI (26937) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (26937) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (26937) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (26947) GATTC_DEMO: iTAG            [0m
+[0;32mI (26947) GATTC_DEMO:  [0m
+[0;32mI (27017) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (27017) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (27017) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (27017) GATTC_DEMO:  [0m
+[0;32mI (27147) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (27147) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (27147) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (27147) GATTC_DEMO: iTAG            [0m
+[0;32mI (27157) GATTC_DEMO:  [0m
+[0;32mI (27267) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (27267) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (27267) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (27267) GATTC_DEMO:  [0m
+[0;32mI (27347) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (27347) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (27347) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (27347) GATTC_DEMO:  [0m
+[0;32mI (27367) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (27367) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (27367) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (27367) GATTC_DEMO: iTAG            [0m
+[0;32mI (27377) GATTC_DEMO:  [0m
+[0;32mI (27467) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (27467) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (27467) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (27467) GATTC_DEMO:  [0m
+[0;32mI (27547) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (27547) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (27547) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (27557) GATTC_DEMO:  [0m
+[0;32mI (27557) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (27557) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (27567) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (27577) GATTC_DEMO: iTAG            [0m
+[0;32mI (27577) GATTC_DEMO:  [0m
+[0;32mI (27577) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (27587) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (27587) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (27597) GATTC_DEMO:  [0m
+[0;32mI (27657) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (27657) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (27667) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (27667) GATTC_DEMO:  [0m
+[0;32mI (27667) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (27677) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (27677) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (27687) GATTC_DEMO:  [0m
+[0;32mI (27747) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (27747) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (27747) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (27757) GATTC_DEMO:  [0m
+[0;32mI (27767) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (27767) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (27767) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (27777) GATTC_DEMO: iTAG            [0m
+[0;32mI (27777) GATTC_DEMO:  [0m
+[0;32mI (27787) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (27787) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (27797) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (27797) GATTC_DEMO:  [0m
+[0;32mI (27867) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (27867) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (27867) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (27867) GATTC_DEMO:  [0m
+[0;32mI (27967) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (27967) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (27967) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (27967) GATTC_DEMO:  [0m
+[0;32mI (28157) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (28157) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (28157) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (28167) GATTC_DEMO: iTAG            [0m
+[0;32mI (28167) GATTC_DEMO:  [0m
+[0;32mI (28357) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (28357) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (28357) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (28367) GATTC_DEMO: iTAG            [0m
+[0;32mI (28367) GATTC_DEMO:  [0m
+[0;32mI (28517) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (28517) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (28517) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (28517) GATTC_DEMO:  [0m
+[0;32mI (28557) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (28557) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (28567) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (28567) GATTC_DEMO: iTAG            [0m
+[0;32mI (28567) GATTC_DEMO:  [0m
+[0;32mI (28617) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (28617) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (28617) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (28617) GATTC_DEMO:  [0m
+[0;32mI (28697) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (28697) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (28697) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (28707) GATTC_DEMO:  [0m
+[0;32mI (28707) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (28707) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (28717) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (28727) GATTC_DEMO:  [0m
+[0;32mI (28767) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (28767) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (28767) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (28767) GATTC_DEMO: iTAG            [0m
+[0;32mI (28777) GATTC_DEMO:  [0m
+[0;32mI (28797) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (28797) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (28797) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (28807) GATTC_DEMO:  [0m
+[0;32mI (28807) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (28817) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (28817) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (28827) GATTC_DEMO:  [0m
+[0;32mI (28917) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (28917) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (28917) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (28917) GATTC_DEMO:  [0m
+[0;32mI (29017) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (29017) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (29017) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (29017) GATTC_DEMO:  [0m
+[0;32mI (29117) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (29117) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (29117) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (29117) GATTC_DEMO:  [0m
+[0;32mI (29467) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (29467) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (29467) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (29467) GATTC_DEMO:  [0m
+[0;32mI (29567) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (29567) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (29567) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (29567) GATTC_DEMO:  [0m
+[0;32mI (29667) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (29667) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (29667) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (29667) GATTC_DEMO:  [0m
+[0;32mI (29717) GATTC_DEMO: cc ce 4a 21 10 c0 [0m
+[0;32mI (29717) GATTC_DEMO: searched Adv Data Len 8, Scan Response Len 0[0m
+[0;32mI (29717) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (29717) GATTC_DEMO:  [0m
+[0;32mI (29767) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (29767) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (29767) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (29767) GATTC_DEMO:  [0m
+[0;32mI (29967) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (29967) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (29967) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (29967) GATTC_DEMO:  [0m
+[0;32mI (30067) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (30067) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (30067) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (30067) GATTC_DEMO:  [0m
+[0;32mI (30167) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (30167) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (30167) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (30167) GATTC_DEMO:  [0m
+[0;32mI (30267) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (30267) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (30267) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (30267) GATTC_DEMO:  [0m
+[0;32mI (30367) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (30367) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (30367) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (30367) GATTC_DEMO:  [0m
+[0;32mI (30387) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (30387) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (30387) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (30387) GATTC_DEMO: iTAG            [0m
+[0;32mI (30397) GATTC_DEMO:  [0m
+[0;32mI (30467) GATTC_DEMO: 39 52 a3 84 44 d2 [0m
+[0;32mI (30467) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (30467) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (30467) GATTC_DEMO:  [0m
+[0;32mI (30517) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (30517) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (30517) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (30517) GATTC_DEMO:  [0m
+[0;32mI (30587) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (30587) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (30587) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (30597) GATTC_DEMO: iTAG            [0m
+[0;32mI (30597) GATTC_DEMO:  [0m
+[0;32mI (30617) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (30617) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (30617) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (30617) GATTC_DEMO:  [0m
+[0;32mI (30717) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (30717) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (30717) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (30717) GATTC_DEMO:  [0m
+[0;32mI (30787) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (30787) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (30787) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (30797) GATTC_DEMO: iTAG            [0m
+[0;32mI (30797) GATTC_DEMO:  [0m
+[0;32mI (30817) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (30817) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (30817) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (30817) GATTC_DEMO:  [0m
+[0;32mI (30987) GATTC_DEMO: ff ff 1b 0a f9 96 [0m
+[0;32mI (30997) GATTC_DEMO: searched Adv Data Len 14, Scan Response Len 18[0m
+[0;32mI (30997) GATTC_DEMO: searched Device Name Len 16[0m
+[0;32mI (30997) GATTC_DEMO: iTAG            [0m
+[0;32mI (31007) GATTC_DEMO:  [0m
+[0;32mI (31017) GATTC_DEMO: 34 01 45 8a 24 27 [0m
+[0;32mI (31017) GATTC_DEMO: searched Adv Data Len 31, Scan Response Len 0[0m
+[0;32mI (31017) GATTC_DEMO: searched Device Name Len 0[0m
+[0;32mI (31027) GATTC_DEMO:  [0m
