@@ -1,0 +1,141 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 26 2024 14:46:20[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2647ch (156796) map[0m
+[0;32mI (158) esp_image: segment 1: paddr=000364a4 vaddr=3ffb0000 size=03f38h ( 16184) load[0m
+[0;32mI (164) esp_image: segment 2: paddr=0003a3e4 vaddr=40080000 size=05c34h ( 23604) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a2760h (665440) map[0m
+[0;32mI (402) esp_image: segment 4: paddr=000e2788 vaddr=40085c34 size=1188ch ( 71820) load[0m
+[0;32mI (442) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (442) boot: Disabling RNG early entropy source...[0m
+[0;32mI (454) cpu_start: Multicore app[0m
+[0;32mI (463) cpu_start: Pro cpu start user code[0m
+[0;32mI (463) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (463) app_init: Application information:[0m
+[0;32mI (466) app_init: Project name:     wifi[0m
+[0;32mI (470) app_init: App version:      1[0m
+[0;32mI (474) app_init: Compile time:     Oct 26 2024 14:54:38[0m
+[0;32mI (480) app_init: ELF file SHA256:  0e7de12e6...[0m
+[0;32mI (486) app_init: ESP-IDF:          v5.3.1[0m
+[0;32mI (491) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (495) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (500) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (505) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (512) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (518) heap_init: At 3FFB8750 len 000278B0 (158 KiB): DRAM[0m
+[0;32mI (525) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (531) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (537) heap_init: At 400974C0 len 00008B40 (34 KiB): IRAM[0m
+[0;32mI (545) spi_flash: detected chip: generic[0m
+[0;32mI (548) spi_flash: flash io: dio[0m
+[0;33mW (552) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (566) main_task: Started on CPU0[0m
+[0;32mI (576) main_task: Calling app_main()[0m
+[0;32mI (606) wifi:wifi driver task: 3ffc0680, prio:23, stack:6656, core=0[0m
+[0;32mI (616) wifi:wifi firmware version: ccaebfa[0m
+[0;32mI (616) wifi:wifi certification version: v7.0[0m
+[0;32mI (616) wifi:config NVS flash: enabled[0m
+[0;32mI (616) wifi:config nano formating: disabled[0m
+[0;32mI (616) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (626) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (626) wifi:Init management short buffer num: 32[0m
+[0;32mI (636) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (636) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (636) wifi:Init static rx buffer num: 10[0m
+[0;32mI (646) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (646) wifi_init: rx ba win: 6[0m
+[0;32mI (656) wifi_init: accept mbox: 6[0m
+[0;32mI (656) wifi_init: tcpip mbox: 32[0m
+[0;32mI (656) wifi_init: udp mbox: 6[0m
+[0;32mI (666) wifi_init: tcp mbox: 6[0m
+[0;32mI (666) wifi_init: tcp tx win: 5760[0m
+[0;32mI (676) wifi_init: tcp rx win: 5760[0m
+[0;32mI (676) wifi_init: tcp mss: 1440[0m
+[0;32mI (676) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (686) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (686) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (696) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;32mI (786) wifi:mode : sta (78:ee:4c:00:06:5c)[0m
+[0;32mI (786) wifi:enable tsf[0m
+[0;32mI (796) main_task: Returned from app_main()[0m
+[0;32mI (806) wifi:new:<2,0>, old:<1,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (806) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (816) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (826) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (826) wifi:state: run -> init (0x4a0)[0m
+[0;32mI (836) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (936) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (936) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (956) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (976) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1036) noise_detector: 0[0m
+[0;32mI (1036) noise_detector: Retrying connection to the WiFi...[0m
+[0;32mI (1176) wifi:connected with MyNET_Fiber_5385, aid = 7, channel 2, BW20, bssid = 9c:9d:7e:2d:19:00[0m
+[0;32mI (1176) wifi:security: WPA2-PSK, phy: bgn, rssi: -87[0m
+[0;32mI (1176) wifi:pm start, type: 1[0m
+
+[0;32mI (1176) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1346) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (15686) esp_netif_handlers: sta ip: 192.168.18.146, mask: 255.255.255.0, gw: 192.168.18.1[0m
+[0;32mI (15686) noise_detector: 1[0m
+[0;32mI (15686) noise_detector: Connected to WiFi![0m
+[0;32mI (15706) wifi:<ba-add>idx:0 (ifx:0, 9c:9d:7e:2d:19:00), tid:0, ssn:2, winSize:64[0m
+[0;32mI (15996) noise_detector: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (15996) noise_detector: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (16206) noise_detector: HTTP_EVENT_ON_HEADER, Key=Date, Value=Sat, 30 Nov 2024 15:26:24 GMT[0m
+[0;32mI (16206) noise_detector: HTTP_EVENT_ON_HEADER, Key=Content-Type, Value=text/html; charset=utf-8[0m
+[0;32mI (16206) noise_detector: HTTP_EVENT_ON_HEADER, Key=Content-Length, Value=9593[0m
+[0;32mI (16216) noise_detector: HTTP_EVENT_ON_HEADER, Key=Connection, Value=keep-alive[0m
+[0;32mI (16226) noise_detector: HTTP_EVENT_ON_HEADER, Key=Server, Value=gunicorn/19.9.0[0m
+[0;32mI (16236) noise_detector: HTTP_EVENT_ON_HEADER, Key=Access-Control-Allow-Origin, Value=*[0m
+[0;32mI (16246) noise_detector: HTTP_EVENT_ON_HEADER, Key=Access-Control-Allow-Credentials, Value=true[0m
+[0;32mI (16256) noise_detector: HTTP_EVENT_ON_DATA, len=512[0m
+[0;32mI (16256) noise_detector: HTTP_EVENT_ON_DATA, len=512[0m
+[0;32mI (16266) noise_detector: HTTP_EVENT_ON_DATA, len=512[0m
+[0;32mI (16266) noise_detector: HTTP_EVENT_ON_DATA, len=512[0m
+[0;32mI (16276) noise_detector: HTTP_EVENT_ON_DATA, len=512[0m
+[0;32mI (16286) noise_detector: HTTP_EVENT_ON_DATA, len=512[0m
+[0;32mI (16286) noise_detector: HTTP_EVENT_ON_DATA, len=512[0m
+[0;32mI (16296) noise_detector: HTTP_EVENT_ON_DATA, len=512[0m
+[0;32mI (16296) noise_detector: HTTP_EVENT_ON_DATA, len=512[0m
+[0;32mI (16306) noise_detector: HTTP_EVENT_ON_DATA, len=512[0m
+[0;32mI (16306) noise_detector: HTTP_EVENT_ON_DATA, len=401[0m
+[0;32mI (16506) noise_detector: HTTP_EVENT_ON_DATA, len=512[0m
+[0;32mI (16506) noise_detector: HTTP_EVENT_ON_DATA, len=512[0m
+[0;32mI (16516) noise_detector: HTTP_EVENT_ON_DATA, len=388[0m
+[0;32mI (16526) noise_detector: HTTP_EVENT_ON_DATA, len=363[0m
+[0;32mI (16526) noise_detector: HTTP_EVENT_ON_DATA, len=512[0m
+[0;32mI (16526) noise_detector: HTTP_EVENT_ON_DATA, len=512[0m
+[0;32mI (16536) noise_detector: HTTP_EVENT_ON_DATA, len=25[0m
+[0;32mI (16546) noise_detector: HTTP_EVENT_ON_DATA, len=512[0m
+[0;32mI (16546) noise_detector: HTTP_EVENT_ON_DATA, len=512[0m
+[0;32mI (16546) noise_detector: HTTP_EVENT_ON_DATA, len=224[0m
+[0;32mI (16556) noise_detector: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (16556) noise_detector: HTTP GET Status = 200, content_length = 9593[0m
+[0;32mI (16566) noise_detector: Other event id:7[0m
+[0;32mI (16926) noise_detector: MQTT_EVENT_CONNECTED[0m
+[0;32mI (17126) noise_detector: MQTT_EVENT_PUBLISHED, msg_id=50685[0m
+[0;32mI (1017896) wifi:bcn_timeout,ap_probe_send_start[0m

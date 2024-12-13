@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "wifi",
-    "project_version":    "1",
+    "project_version":    "29bfbc2-dirty",
     "project_path":       "C:/Projekty/IoT/wifi",
     "idf_path":           "C:/Espressif/frameworks/esp-idf-v5.3.1",
     "build_dir":          "C:/Projekty/IoT/wifi/build",

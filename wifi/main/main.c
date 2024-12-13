@@ -12,8 +12,10 @@
 #include "driver/gpio.h"
 #include "esp_http_client.h"
 #include "mqtt_client.h"
-#define WIFI_SSID "MyNET_Fiber_5385"   // Nazwa sieci WiFi  wifi_przemek
-#define WIFI_PASS "8b0fc920"           // Hasło do sieci WiFi xdxdxdxd
+#include <time.h>
+#include <cJSON.h> 
+#define WIFI_SSID "wifi_przemek"   // Nazwa sieci WiFi   MyNET_Fiber_5385 wifi_przemek
+#define WIFI_PASS "xdxdxdxd"           // Hasło do sieci WiFi   8b0fc920 xdxdxdxd
 #define LED_PIN GPIO_NUM_2  // Definiujemy GPIO2 jako pin LED
 #define AP_SSID "noise_detector"
 #define AP_PASS "qwerty123"
@@ -49,7 +51,7 @@ esp_err_t _http_event_handler(esp_http_client_event_t *evt) {
         case HTTP_EVENT_ON_DATA:
             if (!esp_http_client_is_chunked_response(evt->client)) {
                 ESP_LOGI(TAG, "HTTP_EVENT_ON_DATA, len=%d", evt->data_len);
-                printf("%.*s", evt->data_len, (char*)evt->data); 
+                // printf("%.*s", evt->data_len, (char*)evt->data); 
             }
             break;
         case HTTP_EVENT_ON_FINISH:
@@ -167,7 +169,46 @@ static esp_err_t mqtt_event_handler_cb(esp_mqtt_event_handle_t event)
     case MQTT_EVENT_CONNECTED:
         ESP_LOGI(TAG, "MQTT_EVENT_CONNECTED");
         // esp_mqtt_client_subscribe(client, "my_topic", 0);
-        esp_mqtt_client_publish(client, "my_topic", "Hi to all from ESP32 .........", 0, 1, 0);
+    while (1) {
+    float random_decibel = 30.0 + ((float)rand() / RAND_MAX) * (90.0 - 30.0);
+    time_t now = time(NULL);
+    struct tm *localTime = localtime(&now);
+    char timeString[100]; 
+    strftime(timeString, sizeof(timeString), "%Y-%m-%d %H:%M:%S", localTime);
+char noise_data_json[512];
+            snprintf(noise_data_json, sizeof(noise_data_json),
+                     "{"
+                     "\"sensor_id\": \"ESP32\","
+                     "\"timestamp\": \"%s\","
+                     "\"noise_data\": {"
+                     "\"decibels\": %.1f,"
+                     "\"status\": \"active\""
+                     "}"
+                     "}",
+                     timeString,
+                     random_decibel);
+
+            esp_mqtt_client_publish(client, "noise_detector_web/sensor1/noise_data", noise_data_json, 0, 1, 0);
+
+            char sensor_info_json[512];
+            snprintf(sensor_info_json, sizeof(sensor_info_json),
+                     "{"
+                     "\"sensor_id\": \"ESP32\","
+                     "\"location\": {"
+                     "\"city\": \"Krakow\","
+                     "\"street\": \"al. Adama Mickiewicza 30\","
+                     "\"latitude\": 50.064470,"
+                     "\"longitude\": 19.923290"
+                     "},"
+                     "\"additional_info\": {"
+                     "\"sensor_health\": \"good\""
+                     "}"
+                     "}");
+
+            esp_mqtt_client_publish(client, "noise_detector_web/sensor1/sensor_info", sensor_info_json, 0, 1, 0);
+
+            vTaskDelay(pdMS_TO_TICKS(15000));
+    }
         break;
     case MQTT_EVENT_DISCONNECTED:
         ESP_LOGI(TAG, "MQTT_EVENT_DISCONNECTED");

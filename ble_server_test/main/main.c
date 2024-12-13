@@ -19,6 +19,10 @@
 
 #include "sdkconfig.h"
 
+#ifndef CONFIG_LOG_MAXIMUM_LEVEL
+#define CONFIG_LOG_MAXIMUM_LEVEL 3 
+#endif
+
 #define GATTS_TAG "GATTS_DEMO"
 
 ///Declare the static function
@@ -42,6 +46,9 @@ static void gatts_profile_b_event_handler(esp_gatts_cb_event_t event, esp_gatt_i
 
 #define PREPARE_BUF_MAX_SIZE 1024
 
+#define MAX_WIFI_SSID_LENGTH 32
+char wifi_ssid[MAX_WIFI_SSID_LENGTH] = "default";
+
 static uint8_t char1_str[] = {0x11,0x22,0x33};
 static esp_gatt_char_prop_t a_property = 0;
 static esp_gatt_char_prop_t b_property = 0;
@@ -51,6 +58,12 @@ static esp_attr_value_t gatts_demo_char1_val =
     .attr_max_len = GATTS_DEMO_CHAR_VAL_LEN_MAX,
     .attr_len     = sizeof(char1_str),
     .attr_value   = char1_str,
+};
+
+static esp_attr_value_t gatts_wifi_ssid_val = {
+    .attr_max_len = MAX_WIFI_SSID_LENGTH,
+    .attr_len = sizeof(wifi_ssid),
+    .attr_value = (uint8_t *)wifi_ssid,
 };
 
 static uint8_t adv_config_done = 0;
@@ -333,60 +346,95 @@ static void gatts_profile_a_event_handler(esp_gatts_cb_event_t event, esp_gatt_i
         esp_ble_gatts_create_service(gatts_if, &gl_profile_tab[PROFILE_A_APP_ID].service_id, GATTS_NUM_HANDLE_TEST_A);
         break;
     case ESP_GATTS_READ_EVT: {
-        ESP_LOGI(GATTS_TAG, "GATT_READ_EVT, conn_id %d, trans_id %" PRIu32 ", handle %d", param->read.conn_id, param->read.trans_id, param->read.handle);
+        ESP_LOGI(GATTS_TAG, "GATT_READ_EVT, conn_id %d, trans_id %" PRIu32 ", handle %d", 
+                 param->read.conn_id, param->read.trans_id, param->read.handle);
+
         esp_gatt_rsp_t rsp;
         memset(&rsp, 0, sizeof(esp_gatt_rsp_t));
         rsp.attr_value.handle = param->read.handle;
-        rsp.attr_value.len = 4;
-        rsp.attr_value.value[0] = 0xde;
-        rsp.attr_value.value[1] = 0xed;
-        rsp.attr_value.value[2] = 0xbe;
-        rsp.attr_value.value[3] = 0xef;
+
+        // Populate response with wifi_ssid value
+        size_t ssid_length = strlen(wifi_ssid);
+        rsp.attr_value.len = ssid_length;
+        memcpy(rsp.attr_value.value, wifi_ssid, ssid_length);
+
         esp_ble_gatts_send_response(gatts_if, param->read.conn_id, param->read.trans_id,
                                     ESP_GATT_OK, &rsp);
         break;
     }
     case ESP_GATTS_WRITE_EVT: {
-        ESP_LOGI(GATTS_TAG, "GATT_WRITE_EVT, conn_id %d, trans_id %" PRIu32 ", handle %d", param->write.conn_id, param->write.trans_id, param->write.handle);
-        if (!param->write.is_prep){
-            ESP_LOGI(GATTS_TAG, "GATT_WRITE_EVT, value len %d, value :", param->write.len);
+        ESP_LOGI(GATTS_TAG, "GATT_WRITE_EVT, conn_id %d, trans_id %" PRIu32 ", handle %d", 
+                 param->write.conn_id, param->write.trans_id, param->write.handle);
+
+        // Check if this is a regular write or a prepared write
+        if (!param->write.is_prep) {
+            ESP_LOGI(GATTS_TAG, "GATT_WRITE_EVT, value len %d, value:", param->write.len);
             esp_log_buffer_hex(GATTS_TAG, param->write.value, param->write.len);
-            if (gl_profile_tab[PROFILE_A_APP_ID].descr_handle == param->write.handle && param->write.len == 2){
-                uint16_t descr_value = param->write.value[1]<<8 | param->write.value[0];
-                if (descr_value == 0x0001){
-                    if (a_property & ESP_GATT_CHAR_PROP_BIT_NOTIFY){
-                        ESP_LOGI(GATTS_TAG, "notify enable");
-                        uint8_t notify_data[15];
-                        for (int i = 0; i < sizeof(notify_data); ++i)
-                        {
-                            notify_data[i] = i%0xff;
-                        }
-                        //the size of notify_data[] need less than MTU size
-                        esp_ble_gatts_send_indicate(gatts_if, param->write.conn_id, gl_profile_tab[PROFILE_A_APP_ID].char_handle,
-                                                sizeof(notify_data), notify_data, false);
-                    }
-                }else if (descr_value == 0x0002){
-                    if (a_property & ESP_GATT_CHAR_PROP_BIT_INDICATE){
-                        ESP_LOGI(GATTS_TAG, "indicate enable");
-                        uint8_t indicate_data[15];
-                        for (int i = 0; i < sizeof(indicate_data); ++i)
-                        {
-                            indicate_data[i] = i%0xff;
-                        }
-                        //the size of indicate_data[] need less than MTU size
-                        esp_ble_gatts_send_indicate(gatts_if, param->write.conn_id, gl_profile_tab[PROFILE_A_APP_ID].char_handle,
-                                                sizeof(indicate_data), indicate_data, true);
-                    }
+
+            // Update wifi_ssid if write handle matches the characteristic handle
+            if (param->write.handle == gl_profile_tab[PROFILE_A_APP_ID].char_handle) {
+                size_t ssid_length = param->write.len;
+                if (ssid_length >= MAX_WIFI_SSID_LENGTH) {
+                    ssid_length = MAX_WIFI_SSID_LENGTH - 1; // Truncate if too long
                 }
-                else if (descr_value == 0x0000){
-                    ESP_LOGI(GATTS_TAG, "notify/indicate disable ");
-                }else{
+                memcpy(wifi_ssid, param->write.value, ssid_length);
+                wifi_ssid[ssid_length] = '\0'; // Null-terminate the string
+                ESP_LOGI(GATTS_TAG, "Updated wifi_ssid: %s", wifi_ssid);
+            }
+
+            // Handle descriptor writes for enabling/disabling notifications or indications
+            if (gl_profile_tab[PROFILE_A_APP_ID].descr_handle == param->write.handle && param->write.len == 2) {
+                uint16_t descr_value = param->write.value[1] << 8 | param->write.value[0];
+                if (descr_value == 0x0001) { // Enable notifications
+                    ESP_LOGI(GATTS_TAG, "Notifications enabled");
+                    uint8_t notify_data[MAX_WIFI_SSID_LENGTH];
+                    size_t ssid_length = strlen(wifi_ssid); // Ensure to calculate length of current `wifi_ssid`
+                    memcpy(notify_data, wifi_ssid, ssid_length); // Copy `wifi_ssid` to notification buffer
+
+                    esp_err_t notify_ret = esp_ble_gatts_send_indicate(
+                        gatts_if,
+                        param->write.conn_id,
+                        gl_profile_tab[PROFILE_A_APP_ID].char_handle,
+                        ssid_length,
+                        notify_data,
+                        false // 'false' indicates notification, 'true' would indicate an indication
+                    );
+
+                    if (notify_ret != ESP_OK) {
+                        ESP_LOGE(GATTS_TAG, "Failed to send notification: %d", notify_ret);
+                    } else {
+                        ESP_LOGI(GATTS_TAG, "Notification sent with SSID: %s", wifi_ssid);
+                    }
+                } else if (descr_value == 0x0002) { // Enable indications
+                    ESP_LOGI(GATTS_TAG, "Indications enabled");
+                    uint8_t indicate_data[MAX_WIFI_SSID_LENGTH];
+                    size_t ssid_length = strlen(wifi_ssid);
+                    memcpy(indicate_data, wifi_ssid, ssid_length);
+
+                    esp_err_t indicate_ret = esp_ble_gatts_send_indicate(
+                        gatts_if,
+                        param->write.conn_id,
+                        gl_profile_tab[PROFILE_A_APP_ID].char_handle,
+                        ssid_length,
+                        indicate_data,
+                        true // Indications require confirmation
+                    );
+
+                    if (indicate_ret != ESP_OK) {
+                        ESP_LOGE(GATTS_TAG, "Failed to send indication: %d", indicate_ret);
+                    } else {
+                        ESP_LOGI(GATTS_TAG, "Indication sent with SSID: %s", wifi_ssid);
+                    }
+                } else if (descr_value == 0x0000) { // Disable notifications/indications
+                    ESP_LOGI(GATTS_TAG, "Notifications/Indications disabled");
+                } else {
                     ESP_LOGE(GATTS_TAG, "unknown descr value");
                     esp_log_buffer_hex(GATTS_TAG, param->write.value, param->write.len);
                 }
-
             }
         }
+
+        // Handle prepared write (unchanged)
         example_write_event_env(gatts_if, &a_prepare_write_env, param);
         break;
     }
@@ -408,12 +456,13 @@ static void gatts_profile_a_event_handler(esp_gatts_cb_event_t event, esp_gatt_i
 
         esp_ble_gatts_start_service(gl_profile_tab[PROFILE_A_APP_ID].service_handle);
         a_property = ESP_GATT_CHAR_PROP_BIT_READ | ESP_GATT_CHAR_PROP_BIT_WRITE | ESP_GATT_CHAR_PROP_BIT_NOTIFY;
-        esp_err_t add_char_ret = esp_ble_gatts_add_char(gl_profile_tab[PROFILE_A_APP_ID].service_handle, &gl_profile_tab[PROFILE_A_APP_ID].char_uuid,
-                                                        ESP_GATT_PERM_READ | ESP_GATT_PERM_WRITE,
-                                                        a_property,
-                                                        &gatts_demo_char1_val, NULL);
-        if (add_char_ret){
-            ESP_LOGE(GATTS_TAG, "add char failed, error code =%x",add_char_ret);
+        esp_err_t add_char_ret = esp_ble_gatts_add_char(gl_profile_tab[PROFILE_A_APP_ID].service_handle,
+                                                &gl_profile_tab[PROFILE_A_APP_ID].char_uuid,
+                                                ESP_GATT_PERM_READ | ESP_GATT_PERM_WRITE,
+                                                ESP_GATT_CHAR_PROP_BIT_READ | ESP_GATT_CHAR_PROP_BIT_WRITE,
+                                                &gatts_wifi_ssid_val, NULL);
+        if (add_char_ret) {
+            ESP_LOGE(GATTS_TAG, "add char failed, error code =%x", add_char_ret);
         }
         break;
     case ESP_GATTS_ADD_INCL_SRVC_EVT:
@@ -436,8 +485,17 @@ static void gatts_profile_a_event_handler(esp_gatts_cb_event_t event, esp_gatt_i
         for(int i = 0; i < length; i++){
             ESP_LOGI(GATTS_TAG, "prf_char[%x] =%x",i,prf_char[i]);
         }
-        esp_err_t add_descr_ret = esp_ble_gatts_add_char_descr(gl_profile_tab[PROFILE_A_APP_ID].service_handle, &gl_profile_tab[PROFILE_A_APP_ID].descr_uuid,
-                                                                ESP_GATT_PERM_READ | ESP_GATT_PERM_WRITE, NULL, NULL);
+        esp_err_t add_descr_ret = esp_ble_gatts_add_char_descr(
+            gl_profile_tab[PROFILE_A_APP_ID].service_handle, 
+            &gl_profile_tab[PROFILE_A_APP_ID].descr_uuid,
+            ESP_GATT_PERM_READ | ESP_GATT_PERM_WRITE,
+            &(esp_attr_value_t){
+                .attr_max_len = 20,
+                .attr_len = strlen("wifi ssid"),
+                .attr_value = (uint8_t *)"wifi ssid"
+            },
+            NULL
+            );
         if (add_descr_ret){
             ESP_LOGE(GATTS_TAG, "add char descr failed, error code =%x", add_descr_ret);
         }

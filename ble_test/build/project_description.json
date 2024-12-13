@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "ble_test",
-    "project_version":    "80e5f3c-dirty",
+    "project_version":    "29bfbc2-dirty",
     "project_path":       "C:/Projekty/IoT/ble_test",
     "idf_path":           "C:/Espressif/frameworks/esp-idf-v5.3.1",
     "build_dir":          "C:/Projekty/IoT/ble_test/build",

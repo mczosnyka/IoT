@@ -1,0 +1,36 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Projekty\IoT\ble_test\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Projekty/IoT/ble_test/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6880 bytes. 0x780 bytes (7%) free.
+[2/7] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+C:/Projekty/IoT/ble_test/main/main.c: In function 'gattc_event_handler':
+C:/Projekty/IoT/ble_test/main/main.c:476:59: warning: comparison between pointer and integer
+  476 |             if(param->search_res.srvc_id.uuid.uuid.uuid16 == NULL) {ESP_LOGI(GATTC_TAG, "jbeac to");}
+      |                                                           ^~
+C:/Projekty/IoT/ble_test/main/main.c: In function 'app_main':
+C:/Projekty/IoT/ble_test/main/main.c:573:35: warning: passing argument 1 of 'esp_ble_gap_register_callback' from incompatible pointer type [-Wincompatible-pointer-types]
+  573 |     esp_ble_gap_register_callback(gattc_event_handler);
+      |                                   ^~~~~~~~~~~~~~~~~~~
+      |                                   |
+      |                                   void (*)(esp_gattc_cb_event_t,  esp_gatt_if_t,  esp_ble_gattc_cb_param_t *) {aka void (*)(esp_gattc_cb_event_t,  unsigned char,  esp_ble_gattc_cb_param_t *)}
+In file included from C:/Projekty/IoT/ble_test/main/main.c:26:
+C:/Espressif/frameworks/esp-idf-v5.3.1/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h:1593:58: note: expected 'esp_gap_ble_cb_t' {aka 'void (*)(esp_gap_ble_cb_event_t,  esp_ble_gap_cb_param_t *)'} but argument is of type 'void (*)(esp_gattc_cb_event_t,  esp_gatt_if_t,  esp_ble_gattc_cb_param_t *)' {aka 'void (*)(esp_gattc_cb_event_t,  unsigned char,  esp_ble_gattc_cb_param_t *)'}
+ 1593 | esp_err_t esp_ble_gap_register_callback(esp_gap_ble_cb_t callback);
+      |                                         ~~~~~~~~~~~~~~~~~^~~~~~~~
+C:/Projekty/IoT/ble_test/main/main.c: At top level:
+C:/Projekty/IoT/ble_test/main/main.c:455:22: warning: 'remote_device' defined but not used [-Wunused-variable]
+  455 | static esp_bd_addr_t remote_device;
+      |                      ^~~~~~~~~~~~~
+C:/Projekty/IoT/ble_test/main/main.c:453:22: warning: 'gattc_if' defined but not used [-Wunused-variable]
+  453 | static esp_gatt_if_t gattc_if;
+      |                      ^~~~~~~~
+[3/7] Linking C static library esp-idf\main\libmain.a
+[4/7] Generating ld/sections.ld
+[5/7] Linking CXX executable ble_test.elf
+[6/7] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated C:/Projekty/IoT/ble_test/build/ble_test.bin
+[7/7] cmd.exe /C "cd /D C:\Projekty\IoT\ble_test\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Projekty/IoT/ble_test/build/partition_table/partition-table.bin C:/Projekty/IoT/ble_test/build/ble_test.bin"
+ble_test.bin binary size 0xdc270 bytes. Smallest app partition is 0x100000 bytes. 0x23d90 bytes (14%) free.
