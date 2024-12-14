@@ -12,7 +12,6 @@
 
 void i2c_master_init(SSD1306_t * dev, int16_t sda, int16_t scl)
 {
-	ESP_LOGI(TAG, "New i2c driver is used");
 	i2c_master_bus_config_t i2c_mst_config = {
 		.clk_source = I2C_CLK_SRC_DEFAULT,
 		.glitch_ignore_cnt = 7,
@@ -34,48 +33,32 @@ void i2c_master_init(SSD1306_t * dev, int16_t sda, int16_t scl)
 
 
 	dev->_address = I2C_ADDRESS;
-	dev->_flip = false;
 	dev->_i2c_num = I2C_NUM;
 	dev->_i2c_bus_handle = i2c_bus_handle;
 	dev->_i2c_dev_handle = i2c_dev_handle;
 }
 
-void ssd1306_init(SSD1306_t * dev, int width, int height)
-{
-	i2c_init(dev, width, height);
-	for (int i=0;i<dev->_pages;i++) {
-		memset(dev->_page[i]._segs, 0, 128);
-	}
-}
 
 void i2c_init(SSD1306_t * dev, int width, int height) {
 	dev->_width = width;
 	dev->_height = height;
-	dev->_pages = 8;
-	if (dev->_height == 32) dev->_pages = 4;
-	
+	dev->_pages = 8;	
 	uint8_t out_buf[27];
 	int out_index = 0;
 	out_buf[out_index++] = OLED_CONTROL_BYTE_CMD_STREAM;
 	out_buf[out_index++] = OLED_CMD_DISPLAY_OFF;				
 	out_buf[out_index++] = OLED_CMD_SET_MUX_RATIO;			 
-	if (dev->_height == 64) out_buf[out_index++] = 0x3F;
-	if (dev->_height == 32) out_buf[out_index++] = 0x1F;
+	out_buf[out_index++] = 0x3F;
 	out_buf[out_index++] = OLED_CMD_SET_DISPLAY_OFFSET;		 
 	out_buf[out_index++] = 0x00;
 	out_buf[out_index++] = OLED_CMD_SET_DISPLAY_START_LINE;	
-	if (dev->_flip) {
-		out_buf[out_index++] = OLED_CMD_SET_SEGMENT_REMAP_0; 
-	} else {
-		out_buf[out_index++] = OLED_CMD_SET_SEGMENT_REMAP_1;	
-	}
+	out_buf[out_index++] = OLED_CMD_SET_SEGMENT_REMAP_1;	
 	out_buf[out_index++] = OLED_CMD_SET_COM_SCAN_MODE;		
 	out_buf[out_index++] = OLED_CMD_SET_DISPLAY_CLK_DIV;	
 	out_buf[out_index++] = 0x80;
 	out_buf[out_index++] = OLED_CMD_SET_COM_PIN_MAP;		
-	if (dev->_height == 64) out_buf[out_index++] = 0x12;
-	if (dev->_height == 32) out_buf[out_index++] = 0x02;
-	out_buf[out_index++] = OLED_CMD_SET_CONTRAST;			
+    out_buf[out_index++] = 0x12;
+	out_buf[out_index++] = 0x01;			//OLED_CMD_SET_CONTRAST
 	out_buf[out_index++] = 0xFF;
 	out_buf[out_index++] = OLED_CMD_DISPLAY_RAM;			
 	out_buf[out_index++] = OLED_CMD_SET_VCOMH_DESELCT;		
@@ -96,6 +79,9 @@ void i2c_init(SSD1306_t * dev, int width, int height) {
 	} else {
 		ESP_LOGE(TAG, "Could not write to device [0x%02x at %d]: %d (%s)", dev->_address, dev->_i2c_num, res, esp_err_to_name(res));
 	}
+    	for (int i=0;i<dev->_pages;i++) {
+		memset(dev->_page[i]._segs, 0, 128);
+	}
 }
 
 void ssd1306_clear_screen(SSD1306_t * dev, bool invert)
@@ -115,7 +101,7 @@ void ssd1306_contrast(SSD1306_t * dev, int contrast) {
 	uint8_t out_buf[3];
 	int out_index = 0;
 	out_buf[out_index++] = OLED_CONTROL_BYTE_CMD_STREAM; // 00
-	out_buf[out_index++] = OLED_CMD_SET_CONTRAST; // 81
+	out_buf[out_index++] = 0x81; 
 	out_buf[out_index++] = _contrast;
 
 	esp_err_t res = i2c_master_transmit(dev->_i2c_dev_handle, out_buf, 3, I2C_TICKS_TO_WAIT);
@@ -134,8 +120,7 @@ void ssd1306_display_text(SSD1306_t * dev, int page, char * text, int text_len, 
 	for (int i = 0; i < _text_len; i++) {
 		memcpy(image, font8x8_basic_tr[(uint8_t)text[i]], 8);
 		if (invert) ssd1306_invert(image, 8);
-		if (dev->_flip) ssd1306_flip(image, 8);
-		ssd1306_display_image(dev, page, seg, image, 8);
+		i2c_display_image(dev, page, seg, image, 8);
 		seg = seg + 8;
 	}
 }
@@ -149,9 +134,6 @@ void i2c_display_image(SSD1306_t * dev, int page, int seg, uint8_t * images, int
 	uint8_t columHigh = (_seg >> 4) & 0x0F;
 
 	int _page = page;
-	if (dev->_flip) {
-		_page = (dev->_pages - page) - 1;
-	}
 
 	uint8_t *out_buf;
 	out_buf = malloc(width < 4 ? 4 : width + 1);
@@ -180,14 +162,9 @@ void i2c_display_image(SSD1306_t * dev, int page, int seg, uint8_t * images, int
 	if (res != ESP_OK)
 		ESP_LOGE(TAG, "Could not write to device [0x%02x at %d]: %d (%s)", dev->_address, dev->_i2c_num, res, esp_err_to_name(res));
 	free(out_buf);
+    memcpy(&dev->_page[page]._segs[seg], images, width);
 }
 
-void ssd1306_flip(uint8_t *buf, size_t blen)
-{
-	for(int i=0; i<blen; i++){
-		buf[i] = ssd1306_rotate_byte(buf[i]);
-	}
-}
 
 void ssd1306_invert(uint8_t *buf, size_t blen)
 {
@@ -198,10 +175,6 @@ void ssd1306_invert(uint8_t *buf, size_t blen)
 	}
 }
 
-void ssd1306_display_image(SSD1306_t * dev, int page, int seg, uint8_t * images, int width){
-	i2c_display_image(dev, page, seg, images, width);
-	memcpy(&dev->_page[page]._segs[seg], images, width);
-}
 
 uint8_t ssd1306_rotate_byte(uint8_t ch1) {
 	uint8_t ch2 = 0;
