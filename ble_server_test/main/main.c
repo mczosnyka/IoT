@@ -23,7 +23,7 @@
 #include "driver/gpio.h"
 #include "sdkconfig.h"
 
-#define STORAGE_NAMESPACE "WIFI_CONFIG"
+#define     STORAGE_NAMESPACE "WIFI_CONFIG"
 #define GATTS_TAG "CONFIG_ESP32"
 
 ///Declare the static function

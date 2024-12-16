@@ -14,8 +14,8 @@
 #include "mqtt_client.h"
 #include <time.h>
 #include <cJSON.h> 
-#define WIFI_SSID "wifi_przemek"   // Nazwa sieci WiFi   MyNET_Fiber_5385 wifi_przemek
-#define WIFI_PASS "xdxdxdxd"           // Hasło do sieci WiFi   8b0fc920 xdxdxdxd
+// #define WIFI_SSID "wifi_przemek"   // Nazwa sieci WiFi   MyNET_Fiber_5385 wifi_przemek
+// #define WIFI_PASS "xdxdxdxd"           // Hasło do sieci WiFi   8b0fc920 xdxdxdxd
 #define LED_PIN GPIO_NUM_2  // Definiujemy GPIO2 jako pin LED
 #define AP_SSID "noise_detector"
 #define AP_PASS "qwerty123"
@@ -28,6 +28,15 @@ bool connected = false;
 
 #define MAX_HTTP_RECV_BUFFER 512
 #define MAX_HTTP_OUTPUT_BUFFER 2048
+#define MAX_SSID_LEN 32
+#define MAX_PASSWORD_LEN 32
+#define SSID_KEY "ssid_key"
+#define PASSWORD_KEY "password_key"
+#define STORAGE_NAMESPACE "WIFI_CONFIG"
+#define DEFAULT_VALUE "default"
+
+char ssid_value[MAX_SSID_LEN] = DEFAULT_VALUE;
+char password_value[MAX_PASSWORD_LEN] = DEFAULT_VALUE;
 
 static void mqtt_app_start(void);
 static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event_id, void *event_data);
@@ -89,6 +98,7 @@ static void http_rest_with_hostname_path(void)
 }
 
 static void wifi_event_handler(void* arg, esp_event_base_t event_base, int32_t event_id, void* event_data) {
+
     if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_START) {
         esp_wifi_connect();
     } else if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_DISCONNECTED) {
@@ -104,8 +114,8 @@ static void wifi_event_handler(void* arg, esp_event_base_t event_base, int32_t e
         connected = true;
         ESP_LOGI(TAG, "%d", connected);
         ESP_LOGI(TAG, "Connected to WiFi!");
-        http_rest_with_hostname_path();
-        mqtt_app_start();
+        // http_rest_with_hostname_path();
+        // mqtt_app_start();
     }
 }
 
@@ -121,12 +131,34 @@ void wifi_init_sta() {
     esp_event_handler_instance_register(WIFI_EVENT, ESP_EVENT_ANY_ID, &wifi_event_handler, NULL, NULL);
     esp_event_handler_instance_register(IP_EVENT, IP_EVENT_STA_GOT_IP, &wifi_event_handler, NULL, NULL);
 
-    wifi_config_t wifi_config = {
-        .sta = {
-            .ssid = WIFI_SSID,
-            .password = WIFI_PASS,
-        },
-    };
+    // ODCZYTYWANIE SSID I HASLA DO WIFI:
+
+    nvs_handle_t nvs_handle;
+    esp_err_t err;
+    err = nvs_open(STORAGE_NAMESPACE, NVS_READONLY, &nvs_handle);
+    char ssid[MAX_SSID_LEN];
+    size_t ssid_len = sizeof(ssid);
+    char password[MAX_PASSWORD_LEN];
+    size_t password_len = sizeof(password);
+    err = nvs_get_str(nvs_handle, SSID_KEY, ssid, &ssid_len);
+    if (err == ESP_OK) {
+        strcpy(ssid_value, ssid);
+        ESP_LOGI(TAG, "Current SSID: %s", ssid);
+    } else {
+        ESP_LOGE(TAG, "Unable to read SSID: %s", esp_err_to_name(err));
+    }
+    err = nvs_get_str(nvs_handle, PASSWORD_KEY, password, &password_len);
+    if (err == ESP_OK) {
+        strcpy(password_value, password);
+        ESP_LOGI(TAG, "Current password: %s", password);
+    } else {
+        ESP_LOGE(TAG, "Unable to read password: %s", esp_err_to_name(err));
+    }
+    nvs_close(nvs_handle);
+
+    wifi_config_t wifi_config = {0};
+    strncpy((char *)wifi_config.sta.ssid, ssid, sizeof(wifi_config.sta.ssid));
+    strncpy((char *)wifi_config.sta.password, password, sizeof(wifi_config.sta.password));
     esp_wifi_set_mode(WIFI_MODE_STA);
     esp_wifi_set_config(WIFI_IF_STA, &wifi_config);
     esp_wifi_start();
