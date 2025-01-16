@@ -1,0 +1,181 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Dec 13 2024 12:58:13[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09b6ch ( 39788) map[0m
+[0;32mI (118) esp_image: segment 1: paddr=00019b94 vaddr=3ff80000 size=00004h (     4) load[0m
+[0;32mI (118) esp_image: segment 2: paddr=00019ba0 vaddr=3ffb0000 size=0231ch (  8988) load[0m
+[0;32mI (127) esp_image: segment 3: paddr=0001bec4 vaddr=40080000 size=04154h ( 16724) load[0m
+[0;32mI (139) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=14b54h ( 84820) map[0m
+[0;32mI (170) esp_image: segment 5: paddr=00034b7c vaddr=40084154 size=088d0h ( 35024) load[0m
+[0;32mI (190) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (190) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (214) app_init: Project name:     i2c[0m
+[0;32mI (218) app_init: App version:      68bd834-dirty[0m
+[0;32mI (223) app_init: Compile time:     Dec 16 2024 12:33:06[0m
+[0;32mI (229) app_init: ELF file SHA256:  3c5541a98...[0m
+[0;32mI (235) app_init: ESP-IDF:          v5.3.1[0m
+[0;32mI (239) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (244) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (249) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (254) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (261) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (267) heap_init: At 3FFB2C08 len 0002D3F8 (180 KiB): DRAM[0m
+[0;32mI (274) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (280) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (286) heap_init: At 4008CA24 len 000135DC (77 KiB): IRAM[0m
+[0;32mI (294) spi_flash: detected chip: generic[0m
+[0;32mI (297) spi_flash: flash io: dio[0m
+[0;33mW (301) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (315) main_task: Started on CPU0[0m
+[0;32mI (325) main_task: Calling app_main()[0m
+[0;32mI (1325) SSD1306_t: AVG Reading: 1400.65, Decibel: 45.68dB[0m
+[0;32mI (3325) SSD1306_t: AVG Reading: 1406.88, Decibel: 45.97dB[0m
+[0;32mI (5325) SSD1306_t: AVG Reading: 1406.38, Decibel: 45.95dB[0m
+[0;32mI (7325) SSD1306_t: AVG Reading: 1404.82, Decibel: 45.87dB[0m
+[0;32mI (9325) SSD1306_t: AVG Reading: 1443.54, Decibel: 47.68dB[0m
+[0;32mI (11325) SSD1306_t: AVG Reading: 2319.93, Decibel: 88.61dB[0m
+[0;32mI (13325) SSD1306_t: AVG Reading: 2249.00, Decibel: 85.30dB[0m
+[0;32mI (15325) SSD1306_t: AVG Reading: 1522.20, Decibel: 51.35dB[0m
+[0;32mI (17325) SSD1306_t: AVG Reading: 1380.88, Decibel: 44.76dB[0m
+[0;32mI (19325) SSD1306_t: AVG Reading: 1400.44, Decibel: 45.67dB[0m
+[0;32mI (21325) SSD1306_t: AVG Reading: 1401.91, Decibel: 45.74dB[0m
+[0;32mI (23325) SSD1306_t: AVG Reading: 1408.31, Decibel: 46.04dB[0m
+[0;32mI (25325) SSD1306_t: AVG Reading: 1407.00, Decibel: 45.97dB[0m
+[0;32mI (27325) SSD1306_t: AVG Reading: 1395.66, Decibel: 45.45dB[0m
+[0;32mI (29325) SSD1306_t: AVG Reading: 1407.76, Decibel: 46.01dB[0m
+[0;32mI (31325) SSD1306_t: AVG Reading: 1430.50, Decibel: 47.07dB[0m
+[0;32mI (33325) SSD1306_t: AVG Reading: 1452.47, Decibel: 48.10dB[0m
+[0;32mI (35325) SSD1306_t: AVG Reading: 1448.52, Decibel: 47.91dB[0m
+[0;32mI (37325) SSD1306_t: AVG Reading: 1426.51, Decibel: 46.89dB[0m
+[0;32mI (39325) SSD1306_t: AVG Reading: 1439.74, Decibel: 47.50dB[0m
+[0;32mI (41325) SSD1306_t: AVG Reading: 1440.04, Decibel: 47.52dB[0m
+[0;32mI (43325) SSD1306_t: AVG Reading: 1411.52, Decibel: 46.19dB[0m
+[0;32mI (45325) SSD1306_t: AVG Reading: 1399.52, Decibel: 45.63dB[0m
+[0;32mI (47325) SSD1306_t: AVG Reading: 1400.98, Decibel: 45.69dB[0m
+[0;32mI (49325) SSD1306_t: AVG Reading: 1408.36, Decibel: 46.04dB[0m
+[0;32mI (51325) SSD1306_t: AVG Reading: 1446.81, Decibel: 47.83dB[0m
+[0;32mI (53325) SSD1306_t: AVG Reading: 1437.77, Decibel: 47.41dB[0m
+[0;32mI (55325) SSD1306_t: AVG Reading: 1440.12, Decibel: 47.52dB[0m
+[0;32mI (57325) SSD1306_t: AVG Reading: 1407.15, Decibel: 45.98dB[0m
+[0;32mI (59325) SSD1306_t: AVG Reading: 1404.35, Decibel: 45.85dB[0m
+[0;32mI (61325) SSD1306_t: AVG Reading: 1410.25, Decibel: 46.13dB[0m
+[0;32mI (63325) SSD1306_t: AVG Reading: 1416.83, Decibel: 46.43dB[0m
+[0;32mI (65325) SSD1306_t: AVG Reading: 1401.04, Decibel: 45.70dB[0m
+[0;32mI (67325) SSD1306_t: AVG Reading: 1400.16, Decibel: 45.66dB[0m
+[0;32mI (69325) SSD1306_t: AVG Reading: 1404.48, Decibel: 45.86dB[0m
+[0;32mI (71325) SSD1306_t: AVG Reading: 1399.29, Decibel: 45.61dB[0m
+[0;32mI (73325) SSD1306_t: AVG Reading: 1407.15, Decibel: 45.98dB[0m
+[0;32mI (75325) SSD1306_t: AVG Reading: 1392.90, Decibel: 45.32dB[0m
+[0;32mI (77325) SSD1306_t: AVG Reading: 1397.70, Decibel: 45.54dB[0m
+[0;32mI (79325) SSD1306_t: AVG Reading: 1404.69, Decibel: 45.87dB[0m
+[0;32mI (81325) SSD1306_t: AVG Reading: 1403.65, Decibel: 45.82dB[0m
+[0;32mI (83325) SSD1306_t: AVG Reading: 1403.12, Decibel: 45.79dB[0m
+[0;32mI (85325) SSD1306_t: AVG Reading: 1412.62, Decibel: 46.24dB[0m
+[0;32mI (87325) SSD1306_t: AVG Reading: 1397.11, Decibel: 45.51dB[0m
+[0;32mI (89325) SSD1306_t: AVG Reading: 1423.67, Decibel: 46.75dB[0m
+[0;32mI (91325) SSD1306_t: AVG Reading: 1402.52, Decibel: 45.77dB[0m
+[0;32mI (93325) SSD1306_t: AVG Reading: 1409.29, Decibel: 46.08dB[0m
+[0;32mI (95325) SSD1306_t: AVG Reading: 1390.14, Decibel: 45.19dB[0m
+[0;32mI (97325) SSD1306_t: AVG Reading: 1427.02, Decibel: 46.91dB[0m
+[0;32mI (99325) SSD1306_t: AVG Reading: 1406.45, Decibel: 45.95dB[0m
+[0;32mI (101325) SSD1306_t: AVG Reading: 1398.26, Decibel: 45.57dB[0m
+[0;32mI (103325) SSD1306_t: AVG Reading: 1406.49, Decibel: 45.95dB[0m
+[0;32mI (105325) SSD1306_t: AVG Reading: 1406.30, Decibel: 45.94dB[0m
+[0;32mI (107325) SSD1306_t: AVG Reading: 1411.61, Decibel: 46.19dB[0m
+[0;32mI (109325) SSD1306_t: AVG Reading: 1405.98, Decibel: 45.93dB[0m
+[0;32mI (111325) SSD1306_t: AVG Reading: 1422.58, Decibel: 46.70dB[0m
+[0;32mI (113325) SSD1306_t: AVG Reading: 1411.39, Decibel: 46.18dB[0m
+[0;32mI (115325) SSD1306_t: AVG Reading: 1401.23, Decibel: 45.71dB[0m
+[0;32mI (117325) SSD1306_t: AVG Reading: 1416.20, Decibel: 46.40dB[0m
+[0;32mI (119325) SSD1306_t: AVG Reading: 1406.90, Decibel: 45.97dB[0m
+[0;32mI (121325) SSD1306_t: AVG Reading: 1415.92, Decibel: 46.39dB[0m
+[0;32mI (123325) SSD1306_t: AVG Reading: 1428.17, Decibel: 46.96dB[0m
+[0;32mI (125325) SSD1306_t: AVG Reading: 1426.74, Decibel: 46.90dB[0m
+[0;32mI (127325) SSD1306_t: AVG Reading: 1436.31, Decibel: 47.34dB[0m
+[0;32mI (129325) SSD1306_t: AVG Reading: 1422.36, Decibel: 46.69dB[0m
+[0;32mI (131325) SSD1306_t: AVG Reading: 1408.99, Decibel: 46.07dB[0m
+[0;32mI (133325) SSD1306_t: AVG Reading: 1405.71, Decibel: 45.91dB[0m
+[0;32mI (135325) SSD1306_t: AVG Reading: 1411.59, Decibel: 46.19dB[0m
+[0;32mI (137325) SSD1306_t: AVG Reading: 1402.58, Decibel: 45.77dB[0m
+[0;32mI (139325) SSD1306_t: AVG Reading: 1417.90, Decibel: 46.48dB[0m
+[0;32mI (141325) SSD1306_t: AVG Reading: 1401.37, Decibel: 45.71dB[0m
+[0;32mI (143325) SSD1306_t: AVG Reading: 1409.66, Decibel: 46.10dB[0m
+[0;32mI (145325) SSD1306_t: AVG Reading: 1410.42, Decibel: 46.13dB[0m
+[0;32mI (147325) SSD1306_t: AVG Reading: 1400.60, Decibel: 45.68dB[0m
+[0;32mI (149325) SSD1306_t: AVG Reading: 1401.23, Decibel: 45.71dB[0m
+[0;32mI (151325) SSD1306_t: AVG Reading: 1407.94, Decibel: 46.02dB[0m
+[0;32mI (153325) SSD1306_t: AVG Reading: 1414.38, Decibel: 46.32dB[0m
+[0;32mI (155325) SSD1306_t: AVG Reading: 1410.09, Decibel: 46.12dB[0m
+[0;32mI (157325) SSD1306_t: AVG Reading: 1456.12, Decibel: 48.27dB[0m
+[0;32mI (159325) SSD1306_t: AVG Reading: 1409.77, Decibel: 46.10dB[0m
+[0;32mI (161325) SSD1306_t: AVG Reading: 1393.40, Decibel: 45.34dB[0m
+[0;32mI (163325) SSD1306_t: AVG Reading: 1403.15, Decibel: 45.79dB[0m
+[0;32mI (165325) SSD1306_t: AVG Reading: 1412.62, Decibel: 46.24dB[0m
+[0;32mI (167325) SSD1306_t: AVG Reading: 1445.00, Decibel: 47.75dB[0m
+[0;32mI (169325) SSD1306_t: AVG Reading: 1448.72, Decibel: 47.92dB[0m
+[0;32mI (171325) SSD1306_t: AVG Reading: 1424.54, Decibel: 46.79dB[0m
+[0;32mI (173325) SSD1306_t: AVG Reading: 1402.84, Decibel: 45.78dB[0m
+[0;32mI (175325) SSD1306_t: AVG Reading: 1408.28, Decibel: 46.03dB[0m
+[0;32mI (177325) SSD1306_t: AVG Reading: 1406.42, Decibel: 45.95dB[0m
+[0;32mI (179325) SSD1306_t: AVG Reading: 1411.00, Decibel: 46.16dB[0m
+[0;32mI (181325) SSD1306_t: AVG Reading: 1403.26, Decibel: 45.80dB[0m
+[0;32mI (183325) SSD1306_t: AVG Reading: 1405.15, Decibel: 45.89dB[0m
+[0;32mI (185325) SSD1306_t: AVG Reading: 1411.69, Decibel: 46.19dB[0m
+[0;32mI (187325) SSD1306_t: AVG Reading: 1412.26, Decibel: 46.22dB[0m
+[0;32mI (189325) SSD1306_t: AVG Reading: 1396.21, Decibel: 45.47dB[0m
+[0;32mI (191325) SSD1306_t: AVG Reading: 1442.12, Decibel: 47.62dB[0m
+[0;32mI (193325) SSD1306_t: AVG Reading: 1419.15, Decibel: 46.54dB[0m
+[0;32mI (195325) SSD1306_t: AVG Reading: 1429.76, Decibel: 47.04dB[0m
+[0;32mI (197325) SSD1306_t: AVG Reading: 1398.83, Decibel: 45.59dB[0m
+[0;32mI (199325) SSD1306_t: AVG Reading: 1444.12, Decibel: 47.71dB[0m
+[0;32mI (201325) SSD1306_t: AVG Reading: 1395.50, Decibel: 45.44dB[0m
+[0;32mI (203325) SSD1306_t: AVG Reading: 1398.47, Decibel: 45.58dB[0m
+[0;32mI (205325) SSD1306_t: AVG Reading: 1401.68, Decibel: 45.73dB[0m
+[0;32mI (207325) SSD1306_t: AVG Reading: 1410.77, Decibel: 46.15dB[0m
+[0;32mI (209325) SSD1306_t: AVG Reading: 1409.49, Decibel: 46.09dB[0m
+[0;32mI (211325) SSD1306_t: AVG Reading: 1404.83, Decibel: 45.87dB[0m
+[0;32mI (213325) SSD1306_t: AVG Reading: 1403.19, Decibel: 45.80dB[0m
+[0;32mI (215325) SSD1306_t: AVG Reading: 1408.05, Decibel: 46.02dB[0m
+[0;32mI (217325) SSD1306_t: AVG Reading: 1406.33, Decibel: 45.94dB[0m
+[0;32mI (219325) SSD1306_t: AVG Reading: 1415.11, Decibel: 46.35dB[0m
+[0;32mI (221325) SSD1306_t: AVG Reading: 1400.13, Decibel: 45.65dB[0m
+[0;32mI (223325) SSD1306_t: AVG Reading: 1408.93, Decibel: 46.07dB[0m
+[0;32mI (225325) SSD1306_t: AVG Reading: 1405.09, Decibel: 45.89dB[0m
+[0;32mI (227325) SSD1306_t: AVG Reading: 1430.44, Decibel: 47.07dB[0m
+[0;32mI (229325) SSD1306_t: AVG Reading: 1424.52, Decibel: 46.79dB[0m
+[0;32mI (231325) SSD1306_t: AVG Reading: 1405.09, Decibel: 45.89dB[0m
+[0;32mI (233325) SSD1306_t: AVG Reading: 1419.47, Decibel: 46.56dB[0m
+[0;32mI (235325) SSD1306_t: AVG Reading: 1428.29, Decibel: 46.97dB[0m
+[0;32mI (237325) SSD1306_t: AVG Reading: 1398.97, Decibel: 45.60dB[0m
+[0;32mI (239325) SSD1306_t: AVG Reading: 1406.84, Decibel: 45.97dB[0m
+[0;32mI (241325) SSD1306_t: AVG Reading: 1400.59, Decibel: 45.68dB[0m
+[0;32mI (243325) SSD1306_t: AVG Reading: 1408.28, Decibel: 46.03dB[0m
+[0;32mI (245325) SSD1306_t: AVG Reading: 1406.92, Decibel: 45.97dB[0m
+[0;32mI (247325) SSD1306_t: AVG Reading: 1414.25, Decibel: 46.31dB[0m

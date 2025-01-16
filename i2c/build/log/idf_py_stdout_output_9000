@@ -1,68 +1,49 @@
-ets Jul 29 2019 12:21:46
+[1/5] cmd.exe /C "cd /D C:\Projekty\IoT\i2c\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Projekty/IoT/i2c/build/partition_table/partition-table.bin C:/Projekty/IoT/i2c/build/i2c.bin"
+i2c.bin binary size 0x42130 bytes. Smallest app partition is 0x100000 bytes. 0xbded0 bytes (74%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Projekty\IoT\i2c\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Projekty/IoT/i2c/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6880 bytes. 0x780 bytes (7%) free.
+[2/3] cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.3.1\components\esptool_py && C:\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/Espesptool.py --chip esp32 -p com3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 i2c.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.1
+Serial port com3
+Connecting...
+Failed to get PID of a device on com3, using standard reset sequence.
+....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 78:ee:4c:00:06:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x00052fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 26752 bytes to 16354...
+Writing at 0x00001000... (100 %)
+Wrote 26752 bytes (16354 compressed) at 0x00001000 in 0.6 seconds (effective 378.0 kbit/s)...
+Hash of data verified.
+Compressed 270640 bytes to 143273...
+Writing at 0x00010000... (11 %)
+Writing at 0x0001c77f... (22 %)
+Writing at 0x00023fca... (33 %)
+Writing at 0x0002a15b... (44 %)
+Writing at 0x0002fdba... (55 %)
+Writing at 0x00039d63... (66 %)
+Writing at 0x00040850... (77 %)
+Writing at 0x00047528... (88 %)
+Writing at 0x0004d5af... (100 %)
+Wrote 270640 bytes (143273 compressed) at 0x00010000 in 3.6 seconds (effective 602.5 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 769.7 kbit/s)...
+Hash of data verified.
 
-rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
-configsip: 0, SPIWP:0xee
-clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
-mode:DIO, clock div:2
-load:0x3fff0030,len:7176
-load:0x40078000,len:15564
-ho 0 tail 12 room 4
-load:0x40080400,len:4
-load:0x40080404,len:3904
-entry 0x40080640
-[0;32mI (31) boot: ESP-IDF v5.3.1 2nd stage bootloader[0m
-[0;32mI (31) boot: compile time Dec 13 2024 12:58:13[0m
-[0;32mI (31) boot: Multicore bootloader[0m
-[0;32mI (35) boot: chip revision: v3.1[0m
-[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
-[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
-[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
-[0;32mI (53) boot: Enabling RNG early entropy source...[0m
-[0;32mI (58) boot: Partition Table:[0m
-[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
-[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
-[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
-[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
-[0;32mI (92) boot: End of partition table[0m
-[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0c828h ( 51240) map[0m
-[0;32mI (122) esp_image: segment 1: paddr=0001c850 vaddr=3ffb0000 size=0283ch ( 10300) load[0m
-[0;32mI (126) esp_image: segment 2: paddr=0001f094 vaddr=40080000 size=00f84h (  3972) load[0m
-[0;32mI (129) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=22b74h (142196) map[0m
-[0;32mI (185) esp_image: segment 4: paddr=00042b9c vaddr=40080f84 size=0d734h ( 55092) load[0m
-[0;32mI (214) boot: Loaded app from partition at offset 0x10000[0m
-[0;32mI (214) boot: Disabling RNG early entropy source...[0m
-[0;32mI (226) cpu_start: Multicore app[0m
-[0;32mI (234) cpu_start: Pro cpu start user code[0m
-[0;32mI (234) cpu_start: cpu freq: 160000000 Hz[0m
-[0;32mI (234) app_init: Application information:[0m
-[0;32mI (237) app_init: Project name:     i2c[0m
-[0;32mI (242) app_init: App version:      87454ee-dirty[0m
-[0;32mI (247) app_init: Compile time:     Dec 15 2024 11:32:22[0m
-[0;32mI (253) app_init: ELF file SHA256:  d692f29af...[0m
-[0;32mI (259) app_init: ESP-IDF:          v5.3.1[0m
-[0;32mI (263) efuse_init: Min chip rev:     v0.0[0m
-[0;32mI (268) efuse_init: Max chip rev:     v3.99 [0m
-[0;32mI (273) efuse_init: Chip rev:         v3.1[0m
-[0;32mI (278) heap_init: Initializing. RAM available for dynamic allocation:[0m
-[0;32mI (285) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
-[0;32mI (291) heap_init: At 3FFB3138 len 0002CEC8 (179 KiB): DRAM[0m
-[0;32mI (297) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
-[0;32mI (304) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
-[0;32mI (310) heap_init: At 4008E6B8 len 00011948 (70 KiB): IRAM[0m
-[0;32mI (318) spi_flash: detected chip: generic[0m
-[0;32mI (321) spi_flash: flash io: dio[0m
-[0;33mW (325) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
-[0;32mI (339) main_task: Started on CPU0[0m
-[0;32mI (349) main_task: Calling app_main()[0m
-Czy chcesz wejsc w tryb konfiguracyjny? (y/n)
-Podaj parametr, ktory chcesz skonfigurowac: 
-contrast, inversion 
-Aby wyjść z trybu konfiguracyjnego wpisz: exit
-Podaj wartosc kontrastu:
-Podaj parametr, ktory chcesz skonfigurowac: 
-contrast, inversion 
-Aby wyjść z trybu konfiguracyjnego wpisz: exit
-[0;32mI (6649) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (6649) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (6659) SSD1306_t: OLED configured successfully[0m
-1073430304
+Leaving...
+Hard resetting via RTS pin...
+ressif/frameworks/esp-idf-v5.3.1 -D SERIAL_TOOL=C:/Espressif/python_env/idf5.3_py3.11_env/Scripts/python.exe;;C:/Espressif/frameworks/esp-idf-v5.3.1/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Projekty/IoT/i2c/build -P C:/Espressif/frameworks/esp-idf-v5.3.1/components/esptool_py/run_serial_tool.cmake"

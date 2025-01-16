@@ -1,0 +1,503 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Dec 13 2024 12:58:13[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0d014h ( 53268) map[0m
+[0;32mI (123) esp_image: segment 1: paddr=0001d03c vaddr=3ffb0000 size=0283ch ( 10300) load[0m
+[0;32mI (127) esp_image: segment 2: paddr=0001f880 vaddr=40080000 size=00798h (  1944) load[0m
+[0;32mI (129) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=2417ch (147836) map[0m
+[0;32mI (188) esp_image: segment 4: paddr=000441a4 vaddr=40080798 size=0df20h ( 57120) load[0m
+[0;32mI (217) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (217) boot: Disabling RNG early entropy source...[0m
+[0;32mI (229) cpu_start: Multicore app[0m
+[0;32mI (238) cpu_start: Pro cpu start user code[0m
+[0;32mI (238) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (238) app_init: Application information:[0m
+[0;32mI (241) app_init: Project name:     i2c[0m
+[0;32mI (245) app_init: App version:      68bd834-dirty[0m
+[0;32mI (251) app_init: Compile time:     Dec 16 2024 12:33:06[0m
+[0;32mI (257) app_init: ELF file SHA256:  fad9f1840...[0m
+[0;32mI (262) app_init: ESP-IDF:          v5.3.1[0m
+[0;32mI (267) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (271) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (276) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (281) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (289) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (294) heap_init: At 3FFB3140 len 0002CEC0 (179 KiB): DRAM[0m
+[0;32mI (301) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (307) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (314) heap_init: At 4008E6B8 len 00011948 (70 KiB): IRAM[0m
+[0;32mI (321) spi_flash: detected chip: generic[0m
+[0;32mI (324) spi_flash: flash io: dio[0m
+[0;33mW (328) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (341) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (350) main_task: Started on CPU0[0m
+[0;32mI (360) main_task: Calling app_main()[0m
+Czy chcesz wejsc w tryb konfiguracyjny? (y/n)
+Uruchomienie wyświetlacza w domyślnej konfiguracji... 
+[0;32mI (3110) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (3120) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 1| Pulldown: 0| Intr:0 [0m
+ADC Reading: 1366, Voltage: 1271mV, Decibel: 62.08dB
+ADC Reading: 1291, Voltage: 1209mV, Decibel: 61.65dB
+ADC Reading: 1391, Voltage: 1291mV, Decibel: 62.22dB
+ADC Reading: 1309, Voltage: 1223mV, Decibel: 61.75dB
+ADC Reading: 1373, Voltage: 1276mV, Decibel: 62.12dB
+ADC Reading: 1397, Voltage: 1296mV, Decibel: 62.25dB
+ADC Reading: 1490, Voltage: 1373mV, Decibel: 62.75dB
+ADC Reading: 1247, Voltage: 1172mV, Decibel: 61.38dB
+ADC Reading: 1689, Voltage: 1537mV, Decibel: 63.73dB
+ADC Reading: 1243, Voltage: 1169mV, Decibel: 61.36dB
+ADC Reading: 1455, Voltage: 1344mV, Decibel: 62.57dB
+ADC Reading: 806, Voltage: 808mV, Decibel: 58.15dB
+ADC Reading: 1474, Voltage: 1360mV, Decibel: 62.67dB
+ADC Reading: 1582, Voltage: 1449mV, Decibel: 63.22dB
+ADC Reading: 1264, Voltage: 1186mV, Decibel: 61.48dB
+ADC Reading: 1718, Voltage: 1561mV, Decibel: 63.87dB
+ADC Reading: 1631, Voltage: 1489mV, Decibel: 63.46dB
+ADC Reading: 1163, Voltage: 1103mV, Decibel: 60.85dB
+ADC Reading: 1175, Voltage: 1113mV, Decibel: 60.93dB
+ADC Reading: 976, Voltage: 948mV, Decibel: 59.54dB
+ADC Reading: 1647, Voltage: 1503mV, Decibel: 63.54dB
+ADC Reading: 1197, Voltage: 1131mV, Decibel: 61.07dB
+ADC Reading: 1637, Voltage: 1494mV, Decibel: 63.49dB
+ADC Reading: 1381, Voltage: 1283mV, Decibel: 62.16dB
+ADC Reading: 1525, Voltage: 1402mV, Decibel: 62.93dB
+ADC Reading: 1514, Voltage: 1393mV, Decibel: 62.88dB
+ADC Reading: 1338, Voltage: 1247mV, Decibel: 61.92dB
+ADC Reading: 1395, Voltage: 1294mV, Decibel: 62.24dB
+ADC Reading: 1284, Voltage: 1203mV, Decibel: 61.61dB
+ADC Reading: 1392, Voltage: 1292mV, Decibel: 62.23dB
+ADC Reading: 1331, Voltage: 1242mV, Decibel: 61.88dB
+ADC Reading: 1359, Voltage: 1265mV, Decibel: 62.04dB
+ADC Reading: 1385, Voltage: 1286mV, Decibel: 62.18dB
+ADC Reading: 1355, Voltage: 1261mV, Decibel: 62.01dB
+ADC Reading: 1408, Voltage: 1305mV, Decibel: 62.31dB
+ADC Reading: 1345, Voltage: 1253mV, Decibel: 61.96dB
+ADC Reading: 1413, Voltage: 1309mV, Decibel: 62.34dB
+ADC Reading: 1402, Voltage: 1300mV, Decibel: 62.28dB
+ADC Reading: 1392, Voltage: 1292mV, Decibel: 62.23dB
+ADC Reading: 1477, Voltage: 1362mV, Decibel: 62.68dB
+ADC Reading: 1379, Voltage: 1281mV, Decibel: 62.15dB
+ADC Reading: 1413, Voltage: 1309mV, Decibel: 62.34dB
+ADC Reading: 1370, Voltage: 1274mV, Decibel: 62.10dB
+ADC Reading: 1328, Voltage: 1239mV, Decibel: 61.86dB
+ADC Reading: 1430, Voltage: 1323mV, Decibel: 62.43dB
+ADC Reading: 1360, Voltage: 1266mV, Decibel: 62.05dB
+ADC Reading: 1201, Voltage: 1134mV, Decibel: 61.09dB
+ADC Reading: 1407, Voltage: 1304mV, Decibel: 62.31dB
+ADC Reading: 1341, Voltage: 1250mV, Decibel: 61.94dB
+ADC Reading: 1295, Voltage: 1212mV, Decibel: 61.67dB
+ADC Reading: 1420, Voltage: 1315mV, Decibel: 62.38dB
+ADC Reading: 1309, Voltage: 1223mV, Decibel: 61.75dB
+ADC Reading: 1339, Voltage: 1248mV, Decibel: 61.92dB
+ADC Reading: 1328, Voltage: 1239mV, Decibel: 61.86dB
+ADC Reading: 1406, Voltage: 1304mV, Decibel: 62.31dB
+ADC Reading: 1399, Voltage: 1298mV, Decibel: 62.27dB
+ADC Reading: 1309, Voltage: 1223mV, Decibel: 61.75dB
+ADC Reading: 1350, Voltage: 1257mV, Decibel: 61.99dB
+ADC Reading: 1421, Voltage: 1316mV, Decibel: 62.39dB
+ADC Reading: 1345, Voltage: 1253mV, Decibel: 61.96dB
+ADC Reading: 1309, Voltage: 1223mV, Decibel: 61.75dB
+ADC Reading: 1338, Voltage: 1247mV, Decibel: 61.92dB
+ADC Reading: 1447, Voltage: 1337mV, Decibel: 62.52dB
+ADC Reading: 1380, Voltage: 1282mV, Decibel: 62.16dB
+ADC Reading: 1314, Voltage: 1228mV, Decibel: 61.78dB
+ADC Reading: 1376, Voltage: 1279mV, Decibel: 62.14dB
+ADC Reading: 1447, Voltage: 1337mV, Decibel: 62.52dB
+ADC Reading: 1350, Voltage: 1257mV, Decibel: 61.99dB
+ADC Reading: 1391, Voltage: 1291mV, Decibel: 62.22dB
+ADC Reading: 1456, Voltage: 1345mV, Decibel: 62.57dB
+ADC Reading: 1343, Voltage: 1252mV, Decibel: 61.95dB
+ADC Reading: 1374, Voltage: 1277mV, Decibel: 62.12dB
+ADC Reading: 1376, Voltage: 1279mV, Decibel: 62.14dB
+ADC Reading: 1328, Voltage: 1239mV, Decibel: 61.86dB
+ADC Reading: 1338, Voltage: 1247mV, Decibel: 61.92dB
+ADC Reading: 1334, Voltage: 1244mV, Decibel: 61.90dB
+ADC Reading: 1360, Voltage: 1266mV, Decibel: 62.05dB
+ADC Reading: 1453, Voltage: 1342mV, Decibel: 62.56dB
+ADC Reading: 1397, Voltage: 1296mV, Decibel: 62.25dB
+ADC Reading: 1388, Voltage: 1289mV, Decibel: 62.21dB
+ADC Reading: 1381, Voltage: 1283mV, Decibel: 62.16dB
+ADC Reading: 1429, Voltage: 1323mV, Decibel: 62.43dB
+ADC Reading: 1317, Voltage: 1230mV, Decibel: 61.80dB
+ADC Reading: 1446, Voltage: 1337mV, Decibel: 62.52dB
+ADC Reading: 1300, Voltage: 1216mV, Decibel: 61.70dB
+ADC Reading: 1303, Voltage: 1218mV, Decibel: 61.71dB
+ADC Reading: 1414, Voltage: 1310mV, Decibel: 62.35dB
+ADC Reading: 1328, Voltage: 1239mV, Decibel: 61.86dB
+ADC Reading: 1328, Voltage: 1239mV, Decibel: 61.86dB
+ADC Reading: 1402, Voltage: 1300mV, Decibel: 62.28dB
+ADC Reading: 1326, Voltage: 1237mV, Decibel: 61.85dB
+ADC Reading: 1386, Voltage: 1287mV, Decibel: 62.19dB
+ADC Reading: 1398, Voltage: 1297mV, Decibel: 62.26dB
+ADC Reading: 1424, Voltage: 1318mV, Decibel: 62.40dB
+ADC Reading: 1391, Voltage: 1291mV, Decibel: 62.22dB
+ADC Reading: 1404, Voltage: 1302mV, Decibel: 62.29dB
+ADC Reading: 1327, Voltage: 1238mV, Decibel: 61.85dB
+ADC Reading: 1242, Voltage: 1168mV, Decibel: 61.35dB
+ADC Reading: 1433, Voltage: 1326mV, Decibel: 62.45dB
+ADC Reading: 1354, Voltage: 1261mV, Decibel: 62.01dB
+ADC Reading: 1291, Voltage: 1209mV, Decibel: 61.65dB
+ADC Reading: 1363, Voltage: 1268mV, Decibel: 62.06dB
+ADC Reading: 1347, Voltage: 1255mV, Decibel: 61.97dB
+ADC Reading: 1356, Voltage: 1262mV, Decibel: 62.02dB
+ADC Reading: 1405, Voltage: 1303mV, Decibel: 62.30dB
+ADC Reading: 1301, Voltage: 1217mV, Decibel: 61.71dB
+ADC Reading: 1429, Voltage: 1323mV, Decibel: 62.43dB
+ADC Reading: 1349, Voltage: 1256mV, Decibel: 61.98dB
+ADC Reading: 1424, Voltage: 1318mV, Decibel: 62.40dB
+ADC Reading: 1398, Voltage: 1297mV, Decibel: 62.26dB
+ADC Reading: 1407, Voltage: 1304mV, Decibel: 62.31dB
+ADC Reading: 1378, Voltage: 1280mV, Decibel: 62.14dB
+ADC Reading: 1574, Voltage: 1442mV, Decibel: 63.18dB
+ADC Reading: 1373, Voltage: 1276mV, Decibel: 62.12dB
+ADC Reading: 1371, Voltage: 1275mV, Decibel: 62.11dB
+ADC Reading: 1335, Voltage: 1245mV, Decibel: 61.90dB
+ADC Reading: 1387, Voltage: 1288mV, Decibel: 62.20dB
+ADC Reading: 1397, Voltage: 1296mV, Decibel: 62.25dB
+ADC Reading: 1408, Voltage: 1305mV, Decibel: 62.31dB
+ADC Reading: 1422, Voltage: 1317mV, Decibel: 62.39dB
+ADC Reading: 1386, Voltage: 1287mV, Decibel: 62.19dB
+ADC Reading: 1282, Voltage: 1201mV, Decibel: 61.59dB
+ADC Reading: 1431, Voltage: 1324mV, Decibel: 62.44dB
+ADC Reading: 1466, Voltage: 1353mV, Decibel: 62.63dB
+ADC Reading: 1362, Voltage: 1267mV, Decibel: 62.06dB
+ADC Reading: 1379, Voltage: 1281mV, Decibel: 62.15dB
+ADC Reading: 1434, Voltage: 1327mV, Decibel: 62.46dB
+ADC Reading: 1392, Voltage: 1292mV, Decibel: 62.23dB
+ADC Reading: 1379, Voltage: 1281mV, Decibel: 62.15dB
+ADC Reading: 1360, Voltage: 1266mV, Decibel: 62.05dB
+ADC Reading: 1371, Voltage: 1275mV, Decibel: 62.11dB
+ADC Reading: 1349, Voltage: 1256mV, Decibel: 61.98dB
+ADC Reading: 1369, Voltage: 1273mV, Decibel: 62.10dB
+ADC Reading: 1421, Voltage: 1316mV, Decibel: 62.39dB
+ADC Reading: 1345, Voltage: 1253mV, Decibel: 61.96dB
+ADC Reading: 1280, Voltage: 1199mV, Decibel: 61.58dB
+ADC Reading: 1376, Voltage: 1279mV, Decibel: 62.14dB
+ADC Reading: 1360, Voltage: 1266mV, Decibel: 62.05dB
+ADC Reading: 1392, Voltage: 1292mV, Decibel: 62.23dB
+ADC Reading: 1374, Voltage: 1277mV, Decibel: 62.12dB
+ADC Reading: 1299, Voltage: 1215mV, Decibel: 61.69dB
+ADC Reading: 1385, Voltage: 1286mV, Decibel: 62.18dB
+ADC Reading: 1297, Voltage: 1214mV, Decibel: 61.68dB
+ADC Reading: 1413, Voltage: 1309mV, Decibel: 62.34dB
+ADC Reading: 1463, Voltage: 1351mV, Decibel: 62.61dB
+ADC Reading: 1327, Voltage: 1238mV, Decibel: 61.85dB
+ADC Reading: 1323, Voltage: 1235mV, Decibel: 61.83dB
+ADC Reading: 1498, Voltage: 1380mV, Decibel: 62.80dB
+ADC Reading: 1437, Voltage: 1329mV, Decibel: 62.47dB
+ADC Reading: 1291, Voltage: 1209mV, Decibel: 61.65dB
+ADC Reading: 1424, Voltage: 1318mV, Decibel: 62.40dB
+ADC Reading: 1371, Voltage: 1275mV, Decibel: 62.11dB
+ADC Reading: 1359, Voltage: 1265mV, Decibel: 62.04dB
+ADC Reading: 1498, Voltage: 1380mV, Decibel: 62.80dB
+ADC Reading: 1424, Voltage: 1318mV, Decibel: 62.40dB
+ADC Reading: 1367, Voltage: 1271mV, Decibel: 62.08dB
+ADC Reading: 1395, Voltage: 1294mV, Decibel: 62.24dB
+ADC Reading: 1525, Voltage: 1402mV, Decibel: 62.93dB
+ADC Reading: 1309, Voltage: 1223mV, Decibel: 61.75dB
+ADC Reading: 1396, Voltage: 1295mV, Decibel: 62.25dB
+ADC Reading: 1395, Voltage: 1294mV, Decibel: 62.24dB
+ADC Reading: 1360, Voltage: 1266mV, Decibel: 62.05dB
+ADC Reading: 1424, Voltage: 1318mV, Decibel: 62.40dB
+ADC Reading: 1466, Voltage: 1353mV, Decibel: 62.63dB
+ADC Reading: 1360, Voltage: 1266mV, Decibel: 62.05dB
+ADC Reading: 1384, Voltage: 1285mV, Decibel: 62.18dB
+ADC Reading: 1200, Voltage: 1133mV, Decibel: 61.08dB
+ADC Reading: 1373, Voltage: 1276mV, Decibel: 62.12dB
+ADC Reading: 1371, Voltage: 1275mV, Decibel: 62.11dB
+ADC Reading: 1376, Voltage: 1279mV, Decibel: 62.14dB
+ADC Reading: 1395, Voltage: 1294mV, Decibel: 62.24dB
+ADC Reading: 1279, Voltage: 1199mV, Decibel: 61.58dB
+ADC Reading: 1450, Voltage: 1340mV, Decibel: 62.54dB
+ADC Reading: 1118, Voltage: 1066mV, Decibel: 60.56dB
+ADC Reading: 1017, Voltage: 982mV, Decibel: 59.84dB
+ADC Reading: 927, Voltage: 908mV, Decibel: 59.16dB
+ADC Reading: 1371, Voltage: 1275mV, Decibel: 62.11dB
+ADC Reading: 1641, Voltage: 1498mV, Decibel: 63.51dB
+ADC Reading: 1326, Voltage: 1237mV, Decibel: 61.85dB
+ADC Reading: 1415, Voltage: 1311mV, Decibel: 62.35dB
+ADC Reading: 1265, Voltage: 1187mV, Decibel: 61.49dB
+ADC Reading: 1262, Voltage: 1185mV, Decibel: 61.47dB
+ADC Reading: 1468, Voltage: 1355mV, Decibel: 62.64dB
+ADC Reading: 1360, Voltage: 1266mV, Decibel: 62.05dB
+ADC Reading: 1434, Voltage: 1327mV, Decibel: 62.46dB
+ADC Reading: 1773, Voltage: 1607mV, Decibel: 64.12dB
+ADC Reading: 1183, Voltage: 1119mV, Decibel: 60.98dB
+ADC Reading: 1360, Voltage: 1266mV, Decibel: 62.05dB
+ADC Reading: 1069, Voltage: 1025mV, Decibel: 60.21dB
+ADC Reading: 1289, Voltage: 1207mV, Decibel: 61.63dB
+ADC Reading: 1523, Voltage: 1400mV, Decibel: 62.92dB
+ADC Reading: 1498, Voltage: 1380mV, Decibel: 62.80dB
+ADC Reading: 1225, Voltage: 1154mV, Decibel: 61.24dB
+ADC Reading: 1488, Voltage: 1371mV, Decibel: 62.74dB
+ADC Reading: 1623, Voltage: 1483mV, Decibel: 63.42dB
+ADC Reading: 1088, Voltage: 1041mV, Decibel: 60.35dB
+ADC Reading: 1392, Voltage: 1292mV, Decibel: 62.23dB
+ADC Reading: 1275, Voltage: 1195mV, Decibel: 61.55dB
+ADC Reading: 2593, Voltage: 2284mV, Decibel: 67.17dB
+ADC Reading: 1121, Voltage: 1068mV, Decibel: 60.57dB
+ADC Reading: 1601, Voltage: 1465mV, Decibel: 63.32dB
+ADC Reading: 1616, Voltage: 1477mV, Decibel: 63.39dB
+ADC Reading: 878, Voltage: 867mV, Decibel: 58.76dB
+ADC Reading: 2879, Voltage: 2520mV, Decibel: 68.03dB
+ADC Reading: 1376, Voltage: 1279mV, Decibel: 62.14dB
+ADC Reading: 1363, Voltage: 1268mV, Decibel: 62.06dB
+ADC Reading: 1418, Voltage: 1313mV, Decibel: 62.37dB
+ADC Reading: 1968, Voltage: 1768mV, Decibel: 64.95dB
+ADC Reading: 1872, Voltage: 1689mV, Decibel: 64.55dB
+ADC Reading: 1637, Voltage: 1494mV, Decibel: 63.49dB
+ADC Reading: 1425, Voltage: 1319mV, Decibel: 62.40dB
+ADC Reading: 2881, Voltage: 2522mV, Decibel: 68.03dB
+ADC Reading: 1283, Voltage: 1202mV, Decibel: 61.60dB
+ADC Reading: 0, Voltage: 142mV, Decibel: 43.05dB
+ADC Reading: 572, Voltage: 615mV, Decibel: 55.78dB
+ADC Reading: 2885, Voltage: 2524mV, Decibel: 68.04dB
+ADC Reading: 69, Voltage: 199mV, Decibel: 45.98dB
+ADC Reading: 1395, Voltage: 1294mV, Decibel: 62.24dB
+ADC Reading: 1423, Voltage: 1318mV, Decibel: 62.40dB
+ADC Reading: 943, Voltage: 921mV, Decibel: 59.29dB
+ADC Reading: 1360, Voltage: 1266mV, Decibel: 62.05dB
+ADC Reading: 1405, Voltage: 1303mV, Decibel: 62.30dB
+ADC Reading: 1887, Voltage: 1701mV, Decibel: 64.61dB
+ADC Reading: 391, Voltage: 465mV, Decibel: 53.35dB
+ADC Reading: 1690, Voltage: 1538mV, Decibel: 63.74dB
+ADC Reading: 1520, Voltage: 1398mV, Decibel: 62.91dB
+ADC Reading: 1811, Voltage: 1638mV, Decibel: 64.29dB
+ADC Reading: 2345, Voltage: 2079mV, Decibel: 66.36dB
+ADC Reading: 1360, Voltage: 1266mV, Decibel: 62.05dB
+ADC Reading: 1451, Voltage: 1341mV, Decibel: 62.55dB
+ADC Reading: 1374, Voltage: 1277mV, Decibel: 62.12dB
+ADC Reading: 1399, Voltage: 1298mV, Decibel: 62.27dB
+ADC Reading: 1360, Voltage: 1266mV, Decibel: 62.05dB
+ADC Reading: 1486, Voltage: 1370mV, Decibel: 62.73dB
+ADC Reading: 1360, Voltage: 1266mV, Decibel: 62.05dB
+ADC Reading: 1394, Voltage: 1294mV, Decibel: 62.24dB
+ADC Reading: 1299, Voltage: 1215mV, Decibel: 61.69dB
+ADC Reading: 1388, Voltage: 1289mV, Decibel: 62.21dB
+ADC Reading: 1399, Voltage: 1298mV, Decibel: 62.27dB
+ADC Reading: 1040, Voltage: 1001mV, Decibel: 60.01dB
+ADC Reading: 1474, Voltage: 1360mV, Decibel: 62.67dB
+ADC Reading: 1931, Voltage: 1737mV, Decibel: 64.80dB
+ADC Reading: 1535, Voltage: 1410mV, Decibel: 62.98dB
+ADC Reading: 1296, Voltage: 1213mV, Decibel: 61.68dB
+ADC Reading: 697, Voltage: 718mV, Decibel: 57.12dB
+ADC Reading: 869, Voltage: 860mV, Decibel: 58.69dB
+ADC Reading: 901, Voltage: 886mV, Decibel: 58.95dB
+ADC Reading: 1562, Voltage: 1432mV, Decibel: 63.12dB
+ADC Reading: 1642, Voltage: 1499mV, Decibel: 63.52dB
+ADC Reading: 1411, Voltage: 1308mV, Decibel: 62.33dB
+ADC Reading: 1342, Voltage: 1251mV, Decibel: 61.95dB
+ADC Reading: 1153, Voltage: 1095mV, Decibel: 60.79dB
+ADC Reading: 2707, Voltage: 2378mV, Decibel: 67.52dB
+ADC Reading: 106, Voltage: 230mV, Decibel: 47.23dB
+ADC Reading: 2247, Voltage: 1998mV, Decibel: 66.01dB
+ADC Reading: 240, Voltage: 340mV, Decibel: 50.63dB
+ADC Reading: 2638, Voltage: 2321mV, Decibel: 67.31dB
+ADC Reading: 1751, Voltage: 1589mV, Decibel: 64.02dB
+ADC Reading: 1223, Voltage: 1152mV, Decibel: 61.23dB
+ADC Reading: 0, Voltage: 142mV, Decibel: 43.05dB
+ADC Reading: 2878, Voltage: 2520mV, Decibel: 68.03dB
+ADC Reading: 1526, Voltage: 1403mV, Decibel: 62.94dB
+ADC Reading: 845, Voltage: 840mV, Decibel: 58.49dB
+ADC Reading: 2881, Voltage: 2522mV, Decibel: 68.03dB
+ADC Reading: 0, Voltage: 142mV, Decibel: 43.05dB
+ADC Reading: 1458, Voltage: 1347mV, Decibel: 62.59dB
+ADC Reading: 704, Voltage: 724mV, Decibel: 57.19dB
+ADC Reading: 2524, Voltage: 2227mV, Decibel: 66.95dB
+ADC Reading: 1648, Voltage: 1503mV, Decibel: 63.54dB
+ADC Reading: 1338, Voltage: 1247mV, Decibel: 61.92dB
+ADC Reading: 1370, Voltage: 1274mV, Decibel: 62.10dB
+ADC Reading: 1450, Voltage: 1340mV, Decibel: 62.54dB
+ADC Reading: 1370, Voltage: 1274mV, Decibel: 62.10dB
+ADC Reading: 1395, Voltage: 1294mV, Decibel: 62.24dB
+ADC Reading: 1349, Voltage: 1256mV, Decibel: 61.98dB
+ADC Reading: 1119, Voltage: 1066mV, Decibel: 60.56dB
+ADC Reading: 1455, Voltage: 1344mV, Decibel: 62.57dB
+ADC Reading: 1423, Voltage: 1318mV, Decibel: 62.40dB
+ADC Reading: 1321, Voltage: 1233mV, Decibel: 61.82dB
+ADC Reading: 1423, Voltage: 1318mV, Decibel: 62.40dB
+ADC Reading: 1415, Voltage: 1311mV, Decibel: 62.35dB
+ADC Reading: 1381, Voltage: 1283mV, Decibel: 62.16dB
+ADC Reading: 1424, Voltage: 1318mV, Decibel: 62.40dB
+ADC Reading: 1366, Voltage: 1271mV, Decibel: 62.08dB
+ADC Reading: 1319, Voltage: 1232mV, Decibel: 61.81dB
+ADC Reading: 1395, Voltage: 1294mV, Decibel: 62.24dB
+ADC Reading: 1405, Voltage: 1303mV, Decibel: 62.30dB
+ADC Reading: 1408, Voltage: 1305mV, Decibel: 62.31dB
+ADC Reading: 1520, Voltage: 1398mV, Decibel: 62.91dB
+ADC Reading: 1317, Voltage: 1230mV, Decibel: 61.80dB
+ADC Reading: 1854, Voltage: 1674mV, Decibel: 64.48dB
+ADC Reading: 1441, Voltage: 1332mV, Decibel: 62.49dB
+ADC Reading: 1323, Voltage: 1235mV, Decibel: 61.83dB
+ADC Reading: 1344, Voltage: 1252mV, Decibel: 61.95dB
+ADC Reading: 1306, Voltage: 1221mV, Decibel: 61.73dB
+ADC Reading: 1520, Voltage: 1398mV, Decibel: 62.91dB
+ADC Reading: 1423, Voltage: 1318mV, Decibel: 62.40dB
+ADC Reading: 1362, Voltage: 1267mV, Decibel: 62.06dB
+ADC Reading: 1278, Voltage: 1198mV, Decibel: 61.57dB
+ADC Reading: 1328, Voltage: 1239mV, Decibel: 61.86dB
+ADC Reading: 1397, Voltage: 1296mV, Decibel: 62.25dB
+ADC Reading: 1058, Voltage: 1016mV, Decibel: 60.14dB
+ADC Reading: 1328, Voltage: 1239mV, Decibel: 61.86dB
+ADC Reading: 1309, Voltage: 1223mV, Decibel: 61.75dB
+ADC Reading: 1437, Voltage: 1329mV, Decibel: 62.47dB
+ADC Reading: 1322, Voltage: 1234mV, Decibel: 61.83dB
+ADC Reading: 1382, Voltage: 1284mV, Decibel: 62.17dB
+ADC Reading: 1304, Voltage: 1219mV, Decibel: 61.72dB
+ADC Reading: 1315, Voltage: 1228mV, Decibel: 61.78dB
+ADC Reading: 1369, Voltage: 1273mV, Decibel: 62.10dB
+ADC Reading: 1345, Voltage: 1253mV, Decibel: 61.96dB
+ADC Reading: 1390, Voltage: 1290mV, Decibel: 62.21dB
+ADC Reading: 1337, Voltage: 1247mV, Decibel: 61.92dB
+ADC Reading: 1488, Voltage: 1371mV, Decibel: 62.74dB
+ADC Reading: 1273, Voltage: 1194mV, Decibel: 61.54dB
+ADC Reading: 1382, Voltage: 1284mV, Decibel: 62.17dB
+ADC Reading: 1354, Voltage: 1261mV, Decibel: 62.01dB
+ADC Reading: 1354, Voltage: 1261mV, Decibel: 62.01dB
+ADC Reading: 1379, Voltage: 1281mV, Decibel: 62.15dB
+ADC Reading: 1371, Voltage: 1275mV, Decibel: 62.11dB
+ADC Reading: 1367, Voltage: 1271mV, Decibel: 62.08dB
+ADC Reading: 1395, Voltage: 1294mV, Decibel: 62.24dB
+ADC Reading: 1264, Voltage: 1186mV, Decibel: 61.48dB
+ADC Reading: 1405, Voltage: 1303mV, Decibel: 62.30dB
+ADC Reading: 1397, Voltage: 1296mV, Decibel: 62.25dB
+ADC Reading: 1359, Voltage: 1265mV, Decibel: 62.04dB
+ADC Reading: 1383, Voltage: 1285mV, Decibel: 62.18dB
+ADC Reading: 1465, Voltage: 1352mV, Decibel: 62.62dB
+ADC Reading: 1392, Voltage: 1292mV, Decibel: 62.23dB
+ADC Reading: 1359, Voltage: 1265mV, Decibel: 62.04dB
+ADC Reading: 1345, Voltage: 1253mV, Decibel: 61.96dB
+ADC Reading: 1321, Voltage: 1233mV, Decibel: 61.82dB
+ADC Reading: 1520, Voltage: 1398mV, Decibel: 62.91dB
+ADC Reading: 1455, Voltage: 1344mV, Decibel: 62.57dB
+ADC Reading: 1391, Voltage: 1291mV, Decibel: 62.22dB
+ADC Reading: 1329, Voltage: 1240mV, Decibel: 61.87dB
+ADC Reading: 1525, Voltage: 1402mV, Decibel: 62.93dB
+ADC Reading: 1347, Voltage: 1255mV, Decibel: 61.97dB
+ADC Reading: 1359, Voltage: 1265mV, Decibel: 62.04dB
+ADC Reading: 1393, Voltage: 1293mV, Decibel: 62.23dB
+ADC Reading: 1458, Voltage: 1347mV, Decibel: 62.59dB
+ADC Reading: 1455, Voltage: 1344mV, Decibel: 62.57dB
+ADC Reading: 1387, Voltage: 1288mV, Decibel: 62.20dB
+ADC Reading: 1424, Voltage: 1318mV, Decibel: 62.40dB
+ADC Reading: 1401, Voltage: 1299mV, Decibel: 62.27dB
+ADC Reading: 1405, Voltage: 1303mV, Decibel: 62.30dB
+ADC Reading: 1424, Voltage: 1318mV, Decibel: 62.40dB
+ADC Reading: 1397, Voltage: 1296mV, Decibel: 62.25dB
+ADC Reading: 1332, Voltage: 1242mV, Decibel: 61.88dB
+ADC Reading: 1360, Voltage: 1266mV, Decibel: 62.05dB
+ADC Reading: 1375, Voltage: 1278mV, Decibel: 62.13dB
+ADC Reading: 1371, Voltage: 1275mV, Decibel: 62.11dB
+ADC Reading: 1490, Voltage: 1373mV, Decibel: 62.75dB
+ADC Reading: 1329, Voltage: 1240mV, Decibel: 61.87dB
+ADC Reading: 1435, Voltage: 1328mV, Decibel: 62.46dB
+ADC Reading: 1365, Voltage: 1270mV, Decibel: 62.08dB
+ADC Reading: 1330, Voltage: 1241mV, Decibel: 61.88dB
+ADC Reading: 1311, Voltage: 1225mV, Decibel: 61.76dB
+ADC Reading: 1518, Voltage: 1396mV, Decibel: 62.90dB
+ADC Reading: 1360, Voltage: 1266mV, Decibel: 62.05dB
+ADC Reading: 1298, Voltage: 1214mV, Decibel: 61.68dB
+ADC Reading: 1490, Voltage: 1373mV, Decibel: 62.75dB
+ADC Reading: 1401, Voltage: 1299mV, Decibel: 62.27dB
+ADC Reading: 1374, Voltage: 1277mV, Decibel: 62.12dB
+ADC Reading: 1399, Voltage: 1298mV, Decibel: 62.27dB
+ADC Reading: 1209, Voltage: 1141mV, Decibel: 61.15dB
+ADC Reading: 1519, Voltage: 1397mV, Decibel: 62.90dB
+ADC Reading: 1359, Voltage: 1265mV, Decibel: 62.04dB
+ADC Reading: 1445, Voltage: 1336mV, Decibel: 62.52dB
+ADC Reading: 1373, Voltage: 1276mV, Decibel: 62.12dB
+ADC Reading: 1353, Voltage: 1260mV, Decibel: 62.01dB
+ADC Reading: 1275, Voltage: 1195mV, Decibel: 61.55dB
+ADC Reading: 1473, Voltage: 1359mV, Decibel: 62.66dB
+ADC Reading: 1396, Voltage: 1295mV, Decibel: 62.25dB
+ADC Reading: 1368, Voltage: 1272mV, Decibel: 62.09dB
+ADC Reading: 1392, Voltage: 1292mV, Decibel: 62.23dB
+ADC Reading: 1403, Voltage: 1301mV, Decibel: 62.29dB
+ADC Reading: 1456, Voltage: 1345mV, Decibel: 62.57dB
+ADC Reading: 1361, Voltage: 1266mV, Decibel: 62.05dB
+ADC Reading: 1321, Voltage: 1233mV, Decibel: 61.82dB
+ADC Reading: 1584, Voltage: 1451mV, Decibel: 63.23dB
+ADC Reading: 1487, Voltage: 1370mV, Decibel: 62.73dB
+ADC Reading: 1341, Voltage: 1250mV, Decibel: 61.94dB
+ADC Reading: 1406, Voltage: 1304mV, Decibel: 62.31dB
+ADC Reading: 1473, Voltage: 1359mV, Decibel: 62.66dB
+ADC Reading: 1392, Voltage: 1292mV, Decibel: 62.23dB
+ADC Reading: 1424, Voltage: 1318mV, Decibel: 62.40dB
+ADC Reading: 1350, Voltage: 1257mV, Decibel: 61.99dB
+ADC Reading: 1408, Voltage: 1305mV, Decibel: 62.31dB
+ADC Reading: 1354, Voltage: 1261mV, Decibel: 62.01dB
+ADC Reading: 1335, Voltage: 1245mV, Decibel: 61.90dB
+ADC Reading: 1282, Voltage: 1201mV, Decibel: 61.59dB
+ADC Reading: 1418, Voltage: 1313mV, Decibel: 62.37dB
+ADC Reading: 1431, Voltage: 1324mV, Decibel: 62.44dB
+ADC Reading: 1407, Voltage: 1304mV, Decibel: 62.31dB
+ADC Reading: 1357, Voltage: 1263mV, Decibel: 62.03dB
+ADC Reading: 1376, Voltage: 1279mV, Decibel: 62.14dB
+ADC Reading: 1386, Voltage: 1287mV, Decibel: 62.19dB
+ADC Reading: 1296, Voltage: 1213mV, Decibel: 61.68dB
+ADC Reading: 1338, Voltage: 1247mV, Decibel: 61.92dB
+ADC Reading: 1427, Voltage: 1321mV, Decibel: 62.42dB
+ADC Reading: 1387, Voltage: 1288mV, Decibel: 62.20dB
+ADC Reading: 1335, Voltage: 1245mV, Decibel: 61.90dB
+ADC Reading: 1361, Voltage: 1266mV, Decibel: 62.05dB
+ADC Reading: 1379, Voltage: 1281mV, Decibel: 62.15dB
+ADC Reading: 1312, Voltage: 1226mV, Decibel: 61.77dB
+ADC Reading: 1407, Voltage: 1304mV, Decibel: 62.31dB
+ADC Reading: 1366, Voltage: 1271mV, Decibel: 62.08dB
+ADC Reading: 1329, Voltage: 1240mV, Decibel: 61.87dB
+ADC Reading: 1355, Voltage: 1261mV, Decibel: 62.01dB
+ADC Reading: 1327, Voltage: 1238mV, Decibel: 61.85dB
+ADC Reading: 1412, Voltage: 1309mV, Decibel: 62.34dB
+ADC Reading: 1361, Voltage: 1266mV, Decibel: 62.05dB
+ADC Reading: 1370, Voltage: 1274mV, Decibel: 62.10dB
+ADC Reading: 1411, Voltage: 1308mV, Decibel: 62.33dB
+ADC Reading: 1362, Voltage: 1267mV, Decibel: 62.06dB
+ADC Reading: 1386, Voltage: 1287mV, Decibel: 62.19dB
+ADC Reading: 1374, Voltage: 1277mV, Decibel: 62.12dB
+ADC Reading: 1413, Voltage: 1309mV, Decibel: 62.34dB
+ADC Reading: 1387, Voltage: 1288mV, Decibel: 62.20dB
+ADC Reading: 1435, Voltage: 1328mV, Decibel: 62.46dB
+ADC Reading: 1362, Voltage: 1267mV, Decibel: 62.06dB
+ADC Reading: 1346, Voltage: 1254mV, Decibel: 61.97dB
+ADC Reading: 1151, Voltage: 1093mV, Decibel: 60.77dB
+ADC Reading: 1386, Voltage: 1287mV, Decibel: 62.19dB
+ADC Reading: 1413, Voltage: 1309mV, Decibel: 62.34dB
+ADC Reading: 1360, Voltage: 1266mV, Decibel: 62.05dB
+ADC Reading: 1535, Voltage: 1410mV, Decibel: 62.98dB
+ADC Reading: 1415, Voltage: 1311mV, Decibel: 62.35dB
+ADC Reading: 1423, Voltage: 1318mV, Decibel: 62.40dB
+ADC Reading: 1333, Voltage: 1243mV, Decibel: 61.89dB
+ADC Reading: 1437, Voltage: 1329mV, Decibel: 62.47dB
+ADC Reading: 1469, Voltage: 1356mV, Decibel: 62.65dB
+ADC Reading: 1645, Voltage: 1501mV, Decibel: 63.53dB
+ADC Reading: 1557, Voltage: 1428mV, Decibel: 63.09dB
+ADC Reading: 1396, Voltage: 1295mV, Decibel: 62.25dB
+ADC Reading: 1456, Voltage: 1345mV, Decibel: 62.57dB
+ADC Reading: 1387, Voltage: 1288mV, Decibel: 62.20dB
+ADC Reading: 1402, Voltage: 1300mV, Decibel: 62.28dB
+ADC Reading: 1409, Voltage: 1306mV, Decibel: 62.32dB
+ADC Reading: 1398, Voltage: 1297mV, Decibel: 62.26dB
+ADC Reading: 1353, Voltage: 1260mV, Decibel: 62.01dB

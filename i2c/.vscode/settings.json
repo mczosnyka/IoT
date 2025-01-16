@@ -7,6 +7,8 @@
     "idf.portWin": "COM3",
     "idf.toolsPathWin": "C:\\Espressif",
     "files.associations": {
-        "esp_console.h": "c"
+        "esp_console.h": "c",
+        "esp_log.h": "c",
+        "adc_oneshot.h": "c"
     }
 }

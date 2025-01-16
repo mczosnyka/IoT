@@ -1,0 +1,61 @@
+[0;33m--- esp-idf-monitor 1.5.0 on com3 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400da74f: task_wdt_timeout_handling at C:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:434
+0x400dab14: task_wdt_isr at C:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:507
+0x40082eb9: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x400d9013: gpio_ll_get_level at C:/Espressif/frameworks/esp-idf-v5.3.1/components/hal/esp32/include/hal/gpio_ll.h:515
+ (inlined by) gpio_get_level at C:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_driver_gpio/src/gpio.c:245
+0x400d7f11: button_task at C:/Projekty/IoT/i2c/main/main.c:88
+0x40087a11: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x400da74f: task_wdt_timeout_handling at C:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:434
+0x400dab14: task_wdt_isr at C:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:507
+0x40082eb9: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x400d9008: gpio_ll_get_level at C:/Espressif/frameworks/esp-idf-v5.3.1/components/hal/esp32/include/hal/gpio_ll.h:514
+ (inlined by) gpio_get_level at C:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_driver_gpio/src/gpio.c:245
+0x400d7f11: button_task at C:/Projekty/IoT/i2c/main/main.c:88
+0x40087a11: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x400da74f: task_wdt_timeout_handling at C:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:434
+0x400dab14: task_wdt_isr at C:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:507
+0x40082eb9: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x400d7f11: button_task at C:/Projekty/IoT/i2c/main/main.c:88
+0x40087a11: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x400da74f: task_wdt_timeout_handling at C:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:434
+0x400dab14: task_wdt_isr at C:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:507
+0x40082eb9: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x400d9010: gpio_ll_get_level at C:/Espressif/frameworks/esp-idf-v5.3.1/components/hal/esp32/include/hal/gpio_ll.h:515
+ (inlined by) gpio_get_level at C:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_driver_gpio/src/gpio.c:245
+0x400d7f11: button_task at C:/Projekty/IoT/i2c/main/main.c:88
+0x40087a11: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x400da74f: task_wdt_timeout_handling at C:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:434
+0x400dab14: task_wdt_isr at C:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:507
+0x40082eb9: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x400d9013: gpio_ll_get_level at C:/Espressif/frameworks/esp-idf-v5.3.1/components/hal/esp32/include/hal/gpio_ll.h:515
+ (inlined by) gpio_get_level at C:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_driver_gpio/src/gpio.c:245
+0x400d7f11: button_task at C:/Projekty/IoT/i2c/main/main.c:88
+0x40087a11: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x400da74f: task_wdt_timeout_handling at C:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:434
+0x400dab14: task_wdt_isr at C:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:507
+0x40082eb9: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x400d9008: gpio_ll_get_level at C:/Espressif/frameworks/esp-idf-v5.3.1/components/hal/esp32/include/hal/gpio_ll.h:514
+ (inlined by) gpio_get_level at C:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_driver_gpio/src/gpio.c:245
+0x400d7f11: button_task at C:/Projekty/IoT/i2c/main/main.c:88
+0x40087a11: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0m
+Traceback (most recent call last):
+  File "C:\Espressif\frameworks\esp-idf-v5.3.1\tools/idf_monitor.py", line 11, in <module>
+    sys.exit(subprocess.run([sys.executable, '-m', 'esp_idf_monitor'] + sys.argv[1:]).returncode)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "subprocess.py", line 550, in run
+  File "subprocess.py", line 1199, in communicate
+  File "subprocess.py", line 1262, in wait
+  File "subprocess.py", line 1543, in _wait
+KeyboardInterrupt
