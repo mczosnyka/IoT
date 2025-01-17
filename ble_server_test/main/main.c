@@ -675,21 +675,30 @@ void save_wifi_credentials(void* param) {
     vTaskDelete(NULL);
 }
 
-void listen_for_configuration_mode_button(void* param) {
+ void listen_for_configuration_mode_button(void* param) {
     uint8_t last_button_state = 1;
-    while(true) {
+    int i = 0;
+    while(i<100) {
         uint8_t current_button_state = gpio_get_level(BUTTON_GPIO);
         if(last_button_state == 1 && current_button_state == 0) {
             is_configuration_mode = !is_configuration_mode;
             if(is_configuration_mode) {
                 ESP_LOGI(GATTS_TAG, "You are in configuration mode. Press again to leave");
+                i = 0;
                 xTaskCreate(save_wifi_credentials, "save_wifi_task", 2048, NULL, 5, NULL);
             }
+            vTaskDelay(pdMS_TO_TICKS(200));
         }
-        vTaskDelay(pdMS_TO_TICKS(200));
+        else{
+            if(!is_configuration_mode){
+                i++;
+                vTaskDelay(pdMS_TO_TICKS(200));
+            }
+        }
     }
+    ESP_LOGI(GATTS_TAG, "Time to configure the device has ended.");
+    vTaskDelete(NULL);
 }
-
 void set_configuration_mode(void *param) {
     while(true) {
         if(!is_configuration_mode) {
@@ -789,6 +798,6 @@ void app_main(void)
         ESP_LOGE(GATTS_TAG, "set local  MTU failed, error code = %x", local_mtu_ret);
     }
     configure_button();
-    xTaskCreate(listen_for_configuration_mode_button, "listen_for_configuration_mode_button", 2048, NULL, 5, NULL);
+    xTaskCreate(listen_for_configuration_mode_button, "listen_for_configuration_mode_button", 2048, NULL, tskIDLE_PRIORITY, NULL);
     return;
 }

@@ -1,0 +1,225 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 26 2024 14:46:20[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=251cch (152012) map[0m
+[0;32mI (156) esp_image: segment 1: paddr=000351f4 vaddr=3ffb0000 size=03fd8h ( 16344) load[0m
+[0;32mI (163) esp_image: segment 2: paddr=000391d4 vaddr=40080000 size=06e44h ( 28228) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a0f94h (659348) map[0m
+[0;32mI (400) esp_image: segment 4: paddr=000e0fbc vaddr=40086e44 size=106a4h ( 67236) load[0m
+[0;32mI (438) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (439) boot: Disabling RNG early entropy source...[0m
+[0;32mI (451) cpu_start: Multicore app[0m
+[0;32mI (459) cpu_start: Pro cpu start user code[0m
+[0;32mI (459) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (459) app_init: Application information:[0m
+[0;32mI (462) app_init: Project name:     wifi[0m
+[0;32mI (466) app_init: App version:      a60de5b-dirty[0m
+[0;32mI (472) app_init: Compile time:     Jan 16 2025 13:59:54[0m
+[0;32mI (478) app_init: ELF file SHA256:  1ba9b13ee...[0m
+[0;32mI (483) app_init: ESP-IDF:          v5.3.1[0m
+[0;32mI (488) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (493) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (498) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (503) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (510) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (516) heap_init: At 3FFB8828 len 000277D8 (157 KiB): DRAM[0m
+[0;32mI (522) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (528) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (535) heap_init: At 400974E8 len 00008B18 (34 KiB): IRAM[0m
+[0;32mI (543) spi_flash: detected chip: generic[0m
+[0;32mI (546) spi_flash: flash io: dio[0m
+[0;33mW (549) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (564) main_task: Started on CPU0[0m
+[0;32mI (574) main_task: Calling app_main()[0m
+[0;32mI (614) wifi:wifi driver task: 3ffc0798, prio:23, stack:6656, core=0[0m
+[0;32mI (624) wifi:wifi firmware version: ccaebfa[0m
+[0;32mI (624) wifi:wifi certification version: v7.0[0m
+[0;32mI (624) wifi:config NVS flash: enabled[0m
+[0;32mI (624) wifi:config nano formating: disabled[0m
+[0;32mI (624) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (634) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (634) wifi:Init management short buffer num: 32[0m
+[0;32mI (644) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (644) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (654) wifi:Init static rx buffer num: 10[0m
+[0;32mI (654) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (654) wifi_init: rx ba win: 6[0m
+[0;32mI (664) wifi_init: accept mbox: 6[0m
+[0;32mI (664) wifi_init: tcpip mbox: 32[0m
+[0;32mI (664) wifi_init: udp mbox: 6[0m
+[0;32mI (674) wifi_init: tcp mbox: 6[0m
+[0;32mI (674) wifi_init: tcp tx win: 5760[0m
+[0;32mI (684) wifi_init: tcp rx win: 5760[0m
+[0;32mI (684) wifi_init: tcp mss: 1440[0m
+[0;32mI (684) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (694) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (694) noise_detector: Current SSID: MyNET_Fiber_5385[0m
+[0;32mI (704) noise_detector: Current password: 8b0fc920[0m
+[0;33mW (714) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (724) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;32mI (804) wifi:mode : sta (78:ee:4c:00:06:5c)[0m
+[0;32mI (814) wifi:enable tsf[0m
+78EE4C00065C
+[0;32mI (814) main_task: Returned from app_main()[0m
+[0;32mI (824) wifi:new:<2,0>, old:<1,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (824) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (834) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (844) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (844) wifi:state: run -> init (0x4a0)[0m
+[0;32mI (854) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (864) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (864) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (874) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (884) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (994) wifi:connected with MyNET_Fiber_5385, aid = 8, channel 2, BW20, bssid = 9c:9d:7e:2d:19:00[0m
+[0;32mI (994) wifi:security: WPA2-PSK, phy: bgn, rssi: -86[0m
+[0;32mI (994) wifi:pm start, type: 1[0m
+
+[0;32mI (994) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1054) noise_detector: 0[0m
+[0;32mI (1054) noise_detector: Retrying connection to the WiFi...[0m
+[0;32mI (1154) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (4054) esp_netif_handlers: sta ip: 192.168.18.146, mask: 255.255.255.0, gw: 192.168.18.1[0m
+[0;32mI (4054) noise_detector: 1[0m
+[0;32mI (4054) noise_detector: Connected to WiFi![0m
+[0;32mI (4064) noise_detector: Other event id:7[0m
+[0;32mI (4084) wifi:<ba-add>idx:0 (ifx:0, 9c:9d:7e:2d:19:00), tid:0, ssn:3, winSize:64[0m
+[0;32mI (4544) noise_detector: MQTT_EVENT_CONNECTED[0m
+[0;32mI (4544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (19544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (34544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (49544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (64544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (79544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (94544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (109544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (124544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (139544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (154544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (169544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (184544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (199544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (214544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (229544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (244544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (259544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (274544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (289544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (304544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (319544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (334544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (349544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (364544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (379544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (394544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (409544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (424544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (439544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (454544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (469544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (484544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (499544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (514544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (529544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (544544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (559544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (574544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (589544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (604544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (619544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (634544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (649544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (664544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (679544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (694544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (709544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (724544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (739544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (754544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (769544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (784544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (799544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (814544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (829544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (844544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (859544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (874544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (889544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (904544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (919544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (934544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (949544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (964544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (979544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (994544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1009544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1024544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1039544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1054544) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;31mE (1054544) transport_base: poll_write select error 104, errno = Connection reset by peer, fd = 54[0m
+[0;33mW (1054544) transport_base: Poll timeout or error, errno=Connection already in progress, fd=54, timeout_ms=10000[0m
+[0;31mE (1054554) mqtt_client: Writing failed: errno=119[0m
+[0;32mI (1054564) noise_detector: MQTT_EVENT_ERROR[0m
+[0;32mI (1054564) noise_detector: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1069574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1084574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1099574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1114574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1129574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1144574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1159574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1174574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1189574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1204574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1219574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1234574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1249574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1264574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1279574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1294574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1309574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1324574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1339574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1354574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1369574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1384574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1399574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1414574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1429574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1444574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1459574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1474574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1489574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1504574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1519574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1534574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1549574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1564574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1579574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1594574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1609574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1624574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m
+[0;32mI (1639574) MAC_ADDRESS: Adres MAC: 78EE4C00065C[0m

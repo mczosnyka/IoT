@@ -1,0 +1,287 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 26 2024 14:46:20[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1f4c4h (128196) map[0m
+[0;32mI (148) esp_image: segment 1: paddr=0002f4ec vaddr=3ffb0000 size=00b2ch (  2860) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=839e8h (539112) map[0m
+[0;32mI (339) esp_image: segment 3: paddr=000b3a10 vaddr=3ffb0b2c size=0342ch ( 13356) load[0m
+[0;32mI (344) esp_image: segment 4: paddr=000b6e44 vaddr=40080000 size=1737ch ( 95100) load[0m
+[0;32mI (393) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (393) boot: Disabling RNG early entropy source...[0m
+[0;32mI (405) cpu_start: Multicore app[0m
+[0;32mI (414) cpu_start: Pro cpu start user code[0m
+[0;32mI (414) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (414) app_init: Application information:[0m
+[0;32mI (417) app_init: Project name:     wifi[0m
+[0;32mI (421) app_init: App version:      a60de5b-dirty[0m
+[0;32mI (427) app_init: Compile time:     Jan 16 2025 13:59:54[0m
+[0;32mI (433) app_init: ELF file SHA256:  1b4733432...[0m
+[0;32mI (438) app_init: ESP-IDF:          v5.3.1[0m
+[0;32mI (443) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (448) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (453) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (458) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (465) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (471) heap_init: At 3FFB8198 len 00027E68 (159 KiB): DRAM[0m
+[0;32mI (477) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (483) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (490) heap_init: At 4009737C len 00008C84 (35 KiB): IRAM[0m
+[0;32mI (497) spi_flash: detected chip: generic[0m
+[0;32mI (501) spi_flash: flash io: dio[0m
+[0;33mW (504) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (519) main_task: Started on CPU0[0m
+[0;32mI (529) main_task: Calling app_main()[0m
+[0;32mI (569) wifi:wifi driver task: 3ffbffe0, prio:23, stack:6656, core=0[0m
+[0;32mI (569) wifi:wifi firmware version: ccaebfa[0m
+[0;32mI (569) wifi:wifi certification version: v7.0[0m
+[0;32mI (569) wifi:config NVS flash: enabled[0m
+[0;32mI (569) wifi:config nano formating: disabled[0m
+[0;32mI (579) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (579) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (589) wifi:Init management short buffer num: 32[0m
+[0;32mI (589) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (589) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (599) wifi:Init static rx buffer num: 10[0m
+[0;32mI (599) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (609) wifi_init: rx ba win: 6[0m
+[0;32mI (609) wifi_init: accept mbox: 6[0m
+[0;32mI (609) wifi_init: tcpip mbox: 32[0m
+[0;32mI (619) wifi_init: udp mbox: 6[0m
+[0;32mI (619) wifi_init: tcp mbox: 6[0m
+[0;32mI (619) wifi_init: tcp tx win: 5760[0m
+[0;32mI (629) wifi_init: tcp rx win: 5760[0m
+[0;32mI (629) wifi_init: tcp mss: 1440[0m
+[0;32mI (639) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (639) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (649) noise_detector: Current SSID: MyNET_Fiber_5385[0m
+[0;32mI (649) noise_detector: Current password: default[0m
+[0;32mI (699) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;32mI (789) wifi:mode : sta (78:ee:4c:00:06:5c)[0m
+[0;32mI (789) wifi:enable tsf[0m
+78EE4C00065C
+[0;32mI (789) main_task: Returned from app_main()[0m
+[0;32mI (1199) wifi:new:<2,0>, old:<1,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1199) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1199) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1209) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (6249) wifi:state: run -> init (0xf00)[0m
+[0;32mI (6259) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (6269) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (6269) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (6279) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (6289) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (6459) noise_detector: 0[0m
+[0;32mI (6459) noise_detector: Retrying connection to the WiFi...[0m
+[0;32mI (9389) wifi:state: run -> init (0xf00)[0m
+[0;32mI (9399) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (9599) noise_detector: 0[0m
+[0;32mI (9599) noise_detector: Retrying connection to the WiFi...[0m
+[0;32mI (11819) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (11819) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (11829) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (11839) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (12019) noise_detector: 0[0m
+[0;32mI (12019) noise_detector: Retrying connection to the WiFi...[0m
+[0;32mI (16889) wifi:state: run -> init (0xf00)[0m
+[0;32mI (16909) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (16919) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (16919) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (16929) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (16939) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (17109) noise_detector: 0[0m
+[0;32mI (17109) noise_detector: Retrying connection to the WiFi...[0m
+[0;32mI (20039) wifi:state: run -> init (0xf00)[0m
+[0;32mI (20049) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (20249) noise_detector: 0[0m
+[0;32mI (20249) noise_detector: Retrying connection to the WiFi...[0m
+[0;32mI (22469) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (22469) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (22479) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (22489) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (22669) noise_detector: 0[0m
+[0;32mI (22669) noise_detector: Retrying connection to the WiFi...[0m
+[0;32mI (27529) wifi:state: run -> init (0xf00)[0m
+[0;32mI (27539) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (27549) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (27549) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (27559) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (27559) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (27739) noise_detector: 0[0m
+[0;32mI (27739) noise_detector: Retrying connection to the WiFi...[0m
+[0;32mI (30659) wifi:state: run -> init (0xf00)[0m
+[0;32mI (30669) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (30869) noise_detector: 0[0m
+[0;32mI (30869) noise_detector: Retrying connection to the WiFi...[0m
+[0;32mI (33089) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (33089) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (33099) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (33109) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (33279) noise_detector: 0[0m
+[0;32mI (33279) noise_detector: Retrying connection to the WiFi...[0m
+[0;32mI (38159) wifi:state: run -> init (0xf00)[0m
+[0;32mI (38169) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (38189) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (38189) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (38199) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (38209) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (38369) noise_detector: 0[0m
+[0;32mI (38369) noise_detector: Retrying connection to the WiFi...[0m
+[0;32mI (41299) wifi:state: run -> init (0xf00)[0m
+[0;32mI (41309) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (41509) noise_detector: 0[0m
+[0;32mI (41509) noise_detector: Retrying connection to the WiFi...[0m
+[0;32mI (43729) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (43729) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (43749) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (43749) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (43919) noise_detector: 0[0m
+[0;32mI (43919) noise_detector: Retrying connection to the WiFi...[0m
+[0;32mI (48789) wifi:state: run -> init (0xf00)[0m
+[0;32mI (48809) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (48819) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (48829) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (48839) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (48849) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (49009) noise_detector: 0[0m
+[0;32mI (49009) noise_detector: Retrying connection to the WiFi...[0m
+[0;32mI (51949) wifi:state: run -> init (0xf00)[0m
+[0;32mI (51959) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (52159) noise_detector: 0[0m
+[0;32mI (52159) noise_detector: Retrying connection to the WiFi...[0m
+[0;32mI (54379) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (54379) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (54399) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (54399) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (54569) noise_detector: 0[0m
+[0;32mI (54569) noise_detector: Retrying connection to the WiFi...[0m
+[0;32mI (59439) wifi:state: run -> init (0xf00)[0m
+[0;32mI (59449) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (59459) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (59459) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (59469) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (59479) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (59649) noise_detector: 0[0m
+[0;32mI (59649) noise_detector: Retrying connection to the WiFi...[0m
+[0;32mI (62569) wifi:state: run -> init (0xf00)[0m
+[0;32mI (62579) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (62779) noise_detector: 0[0m
+[0;32mI (62779) noise_detector: Retrying connection to the WiFi...[0m
+[0;32mI (64999) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (64999) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (65009) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (65019) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (65189) noise_detector: 0[0m
+[0;32mI (65189) noise_detector: Retrying connection to the WiFi...[0m
+[0;32mI (70089) wifi:state: run -> init (0xf00)[0m
+[0;32mI (70099) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (70109) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (70109) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (70119) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (70129) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (70299) noise_detector: 0[0m
+[0;32mI (70299) noise_detector: Retrying connection to the WiFi...[0m
+[0;32mI (73219) wifi:state: run -> init (0xf00)[0m
+[0;32mI (73229) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (73429) noise_detector: 0[0m
+[0;32mI (73429) noise_detector: Retrying connection to the WiFi...[0m
+[0;32mI (75649) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (75649) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (75659) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (75669) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (75849) noise_detector: 0[0m
+[0;32mI (75849) noise_detector: Retrying connection to the WiFi...[0m
+[0;32mI (80709) wifi:state: run -> init (0xf00)[0m
+[0;32mI (80719) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (80729) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (80729) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (80749) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (80759) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (80919) noise_detector: 0[0m
+[0;32mI (80919) noise_detector: Retrying connection to the WiFi...[0m
+[0;32mI (83849) wifi:state: run -> init (0xf00)[0m
+[0;32mI (83859) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (84059) noise_detector: 0[0m
+[0;32mI (84059) noise_detector: Retrying connection to the WiFi...[0m
+[0;32mI (86279) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (86279) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (86299) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (86309) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (86469) noise_detector: 0[0m
+[0;32mI (86469) noise_detector: Retrying connection to the WiFi...[0m
+[0;32mI (91359) wifi:state: run -> init (0xf00)[0m
+[0;32mI (91369) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (91379) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (91379) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (91399) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (91409) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (91569) noise_detector: 0[0m
+[0;32mI (91569) noise_detector: Retrying connection to the WiFi...[0m
+[0;32mI (97499) wifi:state: run -> init (0xfc0)[0m
+[0;32mI (97509) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (97709) noise_detector: 0[0m
+[0;32mI (97709) noise_detector: Retrying connection to the WiFi...[0m
+[0;32mI (99939) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (99939) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (99949) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (99959) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (100129) noise_detector: 0[0m
+[0;32mI (100129) noise_detector: Retrying connection to the WiFi...[0m
+[0;32mI (104999) wifi:state: run -> init (0xf00)[0m
+[0;32mI (105019) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (105029) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (105039) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (105049) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (105049) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (105219) noise_detector: 0[0m
+[0;32mI (105219) noise_detector: Retrying connection to the WiFi...[0m
+[0;32mI (108149) wifi:state: run -> init (0xf00)[0m
+[0;32mI (108159) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (108359) noise_detector: 0[0m
+[0;32mI (108359) noise_detector: Retrying connection to the WiFi...[0m
+[0;32mI (110589) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (110589) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (110599) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (110609) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (110779) noise_detector: 0[0m
+[0;32mI (110779) noise_detector: Retrying connection to the WiFi...[0m
+[0;32mI (115639) wifi:state: run -> init (0xf00)[0m
+[0;32mI (115649) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (115659) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (115659) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (115669) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (115679) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (115849) noise_detector: 0[0m
+[0;32mI (115849) noise_detector: Retrying connection to the WiFi...[0m
+[0;32mI (118779) wifi:state: run -> init (0xf00)[0m
+[0;32mI (118799) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (118999) noise_detector: 0[0m
+[0;32mI (118999) noise_detector: Retrying connection to the WiFi...[0m
+[0;32mI (121219) wifi:new:<2,0>, old:<2,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (121219) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (121229) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (121239) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (121409) noise_detector: 0[0m
+[0;32mI (121409) noise_detector: Retrying connection to the WiFi...[0m

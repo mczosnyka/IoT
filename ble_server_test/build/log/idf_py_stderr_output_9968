@@ -1,0 +1,47 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM3 instead...[0m
+[0;33m--- esp-idf-monitor 1.5.0 on \\.\COM3 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4008564e: esp_crosscore_isr at C:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083a71: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x40130d5d: gpio_get_level at C:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_driver_gpio/src/gpio.c:245
+0x400d87be: listen_for_configuration_mode_button at C:/Projekty/IoT/ble_server_test/main/main.c:682
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x4008564e: esp_crosscore_isr at C:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083a71: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x400846fa: spi_flash_op_block_func at C:/Espressif/frameworks/esp-idf-v5.3.1/components/spi_flash/cache_utils.c:140
+0x40081f89: ipc_task at C:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/esp_ipc.c:65
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x4008564e: esp_crosscore_isr at C:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083a71: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x400846fa: spi_flash_op_block_func at C:/Espressif/frameworks/esp-idf-v5.3.1/components/spi_flash/cache_utils.c:140
+0x40081f89: ipc_task at C:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/esp_ipc.c:65
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x4008564e: esp_crosscore_isr at C:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083a71: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x400846fa: spi_flash_op_block_func at C:/Espressif/frameworks/esp-idf-v5.3.1/components/spi_flash/cache_utils.c:140
+0x40081f89: ipc_task at C:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/esp_ipc.c:65
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x4008564e: esp_crosscore_isr at C:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/crosscore_int.c:73
+0x40083a71: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x400846fa: spi_flash_op_block_func at C:/Espressif/frameworks/esp-idf-v5.3.1/components/spi_flash/cache_utils.c:140
+0x40081f89: ipc_task at C:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/esp_ipc.c:65
+0x40090afa: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0m
+Traceback (most recent call last):
+  File "C:\Espressif\frameworks\esp-idf-v5.3.1\tools/idf_monitor.py", line 11, in <module>
+    sys.exit(subprocess.run([sys.executable, '-m', 'esp_idf_monitor'] + sys.argv[1:]).returncode)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "subprocess.py", line 550, in run
+  File "subprocess.py", line 1199, in communicate
+  File "subprocess.py", line 1262, in wait
+  File "subprocess.py", line 1543, in _wait
+KeyboardInterrupt

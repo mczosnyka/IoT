@@ -1,0 +1,31 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Projekty\IoT\wifi\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Projekty/IoT/wifi/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6880 bytes. 0x780 bytes (7%) free.
+[2/7] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+C:/Projekty/IoT/wifi/main/main.c: In function 'app_main':
+C:/Projekty/IoT/wifi/main/main.c:316:17: warning: passing argument 1 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+  316 |     xTaskCreate(blink_led, "blink_led", 1024, NULL, 5, NULL);
+      |                 ^~~~~~~~~
+      |                 |
+      |                 void (*)(void)
+In file included from C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/esp_additions/include/freertos/idf_additions.h:20,
+                 from C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:1533,
+                 from C:/Projekty/IoT/wifi/main/main.c:7:
+C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:371:44: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'void (*)(void)'
+  371 |     BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+      |                             ~~~~~~~~~~~~~~~^~~~~~~~~~
+C:/Projekty/IoT/wifi/main/main.c: At top level:
+C:/Projekty/IoT/wifi/main/main.c:81:13: warning: 'http_rest_with_hostname_path' defined but not used [-Wunused-function]
+   81 | static void http_rest_with_hostname_path(void)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[3/7] Linking C static library esp-idf\main\libmain.a
+[4/7] Generating ld/sections.ld
+[5/7] Linking CXX executable wifi.elf
+[6/7] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated C:/Projekty/IoT/wifi/build/wifi.bin
+[7/7] cmd.exe /C "cd /D C:\Projekty\IoT\wifi\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Projekty/IoT/wifi/build/partition_table/partition-table.bin C:/Projekty/IoT/wifi/build/wifi.bin"
+wifi.bin binary size 0xe16d0 bytes. Smallest app partition is 0x100000 bytes. 0x1e930 bytes (12%) free.

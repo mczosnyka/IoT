@@ -1,0 +1,40 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM3 instead...[0m
+[0;33m--- esp-idf-monitor 1.5.0 on \\.\COM3 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4000c2ba: __memcpy_aux in ROM
+[0m
+[0;33m--- 0x400832de: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1233
+0x400832de: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1233
+[0m
+[0;33m--- 0x400832de: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1233
+0x4000c349: memcpy in ROM
+0x4000c36b: memcpy in ROM
+[0m
+[0;33m--- 0x4000c2b7: __memcpy_aux in ROM
+0x4013f596: lwip_netconn_do_dns_found at C:/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/api_msg.c:2212
+0x4012d769: dns_call_found at C:/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/core/dns.c:1026
+0x4012d84d: dns_correct_response at C:/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/core/dns.c:1224
+0x4012e4cd: dns_recv at C:/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/core/dns.c:1371 (discriminator 1)
+0x40135836: udp_input at C:/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/core/udp.c:404
+0x40138df6: ip4_input at C:/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/core/ipv4/ip4.c:746
+0x4013da7a: ethernet_input at C:/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/netif/ethernet.c:186
+0x4012d2b9: tcpip_thread_handle_msg at C:/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/tcpip.c:174
+0x4012d33c: tcpip_thread at C:/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/tcpip.c:148
+0x4008a016: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0m
+Traceback (most recent call last):
+  File "C:\Espressif\frameworks\esp-idf-v5.3.1\tools/idf_monitor.py", line 11, in <module>
+    sys.exit(subprocess.run([sys.executable, '-m', 'esp_idf_monitor'] + sys.argv[1:]).returncode)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "subprocess.py", line 550, in run
+  File "subprocess.py", line 1199, in communicate
+  File "subprocess.py", line 1262, in wait
+  File "subprocess.py", line 1543, in _wait
+KeyboardInterrupt

@@ -13,6 +13,7 @@
 #include "esp_http_client.h"
 #include "mqtt_client.h"
 #include <time.h>
+#include "esp_system.h"
 #include <cJSON.h> 
 // #define WIFI_SSID "wifi_przemek"   // Nazwa sieci WiFi   MyNET_Fiber_5385 wifi_przemek
 // #define WIFI_PASS "xdxdxdxd"           // Hasło do sieci WiFi   8b0fc920 xdxdxdxd
@@ -23,6 +24,7 @@
 static EventGroupHandle_t wifi_event_group;
 const int CONNECTED_BIT = BIT0;
 static const char *TAG = "noise_detector";
+char mac_str[13];
 
 bool connected = false;
 
@@ -41,6 +43,7 @@ char password_value[MAX_PASSWORD_LEN] = DEFAULT_VALUE;
 static void mqtt_app_start(void);
 static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event_id, void *event_data);
 static esp_err_t mqtt_event_handler_cb(esp_mqtt_event_handle_t event);
+static void mqtt_app_task(void *pvParameters);
 
 
 esp_err_t _http_event_handler(esp_http_client_event_t *evt) {
@@ -103,9 +106,6 @@ static void wifi_event_handler(void* arg, esp_event_base_t event_base, int32_t e
         esp_wifi_connect();
     } else if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_DISCONNECTED) {
         esp_wifi_connect();
-        gpio_set_level(LED_PIN, 1);
-        vTaskDelay(pdMS_TO_TICKS(200));
-        gpio_set_level(LED_PIN, 0);
         connected = false;
         ESP_LOGI(TAG, "%d", connected);
         ESP_LOGI(TAG, "Retrying connection to the WiFi...");
@@ -115,7 +115,8 @@ static void wifi_event_handler(void* arg, esp_event_base_t event_base, int32_t e
         ESP_LOGI(TAG, "%d", connected);
         ESP_LOGI(TAG, "Connected to WiFi!");
         // http_rest_with_hostname_path();
-        // mqtt_app_start();
+        //mqtt_app_start();
+        xTaskCreate(&mqtt_app_task, "mqtt_app_task", 4096, NULL, 5, NULL);
     }
 }
 
@@ -200,14 +201,24 @@ static esp_err_t mqtt_event_handler_cb(esp_mqtt_event_handle_t event)
     {
     case MQTT_EVENT_CONNECTED:
         ESP_LOGI(TAG, "MQTT_EVENT_CONNECTED");
-        // esp_mqtt_client_subscribe(client, "my_topic", 0);
-    while (1) {
-    float random_decibel = 30.0 + ((float)rand() / RAND_MAX) * (90.0 - 30.0);
-    time_t now = time(NULL);
-    struct tm *localTime = localtime(&now);
-    char timeString[100]; 
-    strftime(timeString, sizeof(timeString), "%Y-%m-%d %H:%M:%S", localTime);
-char noise_data_json[512];
+
+        while (1) {
+            float random_decibel = 30.0 + ((float)rand() / RAND_MAX) * (90.0 - 30.0);
+            time_t now = time(NULL);
+            struct tm *localTime = localtime(&now);
+            char timeString[100]; 
+            strftime(timeString, sizeof(timeString), "%Y-%m-%d %H:%M:%S", localTime);
+
+
+
+            // Wyświetl adres MAC jako string
+            ESP_LOGI("MAC_ADDRESS", "Adres MAC: %s", mac_str);
+
+            // Utwórz temat MQTT dynamicznie z adresem MAC
+            char topic_noise[128];
+            snprintf(topic_noise, sizeof(topic_noise), "noise_detector_web/%s/noise_data", mac_str);
+
+            char noise_data_json[512];
             snprintf(noise_data_json, sizeof(noise_data_json),
                      "{"
                      "\"sensor_id\": \"ESP32\","
@@ -220,7 +231,11 @@ char noise_data_json[512];
                      timeString,
                      random_decibel);
 
-            esp_mqtt_client_publish(client, "noise_detector_web/sensor1/noise_data", noise_data_json, 0, 1, 0);
+            // Publikacja danych na temat z adresem MAC
+            esp_mqtt_client_publish(client, topic_noise, noise_data_json, 0, 1, 0);
+
+            char topic_sensor_info[128];
+            snprintf(topic_sensor_info, sizeof(topic_sensor_info), "noise_detector_web/%s/sensor_info", mac_str);
 
             char sensor_info_json[512];
             snprintf(sensor_info_json, sizeof(sensor_info_json),
@@ -237,10 +252,11 @@ char noise_data_json[512];
                      "}"
                      "}");
 
-            esp_mqtt_client_publish(client, "noise_detector_web/sensor1/sensor_info", sensor_info_json, 0, 1, 0);
+            // Publikacja informacji o sensorze na temat z adresem MAC
+            esp_mqtt_client_publish(client, topic_sensor_info, sensor_info_json, 0, 1, 0);
 
-            vTaskDelay(pdMS_TO_TICKS(15000));
-    }
+            vTaskDelay(pdMS_TO_TICKS(15000));  // Odczekaj 15 sekund
+        }
         break;
     case MQTT_EVENT_DISCONNECTED:
         ESP_LOGI(TAG, "MQTT_EVENT_DISCONNECTED");
@@ -272,7 +288,7 @@ char noise_data_json[512];
 static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event_id, void *event_data)
 {
     ESP_LOGD(TAG, "Event dispatched from event loop base=%s, event_id=%d", base, (int)event_id);
-    mqtt_event_handler_cb(event_data);
+    xTaskCreate((TaskFunction_t)mqtt_event_handler_cb, "mqtt_cb", 1024, event_data, tskIDLE_PRIORITY, NULL);
 }
 
 static void mqtt_app_start(void)
@@ -285,15 +301,100 @@ static void mqtt_app_start(void)
     esp_mqtt_client_start(client);
 }
 
+void blink_led(void){
+    while(1){
+        if(connected==false){
+            gpio_set_level(LED_PIN, 1);
+            vTaskDelay(pdMS_TO_TICKS(500));
+            gpio_set_level(LED_PIN, 0);
+            vTaskDelay(pdMS_TO_TICKS(500));
+    }
+    }
+
+
+}
+
+static void mqtt_app_task(void *pvParameters) {
+    esp_mqtt_client_config_t mqtt_cfg = {
+        .broker.address.uri = "mqtt://mqtt.eclipseprojects.io",
+    };
+    esp_mqtt_client_handle_t client = esp_mqtt_client_init(&mqtt_cfg);
+    esp_mqtt_client_start(client);
+
+    while (1) {
+        if (connected) {
+            float random_decibel = 30.0 + ((float)rand() / RAND_MAX) * (90.0 - 30.0);
+            time_t now = time(NULL);
+            struct tm *localTime = localtime(&now);
+            char timeString[100]; 
+            strftime(timeString, sizeof(timeString), "%Y-%m-%d %H:%M:%S", localTime);
+
+
+
+            // Wyświetl adres MAC jako string
+            ESP_LOGI("MAC_ADDRESS", "Adres MAC: %s", mac_str);
+
+            // Utwórz temat MQTT dynamicznie z adresem MAC
+            char topic_noise[128];
+            snprintf(topic_noise, sizeof(topic_noise), "noise_detector_web/%s/noise_data", mac_str);
+
+            char noise_data_json[512];
+            snprintf(noise_data_json, sizeof(noise_data_json),
+                     "{"
+                     "\"sensor_id\": \"ESP32\","
+                     "\"timestamp\": \"%s\","
+                     "\"noise_data\": {"
+                     "\"decibels\": %.1f,"
+                     "\"status\": \"active\""
+                     "}"
+                     "}",
+                     timeString,
+                     random_decibel);
+
+            // Publikacja danych na temat z adresem MAC
+            esp_mqtt_client_publish(client, topic_noise, noise_data_json, 0, 1, 0);
+
+            char topic_sensor_info[128];
+            snprintf(topic_sensor_info, sizeof(topic_sensor_info), "noise_detector_web/%s/sensor_info", mac_str);
+
+            char sensor_info_json[512];
+            snprintf(sensor_info_json, sizeof(sensor_info_json),
+                     "{"
+                     "\"sensor_id\": \"ESP32\","
+                     "\"location\": {"
+                     "\"city\": \"Krakow\","
+                     "\"street\": \"al. Adama Mickiewicza 30\","
+                     "\"latitude\": 50.064470,"
+                     "\"longitude\": 19.923290"
+                     "},"
+                     "\"additional_info\": {"
+                     "\"sensor_health\": \"good\""
+                     "}"
+                     "}");
+
+            // Publikacja informacji o sensorze na temat z adresem MAC
+            esp_mqtt_client_publish(client, topic_sensor_info, sensor_info_json, 0, 1, 0);
+        }
+
+        vTaskDelay(pdMS_TO_TICKS(15000)); // Delay 15 seconds
+    }
+}
 
 
 void app_main(void) {
     nvs_flash_init();         // Inicjalizacja pamięci NVS
-    wifi_init_sta();          // Inicjalizacja i połączenie z WiFi 
-    //wifi_init_ap();
     esp_rom_gpio_pad_select_gpio(LED_PIN);
     gpio_set_direction(LED_PIN, GPIO_MODE_OUTPUT); 
-    gpio_set_level(LED_PIN, 0);
+    xTaskCreate(blink_led, "blink_led", 1024, NULL, tskIDLE_PRIORITY, NULL);
+    wifi_init_sta();          // Inicjalizacja i połączenie z WiFi 
+    //wifi_init_ap();
+    uint8_t mac_addr[6];
+    esp_read_mac(mac_addr, ESP_MAC_WIFI_STA);
+    snprintf(mac_str, sizeof(mac_str), "%02X%02X%02X%02X%02X%02X", 
+                mac_addr[0], mac_addr[1], mac_addr[2], 
+                mac_addr[3], mac_addr[4], mac_addr[5]);
+    printf("%s\n", mac_str);
+
 }
 
 
