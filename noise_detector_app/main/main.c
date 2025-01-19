@@ -29,8 +29,8 @@
     ESP_LOGI(GATTS_TAG, "Time to configure the device has ended.");
     ESP_LOGI(GATTS_TAG, "Initializing wifi connection...");
     wifi_init_sta();
-    vTaskDelete(NULL);
     xTaskCreate(blink_led, "blink_led", 4096, NULL, tskIDLE_PRIORITY, NULL);
+    vTaskDelete(NULL);
 }
 
 void change_configuration(void* param){
