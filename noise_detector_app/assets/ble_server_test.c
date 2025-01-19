@@ -609,10 +609,6 @@ void save_wifi_credentials(void* param) {
     ssid_changed = 0;
     ESP_LOGI(GATTS_TAG, "Waiting for wi-fi credentials...");
     while(is_configuration_mode) {
-        if(password_changed == 1 && ssid_changed == 1) {
-            ESP_LOGI("NVS", "Both Wi-Fi credentials saved successfully.");
-            break;
-        }
         err = nvs_open(STORAGE_NAMESPACE, NVS_READWRITE, &nvs_handle);
         if (err != ESP_OK) {
             ESP_LOGE("NVS", "Failed to open NVS handle!");
@@ -641,7 +637,11 @@ void save_wifi_credentials(void* param) {
         }
 
         nvs_close(nvs_handle);
-
+        if(password_changed == 1 && ssid_changed == 1) {
+            ESP_LOGI("NVS", "Both Wi-Fi credentials saved successfully.");
+            vTaskDelay(pdMS_TO_TICKS(2000));
+            break;
+        }
         vTaskDelay(pdMS_TO_TICKS(100));
     }
     ESP_LOGI("NVS", "Leaving configuration mode.");
