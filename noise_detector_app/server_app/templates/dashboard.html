@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+<body>
+    <h1>Dashboard</h1>
+    <nav>
+        <a href="{{ url_for('add_device') }}">Add Device</a> | 
+        <a href="{{ url_for('device_list') }}">Device List</a> | 
+        <a href="{{ url_for('messages') }}">Messages</a> | 
+        <a href="{{ url_for('dashboard') }}">Home</a> | 
+        <a href="{{ url_for('config_device') }}">Configure Device</a> | 
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </nav>
+    <h2>Received Messages Info</h2>
+    <p id="last-message"></p>
+
+    <label for="time-range">Select time range (hours):</label>
+    <input type="range" id="time-range" name="time-range" min="1" max="24" value="1" oninput="updateTimeRange(this.value)">
+    <span id="time-range-value">1</span> hours
+
+    <h2>Newest Message</h2>
+    <p id="newest-message"></p>
+
+    <!-- <h2>All Data (Debug)</h2> -->
+    <pre id="all-data"></pre>
+
+    <script>
+        function updateTimeRange(value) {
+            document.getElementById('time-range-value').innerText = value;
+            loadMessages(value);
+        }
+
+        // Function to load messages
+        function loadMessages(hours = 6) {
+            fetch('/get_dashboard_messages')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        console.error('Error:', data.error);
+                        return;
+                    }
+
+                    const messagesList = document.getElementById('last-message');
+                    const newestMessageElement = document.getElementById('newest-message');
+                    const allData = document.getElementById('all-data');
+                    // allData.innerText = JSON.stringify(data, null, 2); // Display all data for debugging
+
+                    const now = new Date();
+                    const filteredMessages = data.messages.filter(message => {
+                        const messageTime = new Date(message.timestamp);
+                        return (now - messageTime) <= hours * 60 * 60 * 1000;
+                    });
+
+                    if (filteredMessages.length > 0) {
+                        let totalNoise = 0;
+                        let maxNoise = 0;
+                        filteredMessages.forEach(message => {
+                            const messageData = JSON.parse(message.payload);
+                            const noiseData = messageData.noise_data;
+                            if (noiseData) {
+                                totalNoise += noiseData.current_noise;
+                                if (noiseData.max_noise > maxNoise) {
+                                    maxNoise = noiseData.max_noise;
+                                }
+                            }
+                        });
+                        const avgNoise = totalNoise / filteredMessages.length;
+                        messagesList.innerHTML = `Average Noise: ${avgNoise.toFixed(2)} dB, Max Noise: ${maxNoise.toFixed(2)} dB`;
+
+                        // Display the newest message
+                        const newestMessage = filteredMessages[filteredMessages.length - 1];
+                        const newestMessageData = JSON.parse(newestMessage.payload);
+                        const newestNoiseData = newestMessageData.noise_data;
+                        newestMessageElement.innerHTML = `Timestamp: ${new Date(newestMessage.timestamp).toLocaleString()}, Current Noise: ${newestNoiseData.current_noise} dB, Max Noise: ${newestNoiseData.max_noise} dB`;
+                    } else {
+                        messagesList.innerHTML = "No noise data available for the selected time range";
+                        newestMessageElement.innerHTML = "No newest message available";
+                    }
+                })
+                .catch(error => console.error('Error fetching messages:', error));
+        }
+
+        // Function to periodically update messages
+        function startAutoUpdate(interval = 5000) { // Default interval is 60 seconds
+            setInterval(() => {
+                const timeRange = document.getElementById('time-range').value;
+                loadMessages(timeRange);
+            }, interval);
+        }
+
+        // Load messages when the page loads and start auto-update
+        window.onload = () => {
+            loadMessages();
+            startAutoUpdate();
+        };
+    </script>
+</body>
+</html>

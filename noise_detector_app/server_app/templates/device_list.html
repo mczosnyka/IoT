@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Device List</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='device_list.css') }}">
+</head>
+<body>
+    <h1>Device List</h1>
+    <form method="POST" action="{{ url_for('set_active_device') }}">
+        <ul>
+            {% for device in devices %}
+                <li>
+                    MAC Address: {{ device.mac_address }}
+                    <input type="radio" name="active_device" value="{{ device.mac_address }}" {% if device.active %}checked{% endif %}>
+                </li>
+            {% endfor %}
+        </ul>
+        <div class="button-container">
+            <button type="submit" class="btn-active-device">Set Active Device</button>
+        </div>
+    </form>
+    <form method="POST" action="{{ url_for('handover_device') }}">
+        <label for="device-mac">Device MAC Address:</label>
+        <input type="text" id="device-mac" name="device_mac" required>
+        <label for="new-owner-username">New Owner Username:</label>
+        <input type="text" id="new-owner-username" name="new_owner_username" required>
+        <button type="submit">Hand Over Device</button>
+    </form>
+    <a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Device</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='add_device.css') }}">
+    <script>
+        function validateMACAddress() {
+            const macAddress = document.forms["addDeviceForm"]["mac_address"].value;
+            const macRegex = /^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$/;
+            if (!macRegex.test(macAddress)) {
+                alert("Invalid MAC Address format. Please enter a valid MAC Address.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Add Device</h1>
+        <form name="addDeviceForm" method="POST" onsubmit="return validateMACAddress()">
+            <label for="mac_address">MAC Address:</label>
+            <input type="text" id="mac_address" name="mac_address" required><br><br>
+            <button type="submit">Add Device</button>
+        </form>
+        <a href="{{ url_for('dashboard') }}">Home</a>
+    </div>
+</body>
+</html>

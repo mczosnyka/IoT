@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Received Messages</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Received Messages</h1>
+    <a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+    <label for="sort-by">Sort by:</label>
+    <select id="sort-by" onchange="loadMessages()">
+        <option value="timestamp">Timestamp</option>
+        <option value="avg-noise">Average Noise</option>
+        <option value="max-noise">Max Noise</option>
+    </select>
+
+    <label for="order">Order:</label>
+    <select id="order" onchange="loadMessages()">
+        <option value="desc">Descending</option>
+        <option value="asc">Ascending</option>
+    </select>
+
+    <ul id="messages-list">
+        <!-- Messages will be dynamically added here -->
+    </ul>
+
+    
+
+    <script>
+        // Function to format message data
+        function formatMessage(message) {
+            const timestamp = new Date(message.timestamp).toLocaleString();
+            const payload = JSON.parse(message.payload);
+            const noiseData = payload.noise_data;
+            return `Date: ${timestamp}\r Last 15 seconds average noise: ${noiseData.current_noise} dB\r Last 15 seconds max noise: ${noiseData.max_noise} dB`;
+        }
+
+        // Function to load messages
+        function loadMessages() {
+            fetch('/get_messages')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        console.error('Error:', data.error);
+                        return;
+                    }
+
+                    const sortBy = document.getElementById('sort-by').value;
+                    const order = document.getElementById('order').value;
+                    const messagesList = document.getElementById('messages-list');
+                    messagesList.innerHTML = ''; // Clear the previous list
+
+                    // Sort messages based on the selected option
+                    data.messages.sort((a, b) => {
+                        const aPayload = JSON.parse(a.payload);
+                        const bPayload = JSON.parse(b.payload);
+                        const aNoiseData = aPayload.noise_data;
+                        const bNoiseData = bPayload.noise_data;
+
+                        let comparison = 0;
+                        if (sortBy === 'avg-noise') {
+                            comparison = bNoiseData.current_noise - aNoiseData.current_noise;
+                        } else if (sortBy === 'max-noise') {
+                            comparison = bNoiseData.max_noise - aNoiseData.max_noise;
+                        } else {
+                            comparison = new Date(b.timestamp) - new Date(a.timestamp);
+                        }
+
+                        return order === 'asc' ? -comparison : comparison;
+                    });
+
+                    // Add each message to the list
+                    
+
+                    data.messages.forEach(message => {
+                        const listItem = document.createElement('li');
+                        listItem.textContent = formatMessage(message);
+                        messagesList.append(listItem); // Add new messages at the top
+                    });
+                })
+                .catch(error => console.error('Error fetching messages:', error));
+        }
+
+        // Auto-refresh messages every 5 seconds
+        setInterval(loadMessages, 5000);
+
+        // Load messages when the page loads
+        window.onload = loadMessages;
+    </script>
+</body>
+</html>

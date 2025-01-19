@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Configure Device</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='config_device.css') }}">
+</head>
+<body>
+    <h1>Configure Device</h1>
+    <form method="POST">
+        <label for="inverted_colors">Inverted Colors:</label>
+        <input type="checkbox" id="inverted_colors" name="inverted_colors" {% if config.screen_invert_colors %}checked{% endif %}><br>
+        
+        <label for="contrast">Contrast:</label>
+        <input type="number" id="contrast" name="contrast" value="{{ config.screen_contrast }}" min="0" max="255"><br>
+        
+        <label for="yoffset">Y Offset:</label>
+        <input type="number" id="yoffset" name="yoffset" value="{{ config.screen_yoffset }}"><br>
+        
+        <label for="xoffset">X Offset:</label>
+        <input type="number" id="xoffset" name="xoffset" value="{{ config.screen_xoffset }}"><br>
+        
+        <label for="threshold">Threshold:</label>
+        <input type="number" step="0.01" id="threshold" name="threshold" value="{{ config.LED_db_treshold }}"><br>
+        
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
